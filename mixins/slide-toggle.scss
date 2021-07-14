@@ -1,0 +1,33 @@
+@mixin pxb-mat-slide-toggle($primaryPalette, $accentPalette, $warnPalette, $inactiveThumb) {
+    .mat-slide-toggle {
+        .mat-slide-toggle-thumb {
+            /* Inactive Thumb Background */
+            background-color: $inactiveThumb;
+        }
+
+        &.mat-primary {
+            @include active-slide-toggle-helper($primaryPalette);
+        }
+
+        &.mat-accent,
+        &:not([color]) {
+            @include active-slide-toggle-helper($accentPalette);
+        }
+
+        &.mat-warn {
+            @include active-slide-toggle-helper($warnPalette);
+        }
+    }
+}
+
+@mixin active-slide-toggle-helper($palette) {
+    &.mat-checked {
+        .mat-slide-toggle-bar {
+            background-color: map-get($palette, bar);
+        }
+
+        .mat-slide-toggle-thumb {
+            background-color: map-get($palette, thumb);
+        }
+    }
+}

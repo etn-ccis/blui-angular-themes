@@ -1,0 +1,161 @@
+/**
+Copyright (c) 2020-present, Eaton
+
+All rights reserved.
+
+This code is licensed under the BSD-3 license found in the LICENSE file in the root directory of this source tree and at https://opensource.org/licenses/BSD-3-Clause.
+**/
+
+@import '~@angular/material/_theming.scss';
+@import '~@pxblue/colors/palette.scss';
+@import './pxb-component-theme';
+@import './margins';
+@import './fonts';
+@import './typography';
+@import './darkTheme';
+@import './blueTheme';
+@import './common';
+
+// Custom Typography Sizes & Weights
+$custom-typography: mat-typography-config(
+    $font-family: '"Open Sans", Arial, Helvetica, sans-serif;',
+    $display-4: mat-typography-level(6rem, 1.167, 300),
+    $display-3: mat-typography-level(3.75rem, 1.2, 300),
+    $display-2: mat-typography-level(3rem, 1.167, 400),
+    $display-1: mat-typography-level(2.125rem, 1.235, 400),
+    $headline: mat-typography-level(1.5rem, 1.334, 400),
+    $title: mat-typography-level(1.25rem, 1.6, 600),
+    $subheading-2: mat-typography-level(1rem, 1.75, 400),
+    $subheading-1: mat-typography-level(0.875rem, 1.57, 600),
+    $body-2: mat-typography-level(0.875rem, 1.43, 500),
+    $body-1: mat-typography-level(1rem, 1.5, 400),
+    $caption: mat-typography-level(0.75rem, 1.66, 400),
+    $button: mat-typography-level(0.875rem, 1, 600),
+    $input: mat-typography-level(inherit, 1.125, 400),
+);
+
+/*
+** Include the Material base styles
+**
+** NOTE: material theme will use our PX Blue custom typography
+** There is currently not a way to specify different custom fonts for different themes
+*/
+@include mat-core($custom-typography);
+
+// Material default theme colors
+$material-theme-primary: mat-palette($mat-indigo, 700, 300, 900);
+$material-theme-accent: mat-palette($mat-light-blue);
+$material-theme-warn: mat-palette($mat-deep-orange, A200);
+$material-theme: mat-light-theme($material-theme-primary, $material-theme-accent, $material-theme-warn);
+@include angular-material-theme($material-theme);
+
+// Blue Theme
+@function pxb-light-theme($primary, $accent, $warn) {
+    @return map-merge(
+        mat-light-theme($primary, $accent, $warn),
+        (
+            foreground: (
+                text: map-get($pxb-black, 500),
+                secondary-text: map-get($pxb-gray, 500),
+                hint-text: map-get($pxb-gray, 500),
+                base: map-get($pxb-darkBlack, 900),
+                divider: rgba(66, 78, 84, 0.12),
+                dividers: $dark-dividers,
+                disabled: rgba(66, 78, 84, 0.3),
+                disabled-button: rgba(black, 0.26),
+                disabled-text: rgba(66, 78, 84, 0.3),
+                elevation: map-get($pxb-darkBlack, 900),
+                icon: rgba(black, 0.54),
+                icons: rgba(black, 0.54),
+                slider-min: rgba(black, 0.87),
+                slider-off: rgba(black, 0.26),
+                slider-off-active: rgba(black, 0.38),
+            ),
+            background: (
+                status-bar: map_get($mat-grey, 300),
+                app-bar: map-get($pxb-gray, 50),
+                background: map-get($pxb-white, 200),
+                hover: rgba(black, 0.04),
+                card: map-get($pxb-white, 50),
+                dialog: map-get($pxb-white, 50),
+                disabled-button: rgba(114, 126, 132, 0.12),
+                raised-button: map-get($pxb-white, 50),
+                focused-button: $dark-focused,
+                selected-button: map-get($pxb-gray, 300),
+                selected-disabled-button: map-get($pxb-gray, 400),
+                disabled-button-toggle: map-get($pxb-gray, 200),
+                unselected-chip: map-get($pxb-gray, 300),
+                disabled-list-option: map-get($pxb-gray, 200),
+            ),
+        )
+    );
+}
+
+$pxb-blue-primary: mat-palette($pxb-blue);
+$pxb-blue-accent: mat-palette($pxb-lightBlue, 500);
+$pxb-blue-warn: mat-palette($pxb-red, 500);
+$pxb-blue-theme: pxb-light-theme($pxb-blue-primary, $pxb-blue-accent, $pxb-blue-warn);
+.pxb-blue {
+    @include angular-material-theme($pxb-blue-theme);
+    @include reasonable-margins();
+    @include bodyfont();
+    @include typography();
+    @include common();
+    @include pxb-components-theme($pxb-blue-theme);
+    @include bluetheme($pxb-blue-theme);
+}
+
+// Blue Dark Theme
+@function pxb-dark-theme($primary, $accent, $warn) {
+    @return map-merge(
+        mat-dark-theme($primary, $accent, $warn),
+        (
+            foreground: (
+                text: map-get($pxb-black, 50),
+                secondary-text: map-get($pxb-black, 200),
+                hint-text: map-get($pxb-gray, 300),
+                base: map-get($pxb-white, 50),
+                divider: rgba(map-get($pxb-black, 200), 0.36),
+                dividers: rgba(map-get($pxb-black, 200), 0.36),
+                disabled: rgba(map-get($pxb-black, 300), 0.36),
+                disabled-button: rgba(white, 0.3),
+                disabled-text: rgba(map-get($pxb-black, 300), 0.36),
+                elevation: map-get($pxb-darkBlack, 900),
+                icon: map-get($pxb-black, 50),
+                icons: map-get($pxb-black, 50),
+                slider-min: map-get($pxb-black, 50),
+                slider-off: rgba(white, 0.3),
+                slider-off-active: rgba(white, 0.3),
+            ),
+            background: (
+                status-bar: map-get($pxb-darkBlack, 900),
+                app-bar: map-get($pxb-darkBlack, 100),
+                background: map-get($pxb-darkBlack, 100),
+                hover: rgba(white, 0.04),
+                card: map-get($pxb-black, 900),
+                dialog: map-get($pxb-black, 900),
+                disabled-button: rgba(white, 0.12),
+                raised-button: map-get($pxb-black, 500),
+                focused-button: $light-focused,
+                selected-button: map_get($mat-grey, 900),
+                selected-disabled-button: map_get($mat-grey, 800),
+                disabled-button-toggle: black,
+                unselected-chip: map_get($mat-grey, 700),
+                disabled-list-option: black,
+            ),
+        )
+    );
+}
+$pxb-blue-dark-primary: mat-palette($pxb-blue);
+$pxb-blue-dark-accent: mat-palette($pxb-lightBlue, 200);
+$pxb-blue-dark-warn: mat-palette($pxb-red, 200);
+$pxb-blue-dark-theme: pxb-dark-theme($pxb-blue-dark-primary, $pxb-blue-dark-accent, $pxb-blue-dark-warn);
+.pxb-blue-dark {
+    @include angular-material-theme($pxb-blue-dark-theme);
+    @include reasonable-margins();
+    @include bodyfont();
+    @include typography();
+    @include common();
+    @include pxb-components-theme($pxb-blue-dark-theme);
+    @include darktheme($pxb-blue-dark-theme);
+}

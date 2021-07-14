@@ -1,0 +1,363 @@
+// Import library functions for theme creation.
+@import '~@angular/material/theming';
+@import '~@pxblue/colors/palette';
+@import 'utility';
+@import './mixins/input-field';
+@import './mixins/chip';
+@import './mixins/button';
+@import './mixins/tab';
+@import './mixins/stepper';
+@import './mixins/slide-toggle';
+
+@mixin bluetheme($theme) {
+    $primary: map-get($theme, primary);
+    $accent: map-get($theme, accent);
+    $warn: $pxb-red;
+    $foreground: map-get($theme, foreground);
+    $background: map-get($theme, background);
+
+    /* input fields */
+    $inputPrimary: (
+        icon: map-get($foreground, hint-text),
+        placeholder: map-get($pxb-black, 100),
+        hint: map-get($foreground, secondary-text),
+        filledBackgroundColor: map-get($pxb-white, 200),
+        label: (
+            withoutValue: map-get($foreground, hint-text),
+            withValue: map-get($foreground, text),
+            onFocus: map-get($primary, 500),
+        ),
+        underline: (
+            default: map-get($foreground, divider),
+            onHover: map-get($foreground, text),
+            onFocus: map-get($primary, 500),
+        ),
+    );
+    $inputWarn: (
+        icon: map-get($foreground, hint-text),
+        placeholder: map-get($pxb-black, 100),
+        hint: map-get($warn, 500),
+        filledBackgroundColor: map-get($pxb-white, 200),
+        label: (
+            withoutValue: map-get($warn, 500),
+            withValue: map-get($warn, 500),
+            onFocus: map-get($warn, 500),
+        ),
+        underline: (
+            default: map-get($warn, 500),
+            onHover: map-get($warn, 900),
+            onFocus: map-get($warn, 500),
+        ),
+    );
+    $inputDisabled: (
+        text: map-get($foreground, disabled),
+        filledBackgroundColor: map-get($pxb-white, 100),
+    );
+    @include pxb-mat-form-field($inputPrimary, $inputWarn, $inputDisabled);
+    /* Mat Disabled Select Underline Color */
+    .mat-form-field.mat-form-field-disabled.mat-form-field-appearance-legacy,
+    .mat-form-field.mat-form-field-disabled,
+    .mat-form-field.mat-form-field-disabled.mat-form-field-appearance-standard {
+        .mat-form-field-underline {
+            background-color: map-get($foreground, divider);
+        }
+    }
+    .mat-form-field.mat-form-field-disabled.mat-form-field-appearance-fill .mat-form-field-underline::before {
+        background-color: map-get($foreground, divider);
+    }
+    .mat-form-field-appearance-outline.mat-form-field-disabled .mat-form-field-outline {
+        color: map-get($foreground, divider);
+    }
+
+    /* Chips */
+    $chipText: map-get($pxb-white, 50);
+    $chipPrimary: (
+        text: $chipText,
+        backgroundPalette: $pxb-blue,
+    );
+    $chipAccent: (
+        text: $chipText,
+        backgroundPalette: $pxb-lightBlue,
+    );
+    $chipWarn: (
+        text: $chipText,
+        backgroundPalette: $pxb-red,
+    );
+    $chipDefault: (
+        text: map-get($foreground, text),
+        backgroundPalette: $pxb-white,
+        remove: map-get($pxb-gray, 500),
+        removeHover: map-get($pxb-gray, 400),
+    );
+    @include pxb-mat-chip($chipPrimary, $chipAccent, $chipWarn, $chipDefault);
+    .mat-chip:not([color]).mat-chip-disabled .mat-chip-remove {
+        color: map-get($chipDefault, remove);
+    }
+    .mat-chip.mat-standard-chip::after {
+        background-color: white;
+    }
+
+    /* toolbar*/
+    .mat-toolbar {
+        color: map-get($foreground, text);
+        background-color: map-get($pxb-white, 50);
+        &.mat-primary {
+            background-color: map-get($primary, 500);
+            .mat-icon-button:not([color]) {
+                color: map-get($pxb-white, 50);
+            }
+        }
+        &.mat-accent {
+            background-color: map-get($primary, 700);
+            .mat-icon-button:not([color]) {
+                color: map-get($pxb-white, 50);
+            }
+        }
+        &.mat-warn .mat-icon-button:not([color]) {
+            color: map-get($pxb-white, 50);
+        }
+    }
+
+    /* Buttons*/
+    $buttonPrimary: (
+        icon: (
+            text: map-get($primary, 500),
+        ),
+        outline: (
+            text: map-get($primary, 500),
+            background: transparent,
+            backgroundHover: rgba(0, 123, 193, 0.05),
+            border: map-get($primary, 500),
+        ),
+        fill: (
+            text: map-get($pxb-white, 50),
+            background: map-get($primary, 500),
+            backgroundHover: map-get($primary, 300),
+            disabled: (
+                text: map-get($primary, 200),
+                background: map-get($primary, 50),
+            ),
+        ),
+    );
+    $buttonAccent: (
+        icon: (
+            text: map-get($accent, 500),
+        ),
+        outline: (
+            text: map-get($accent, 500),
+            background: transparent,
+            backgroundHover: rgba(map-get($accent, 500), 0.05),
+            border: map-get($accent, 500),
+        ),
+        fill: (
+            text: map-get($pxb-white, 50),
+            background: map-get($accent, 500),
+            backgroundHover: map-get($accent, 300),
+            disabled: (
+                text: map-get($accent, 200),
+                background: map-get($accent, 50),
+            ),
+        ),
+    );
+    $buttonWarn: (
+        icon: (
+            text: map-get($warn, 500),
+        ),
+        outline: (
+            text: map-get($warn, 500),
+            background: transparent,
+            backgroundHover: rgba(map-get($warn, 500), 0.05),
+            border: map-get($warn, 500),
+        ),
+        fill: (
+            text: map-get($pxb-white, 50),
+            background: map-get($warn, 500),
+            backgroundHover: map-get($warn, 300),
+            disabled: (
+                text: map-get($warn, 200),
+                background: map-get($warn, 50),
+            ),
+        ),
+    );
+    $buttonDefault: (
+        icon: (
+            text: map-get($pxb-gray, 500),
+        ),
+        outline: (
+            text: map-get($pxb-black, 500),
+            background: transparent,
+            backgroundHover: rgba(66, 78, 84, 0.05),
+            border: rgba(66, 78, 84, 0.3),
+        ),
+        fill: (
+            text: map-get($pxb-black, 500),
+            background: map-get($pxb-white, 50),
+            backgroundHover: rgba(66, 78, 84, 0.05),
+            disabled: (
+                text: map-get($foreground, disabled),
+                background: map-get($background, disabled-button),
+            ),
+        ),
+        toggle: (
+            border: map-get($pxb-gray, 100),
+            default: (
+                text: map-get($pxb-gray, 500),
+                background: map-get($pxb-white, 50),
+                backgroundHover: rgba(66, 78, 84, 0.05),
+            ),
+            active: (
+                text: map-get($primary, 500),
+                background: map-get($primary, 50),
+                backgroundHover: map-get($primary, 100),
+            ),
+        ),
+    );
+    @include pxb-mat-buttons($buttonPrimary, $buttonAccent, $buttonWarn, $buttonDefault);
+    .mat-stroked-button,
+    .mat-raised-button {
+        &.mat-button-disabled {
+            color: map-get($foreground, disabled);
+            border: solid 1px map-get($foreground, divider);
+        }
+    }
+    .mat-flat-button:not([color]) {
+        background-color: map-get($pxb-white, 500);
+        &.mat-button-disabled {
+            color: map-get($foreground, disabled);
+            background-color: rgba(114, 126, 132, 0.12);
+        }
+    }
+
+    /* Tabs */
+    $tabText: map-get($primary, 500);
+    $tabBackground: map-get($pxb-white, 50);
+    $tabActiveText: map-get($primary, 500);
+    $tabActiveBackground: map-get($pxb-white, 50);
+    $tabUnderline: map-get($primary, 500);
+    @include pxb-mat-tab($tabText, $tabBackground, $tabActiveText, $tabActiveBackground, $tabUnderline);
+
+    /* Stepper */
+    $stepperBackground: map-get($background, dialog);
+    $stepperIcon: (
+        defaultColor: map-get($pxb-black, 500),
+        defaultBg: map-get($pxb-white, 500),
+        activeColor: map-get($pxb-white, 50),
+        activeBg: map-get($primary, 500),
+    );
+    $stepperLabel: (
+        defaultColor: map-get($pxb-black, 500),
+        activeColor: map-get($primary, 500),
+    );
+    @include pxb-mat-stepper($stepperBackground, $stepperIcon, $stepperLabel);
+
+    /* Slide Toggle */
+    $slideTogglePrimary: (
+        thumb: map-get($primary, 500),
+        bar: rgba(map-get($primary, 500), 0.38),
+    );
+    $slideToggleAccent: (
+        thumb: map-get($accent, 500),
+        bar: rgba(map-get($accent, 500), 0.5),
+    );
+    $slideToggleWarn: (
+        thumb: map-get($warn, 500),
+        bar: rgba(map-get($warn, 500), 0.38),
+    );
+    $inactiveThumb: map-get($pxb-white, 50);
+    @include pxb-mat-slide-toggle($slideTogglePrimary, $slideToggleAccent, $slideToggleWarn, $inactiveThumb);
+    .mat-slide-toggle:not([color]).mat-checked .mat-ripple-element {
+        background-color: rgba(map-get($pxb-black, 500), 0.36);
+    }
+
+    /* date picker */
+    .mat-calendar-body-today:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+        border-color: map-get($primary, 500);
+    }
+    .mat-form-field-appearance-legacy .mat-form-field-prefix .mat-datepicker-toggle-default-icon,
+    .mat-form-field-appearance-legacy .mat-form-field-suffix .mat-datepicker-toggle-default-icon,
+    .mat-input-element.mat-form-field-autofill-control.mat-datepicker-input {
+        color: map-get($foreground, text);
+    }
+
+    /* Snackbar button */
+    .mat-snack-bar-container {
+        color: map-get($pxb-black, 50);
+        .mat-simple-snackbar-action .mat-button {
+            color: map-get($primary, 200);
+            &:hover {
+                background-color: rgba(map-get($accent, 500), 0.2);
+            }
+        }
+    }
+
+    /* Radio Button */
+    .mat-checkbox-disabled:not(.mat-checkbox-checked) .mat-checkbox-frame {
+        border-color: map-get($foreground, disabled);
+    }
+    .mat-checkbox-disabled .mat-checkbox-label {
+        color: map-get($foreground, disabled);
+    }
+
+    /* Slider */
+    .mat-slider {
+        .mat-slider-thumb {
+            background-color: map-get($primary, 500);
+        }
+        .mat-slider-track-fill {
+            background-color: map-get($primary, 300);
+        }
+        .mat-slider-ticks {
+            background-image: repeating-linear-gradient(
+                to right,
+                map-get($primary, 200),
+                map-get($primary, 200),
+                2px,
+                transparent 0,
+                transparent
+            );
+        }
+        &.mat-slider-disabled {
+            .mat-slider-thumb {
+                background-color: map-get($foreground, disabled);
+            }
+        }
+    }
+    .mat-slider-horizontal .mat-slider-track-background,
+    .mat-slider:hover .mat-slider-track-background {
+        background-color: rgba(map-get($pxb-black, 300), 0.36);
+    }
+
+    /* PXB Drawer */
+    .pxb-drawer {
+        background-color: map-get($pxb-white, 50);
+        .pxb-drawer-nested-nav-item .mat-expansion-panel {
+            background-color: map-get($pxb-white, 200);
+        }
+        .pxb-drawer-nav-item-active-highlight {
+            opacity: 0.05;
+        }
+
+        .pxb-drawer-nav-item-active, /*NavRail item*/
+        .pxb-drawer-nav-item-active .pxb-info-list-item .mat-list-item-content, /*Normal NavItem*/
+        .pxb-drawer-nav-item-active .pxb-info-list-item .pxb-info-list-item-icon-wrapper {
+            color: map-get($primary, 500);
+        }
+        .pxb-info-list-item .mat-list-item-content .mat-list-icon {
+            color: map-get($foreground, text);
+        }
+    }
+
+    /*  Drawer Content */
+    .mat-drawer-content {
+        background-color: map-get($pxb-white, 200);
+    }
+
+    /* Disabled  */
+    .mat-menu-item[disabled] .mat-icon-no-color {
+        color: map-get($foreground, disabled);
+    }
+    .mat-list-item-disabled {
+        background-color: unset;
+        opacity: 0.5;
+    }
+}

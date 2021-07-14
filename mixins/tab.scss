@@ -1,0 +1,34 @@
+@mixin pxb-mat-tab($text, $background, $activeText, $activeBackground, $underline) {
+    .mat-tab-group {
+        .mat-tab-label {
+            color: $text;
+            font-weight: 400;
+            background-color: $background;
+
+            &:not(.mat-tab-disabled) {
+                opacity: 1;
+            }
+        }
+
+        .mat-tab-label-active {
+            font-weight: 600;
+            color: $activeText;
+            background-color: $activeBackground;
+        }
+    }
+    .mat-tab-group.mat-primary,
+    .mat-tab-nav-bar.mat-primary {
+        .mat-ink-bar {
+            background-color: $underline;
+        }
+    }
+    .mat-tab-header-pagination-chevron {
+        border-color: $text;
+    }
+    .mat-tab-header-pagination-disabled .mat-tab-header-pagination-chevron {
+        border-color: rgba($text, 0.28);
+    }
+    .mat-tab-header-pagination {
+        background-color: $background;
+    }
+}

@@ -1,0 +1,156 @@
+@import '../utility';
+
+@mixin pxb-mat-form-field($primaryPalette, $warnPalette, $disablePalette) {
+    .mat-form-field {
+        &.mat-primary {
+            @include colored-input-styles($primaryPalette);
+        }
+
+        &.mat-form-field-invalid {
+            @include colored-input-styles($warnPalette);
+        }
+
+        /* Disabled */
+        &.mat-form-field-disabled {
+            .mat-hint,
+            .mat-form-field-label,
+            .mat-form-field-underline,
+            .mat-form-field-outline-thick,
+            .mat-form-field-suffix,
+            input::-webkit-input-placeholder {
+                color: map-get($disablePalette, text);
+            }
+
+            &.mat-form-field-appearance-legacy,
+            &.mat-form-field-appearance-standard {
+                .mat-form-field-underline {
+                    background-image: none;
+                    background-color: map-get($disablePalette, text);
+                }
+            }
+
+            &.mat-form-field-appearance-fill {
+                .mat-form-field-underline::before {
+                    background-color: map-get($disablePalette, text);
+                }
+                .mat-form-field-flex {
+                    background-color: map-get($disablePalette, filledBackgroundColor);
+                }
+            }
+        }
+    }
+}
+
+@mixin colored-input-styles($palette) {
+    &:not(.mat-form-field-disabled) {
+        /* Underline */
+        &.mat-form-field-appearance-legacy,
+        &.mat-form-field-appearance-standard,
+        &.mat-form-field-appearance-fill {
+            .mat-form-field-underline,
+            .mat-form-field-underline::before {
+                background-color: map-deep-get($palette, underline, default);
+            }
+
+            .mat-form-field-flex:hover + .mat-form-field-underline {
+                background-color: map-deep-get($palette, underline, onHover);
+            }
+
+            .mat-form-field-flex + .mat-form-field-underline .mat-form-field-ripple {
+                height: 1px;
+            }
+
+            .mat-form-field-flex:focus-within + .mat-form-field-underline .mat-form-field-ripple {
+                height: 2px;
+            }
+        }
+
+        /* Label */
+        .mat-form-field-label {
+            color: map-deep-get($palette, label, withoutValue);
+        }
+
+        /* Filled Label */
+        &.mat-form-field-should-float .mat-form-field-label {
+            color: map-deep-get($palette, label, withValue);
+        }
+
+        /* Label Focus */
+        .mat-form-field-flex:focus-within {
+            .mat-form-field-label {
+                color: map-deep-get($palette, label, onFocus);
+            }
+        }
+
+        /* Icon */
+        .mat-form-field-suffix {
+            color: map-get($palette, icon);
+        }
+
+        /* Input Placeholders */
+        input::-webkit-input-placeholder {
+            color: map-get($palette, placeholder);
+        }
+
+        /* Hint */
+        .mat-hint {
+            color: map-get($palette, hint);
+        }
+
+        /* Standard / Legacy Variant */
+        &.mat-form-field-appearance-legacy,
+        &.mat-form-field-appearance-standard,
+        &.mat-form-field-appearance-fill {
+            .mat-form-field-flex + .mat-form-field-underline .mat-form-field-ripple {
+                background-color: map-deep-get($palette, underline, default);
+            }
+
+            .mat-form-field-flex:hover + .mat-form-field-underline .mat-form-field-ripple {
+                background-color: map-deep-get($palette, underline, onHover);
+            }
+
+            .mat-form-field-flex:focus-within + .mat-form-field-underline .mat-form-field-ripple {
+                background-color: map-deep-get($palette, underline, onFocus);
+            }
+        }
+
+        /* Fill Variant */
+        &.mat-form-field-appearance-fill {
+            .mat-form-field-flex {
+                background-color: map-get($palette, filledBackgroundColor);
+            }
+            .mat-form-field-outline-thick {
+                color: map-deep-get($palette, underline, default);
+            }
+            .mat-form-field-flex:hover .mat-form-field-outline-thick {
+                color: map-deep-get($palette, underline, onHover);
+            }
+            .mat-form-field-flex:focus-within .mat-form-field-outline-thick {
+                color: map-deep-get($palette, underline, onFocus);
+            }
+        }
+
+        /* Outline Variant */
+        &.mat-form-field-appearance-outline {
+            .mat-form-field-outline-thick {
+                .mat-form-field-outline-start,
+                .mat-form-field-outline-end,
+                .mat-form-field-outline-gap {
+                    border-width: 1px;
+                }
+                color: map-deep-get($palette, underline, default);
+            }
+            .mat-form-field-flex:hover .mat-form-field-outline-thick {
+                color: map-deep-get($palette, underline, onHover);
+            }
+            .mat-form-field-flex:focus-within .mat-form-field-outline-thick {
+                color: map-deep-get($palette, underline, onFocus);
+                .mat-form-field-outline-start,
+                .mat-form-field-outline-end,
+                .mat-form-field-outline-gap {
+                    border-width: 2px;
+                }
+            }
+        }
+    }
+}

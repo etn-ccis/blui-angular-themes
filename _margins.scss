@@ -1,0 +1,7 @@
+@mixin reasonable-margins($selector: '.mat-typography') {
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+    }
+}

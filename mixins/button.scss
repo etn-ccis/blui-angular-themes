@@ -1,0 +1,132 @@
+@import '../utility';
+
+@mixin pxb-mat-buttons($primaryPalette, $accentPalette, $warnPalette, $defaultPalette) {
+    .mat-icon-button {
+        @include icon-button-helper($primaryPalette, $accentPalette, $warnPalette, $defaultPalette);
+    }
+    .mat-button,
+    .mat-stroked-button {
+        @include default-button-helper($primaryPalette, $accentPalette, $warnPalette, $defaultPalette);
+    }
+    .mat-stroked-button {
+        @include stroked-button-helper($primaryPalette, $accentPalette, $warnPalette, $defaultPalette);
+    }
+    .mat-fab,
+    .mat-mini-fab,
+    .mat-raised-button,
+    .mat-flat-button {
+        @include filled-button-helper($primaryPalette, $accentPalette, $warnPalette, $defaultPalette);
+    }
+    .mat-button-toggle {
+        @include button-toggle-helper($defaultPalette);
+    }
+}
+
+@mixin icon-colors($palette) {
+    color: map-deep-get($palette, icon, text);
+}
+@mixin icon-button-helper($primaryPalette, $accentPalette, $warnPalette, $defaultPalette) {
+    &.mat-primary {
+        @include icon-colors($primaryPalette);
+    }
+    &.mat-accent {
+        @include icon-colors($accentPalette);
+    }
+    &.mat-warn {
+        @include icon-colors($warnPalette);
+    }
+    &:not([color]) {
+        @include icon-colors($defaultPalette);
+    }
+}
+
+@mixin default-colors($palette) {
+    color: map-deep-get($palette, outline, text);
+    background-color: map-deep-get($palette, outline, background);
+    &:hover:not(.mat-button-disabled) {
+        background-color: map-deep-get($palette, outline, backgroundHover);
+    }
+}
+@mixin default-button-helper($primaryPalette, $accentPalette, $warnPalette, $defaultPalette) {
+    &.mat-primary {
+        @include default-colors($primaryPalette);
+    }
+    &.mat-accent {
+        @include default-colors($accentPalette);
+    }
+    &.mat-warn {
+        @include default-colors($warnPalette);
+    }
+    &:not([color]) {
+        @include default-colors($defaultPalette);
+    }
+}
+
+@mixin stroked-colors($palette) {
+    &:not(.mat-button-disabled) {
+        color: map-deep-get($palette, outline, text);
+        border-color: map-deep-get($palette, outline, border);
+    }
+}
+@mixin stroked-button-helper($primaryPalette, $accentPalette, $warnPalette, $defaultPalette) {
+    &.mat-primary {
+        @include stroked-colors($primaryPalette);
+    }
+    &.mat-accent {
+        @include stroked-colors($accentPalette);
+    }
+    &.mat-warn {
+        @include stroked-colors($warnPalette);
+    }
+    &:not([color]) {
+        @include stroked-colors($defaultPalette);
+    }
+}
+
+@mixin raised-colors($palette) {
+    color: map-deep-get($palette, fill, text);
+    background-color: map-deep-get($palette, fill, background);
+    &:hover:not(.mat-button-disabled) {
+        background-color: map-deep-get($palette, fill, backgroundHover);
+    }
+    &.mat-button-disabled {
+        color: map-deep-get($palette, fill, disabled, text);
+        background-color: map-deep-get($palette, fill, disabled, background);
+        border: none;
+    }
+}
+@mixin filled-button-helper($primaryPalette, $accentPalette, $warnPalette, $defaultPalette) {
+    &.mat-primary {
+        @include raised-colors($primaryPalette);
+    }
+    &.mat-accent {
+        @include raised-colors($accentPalette);
+    }
+    &.mat-warn {
+        @include raised-colors($warnPalette);
+    }
+    &:not([color]) {
+        @include raised-colors($defaultPalette);
+    }
+}
+
+@mixin button-toggle-helper($palette) {
+    border-left: 0 !important;
+    border-right: 0 !important;
+    .mat-button-toggle-button {
+        color: map-deep-get($palette, toggle, default, text);
+        background-color: map-deep-get($palette, toggle, default, background);
+        border-color: map-deep-get($palette, toggle, border);
+        &:hover:not(.mat-button-disabled) {
+            background-color: map-deep-get($palette, toggle, default, backgroundHover);
+        }
+    }
+
+    &.mat-button-toggle-checked .mat-button-toggle-button {
+        color: map-deep-get($palette, toggle, active, text);
+        background-color: map-deep-get($palette, toggle, active, background);
+        &:hover:not(.mat-button-disabled) {
+            background-color: map-deep-get($palette, toggle, active, backgroundHover);
+        }
+    }
+}

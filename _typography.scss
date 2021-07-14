@@ -1,0 +1,34 @@
+@mixin typography() {
+    .mat-display-4,
+    .mat-display-3,
+    .mat-display-2 {
+        letter-spacing: 0;
+    }
+
+    .mat-display-4,
+    .mat-display-3,
+    .mat-display-2,
+    .mat-display-1,
+    .mat-headline,
+    .mat-title,
+    .mat-subheading-1,
+    .mat-subheading-2,
+    .mat-body-1,
+    .mat-body-2,
+    .mat-caption,
+    .mat-button {
+        margin-bottom: 0;
+    }
+
+    .mat-body-2 {
+        font-weight: 600;
+    }
+
+    .mat-overline {
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.125rem;
+        line-height: 2.66;
+        text-transform: uppercase;
+    }
+}

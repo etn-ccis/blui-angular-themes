@@ -1,0 +1,54 @@
+{
+    "name": "@pxblue/angular-themes",
+    "author": "PX Blue <pxblue@eaton.com>",
+    "license": "BSD-3-Clause",
+    "version": "6.1.1",
+    "description": "Angular themes for PX Blue applications",
+    "scripts": {
+        "initialize": "bash scripts/initializeSubmodule.sh",
+        "install:dependencies": "cd demos/showcase && yarn && cd ../..",
+        "start": "yarn initialize && yarn install:dependencies && yarn link:themes && cd demos/showcase && yarn start",
+        "link:themes": "bash ./scripts/linkThemes.sh",
+        "test": "bash ./scripts/buildTest.sh",
+        "prettier": "prettier \"**/**.{css,scss,html,md}\" --write",
+        "publish:package": "set npm_config_yes=true && npx -p @pxblue/publish pxb-publish",
+        "precommit": "yarn initialize && yarn install:dependencies && yarn prettier && yarn test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/pxblue/themes.git"
+    },
+    "bugs": {
+        "url": "https://github.com/pxblue/themes/issues"
+    },
+    "homepage": "https://github.com/pxblue/themes/tree/master/angular",
+    "keywords": [
+        "PXBlue",
+        "themes",
+        "Eaton",
+        "Power",
+        "Xpert",
+        "Angular"
+    ],
+    "prettier": "@pxblue/prettier-config",
+    "files": [
+        "mixins",
+        "package.json",
+        "README.md",
+        "LICENSE",
+        "CHANGELOG.md",
+        "*.scss"
+    ],
+    "dependencies": {
+        "@pxblue/colors": "^3.0.0",
+        "@fontsource/open-sans": "^4.1.0"
+    },
+    "devDependencies": {
+        "@angular/material": ">=8.2.0",
+        "@pxblue/prettier-config": "^1.0.2",
+        "prettier": "^2.0.4"
+    },
+    "peerDependencies": {
+        "@angular/material": ">=8.2.0"
+    }
+}

@@ -1,0 +1,143 @@
+// Import library functions for theme creation.
+@import '~@angular/material/theming';
+@import '~@pxblue/colors/palette.scss';
+
+@mixin pxb-components-theme($theme) {
+    @include pxb-empty-state-theme($theme);
+    @include pxb-score-card-theme($theme);
+    @include pxb-channel-value-theme($theme);
+    @include pxb-hero-theme($theme);
+    @include pxb-info-list-item-theme($theme);
+    @include pxb-list-item-tag($theme);
+    @include pxb-drawer($theme);
+    @include pxb-user-menu($theme);
+    @include pxb-mobile-stepper($theme);
+}
+
+@mixin pxb-score-card-theme($theme) {
+    $primary: map-get($theme, primary);
+    $foreground: map-get($theme, foreground);
+    $background: map-get($theme, background);
+    .pxb-score-card {
+        .pxb-score-card-header {
+            background-color: mat-color($primary);
+            color: map-get($pxb-white, 50);
+            .mat-card-subtitle {
+                color: inherit;
+            }
+        }
+        .pxb-hero-primary-wrapper {
+            background-color: mat-color($background, card);
+        }
+    }
+}
+
+@mixin pxb-empty-state-theme($theme) {
+    $primary: map-get($theme, primary);
+    $foreground: map-get($theme, foreground);
+    .pxb-empty-state {
+        color: map-get($foreground, text);
+        .pxb-empty-state-empty-icon-wrapper {
+            color: map-get($foreground, secondary-text);
+        }
+        .pxb-empty-state-description {
+            color: map-get($foreground, text);
+        }
+    }
+}
+
+@mixin pxb-channel-value-theme($theme) {
+    $foreground: map-get($theme, foreground);
+    .pxb-channel-value {
+        color: map-get($foreground, text);
+    }
+}
+
+@mixin pxb-hero-theme($theme) {
+    $foreground: map-get($theme, foreground);
+    .pxb-hero {
+        color: map-get($foreground, text);
+        .pxb-hero-primary-wrapper {
+            color: map-get($foreground, secondary-text);
+        }
+    }
+}
+
+@mixin pxb-info-list-item-theme($theme) {
+    $foreground: map-get($theme, foreground);
+    .pxb-info-list-item {
+        color: map-get($foreground, text);
+        &.mat-list-item,
+        .mat-list-item-content {
+            color: inherit;
+            & .mat-list-icon {
+                color: map-get($foreground, secondary-text);
+            }
+        }
+    }
+}
+
+@mixin pxb-list-item-tag($theme) {
+    $primary: map-get($theme, primary);
+    $foreground: map-get($theme, foreground);
+    .pxb-list-item-tag {
+        background-color: mat-color($primary);
+        color: map-get($pxb-white, 50);
+    }
+}
+
+@mixin pxb-mobile-stepper($theme) {
+    $primary: map-get($theme, primary);
+    $background: map-get($theme, background);
+    .pxb-mobile-stepper {
+        .pxb-mobile-stepper-dot {
+            background-color: map-get($background, disabled-button-toggle);
+        }
+        .pxb-mobile-stepper-dot-active {
+            background-color: map-get($primary, 500);
+        }
+    }
+}
+
+@mixin pxb-drawer($theme) {
+    $primary: map-get($theme, primary);
+    $foreground: map-get($theme, foreground);
+    $background: map-get($theme, background);
+    .pxb-drawer {
+        .pxb-drawer-nav-group .mat-list-base {
+            color: map-get($foreground, text);
+        }
+        .pxb-drawer-header-content.mat-toolbar {
+            background-color: map-get($primary, 500);
+        }
+        .pxb-drawer-nav-item-active-highlight {
+            background-color: map-get($primary, 500);
+        }
+        .pxb-drawer-nav-item-rail {
+            &:hover,
+            &:focus {
+                background: mat-color($background, 'hover');
+            }
+        }
+    }
+}
+
+@mixin pxb-user-menu($theme) {
+    $primary: map-get($theme, primary);
+    .pxb-user-menu-avatar {
+        background-color: map-get($primary, 50);
+        color: map-get($primary, 500);
+    }
+
+    .pxb-user-menu-overlay .mat-toolbar {
+        color: inherit;
+        background-color: inherit;
+    }
+    .pxb-user-menu-overlay,
+    .pxb-user-menu-bottomsheet {
+        .pxb-drawer-header-content.mat-toolbar-single-row.mat-toolbar {
+            background-color: unset;
+            color: unset;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+@import '../utility';
+
+@mixin pxb-mat-chip($primary, $accent, $warn, $default) {
+    .mat-chip {
+        &.mat-primary {
+            @include chips-helper($primary);
+        }
+        &.mat-accent {
+            @include chips-helper($accent);
+        }
+        &.mat-standard-chip.mat-chip-selected.mat-warn {
+            @include chips-helper($warn);
+        }
+        &:not([color]) {
+            @include chips-helper($default);
+            &:not(.mat-chip-disabled) {
+                .mat-chip-remove {
+                    color: map-get($default, remove);
+                    &:hover {
+                        color: map-get($default, removeHover);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin chips-helper($palette) {
+    color: map-get($palette, text);
+    background-color: map-deep-get($palette, backgroundPalette, 500);
+    &:hover:not(.mat-chip-disabled) {
+        background-color: map-deep-get($palette, backgroundPalette, 400);
+    }
+    .mat-chip-remove {
+        opacity: 1;
+        color: map-deep-get($palette, backgroundPalette, 100);
+    }
+    &:not(.mat-chip-disabled) .mat-chip-remove:hover {
+        color: map-get($palette, text);
+        opacity: 1;
+    }
+}
