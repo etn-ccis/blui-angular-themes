@@ -16,12 +16,12 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/pxblue/themes.git"
+        "url": "git+https://github.com/pxblue/angular-themes.git"
     },
     "bugs": {
-        "url": "https://github.com/pxblue/themes/issues"
+        "url": "https://github.com/pxblue/angular-themes/issues"
     },
-    "homepage": "https://github.com/pxblue/themes/tree/master/angular",
+    "homepage": "https://github.com/pxblue/angular-themes/tree/master",
     "keywords": [
         "PXBlue",
         "themes",
