@@ -1,4 +1,4 @@
-[submodule "angular-themes/demos/showcase"]
-	path = angular-themes/demos/showcase
+[submodule "angular/demos/showcase"]
+	path = angular/demos/showcase
 	url = https://github.com/pxblue/angular-showcase-demo
 	branch = dev
