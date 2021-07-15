@@ -12,7 +12,8 @@
         "test": "bash ./scripts/buildTest.sh",
         "prettier": "prettier \"**/**.{css,scss,html,md}\" --write",
         "publish:package": "set npm_config_yes=true && npx -p @pxblue/publish pxb-publish",
-        "precommit": "yarn initialize && yarn install:dependencies && yarn prettier && yarn test"
+        "precommit": "yarn initialize && yarn install:dependencies && yarn prettier && yarn test",
+        "update:submodule": "git submodule update --remote"
     },
     "repository": {
         "type": "git",
