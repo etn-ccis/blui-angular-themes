@@ -1,0 +1,39 @@
+version: 2
+jobs:
+    build:
+        docker:
+            -   image: circleci/node:12.9.1-browsers
+        steps:
+            - checkout
+            - run:
+                  name: Test
+                  command: |
+                      yarn test
+
+    publish:
+        docker:
+            -   image: circleci/node:12.9.1-browsers
+        steps:
+            -   run:
+                    name: Authenticate with registry
+                    command: |
+                        echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
+                        echo "//registry.yarnpkg.com/:_authToken=$NPM_TOKEN" >> ~/.npmrc            
+            -   run:
+                    name: Publish @pxblue/angular-themes
+                    command:  |
+                        yarn publish:package -b $CIRCLE_BRANCH
+
+workflows:
+    version: 2
+    themes:
+        jobs:
+            - build
+            - publish:
+                  requires:
+                      - build
+                  filters:
+                      branches:
+                          only:
+                              - master
+                              - dev
