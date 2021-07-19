@@ -1,6 +1,6 @@
 # PX Blue themes for Angular applications
 [![](https://img.shields.io/circleci/project/github/pxblue/angular-themes/master.svg?style=flat)](https://circleci.com/gh/pxblue/angular-themes/tree/master)
-![npm](https://img.shields.io/npm/v/@pxblue/angular-themes?label=%40pxblue%2Fangular-themes)
+[![](https://img.shields.io/npm/v/@pxblue/angular-themes.svg?label=@pxblue/angular-themes&style=flat)](https://www.npmjs.com/package/@pxblue/angular-themes)
 
 This package provides theming support for Eaton applications using the PX Blue design system. It includes resources for developers using Angular w/ [Angular Material](https://www.npmjs.com/package/@angular/material). This package comes with two theme options: a Blue theme (standard) and a Dark theme.
 
