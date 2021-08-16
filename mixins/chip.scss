@@ -17,7 +17,8 @@
     }
 }
 @mixin pxb-mat-chip-outline($primary, $accent, $warn, $default) {
-    .mat-chip[variant='outline'], .mat-chip[variant='stroked'] {
+    .mat-chip[variant='outline'],
+    .mat-chip[variant='stroked'] {
         &.mat-primary {
             @include chips-outline($primary);
         }
@@ -65,12 +66,11 @@
     }
 }
 
-
 @mixin chips-outline($palette) {
     border: solid 1px;
     &:not(.mat-chip-disabled) {
         color: map-get($palette, color);
-        border-color:  map-get($palette, color);
+        border-color: map-get($palette, color);
         background-color: map-get($palette, background);
         .mat-chip-remove {
             opacity: 1;

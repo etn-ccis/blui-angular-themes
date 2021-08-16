@@ -23,7 +23,7 @@
         removeIconColor: map-get($primary, 100),
         removeIconHoverColor: map-get($pxb-white, 50),
         disabledColor: map-get($pxb-black, 400),
-        disabledBackground: rgba(map-get($pxb-black, 200), .24),
+        disabledBackground: rgba(map-get($pxb-black, 200), 0.24),
         removeIconDisabledColor: map-get($pxb-black, 400),
         avatarColor: map-get($primary, 500),
         avatarBackground: map-get($pxb-blue, 50),
@@ -37,7 +37,7 @@
         removeIconColor: map-get($accent, 100),
         removeIconHoverColor: map-get($pxb-white, 50),
         disabledColor: map-get($pxb-black, 400),
-        disabledBackground: rgba(map-get($pxb-black, 200), .24),
+        disabledBackground: rgba(map-get($pxb-black, 200), 0.24),
         removeIconDisabledColor: map-get($pxb-black, 400),
         avatarColor: map-get($primary, 500),
         avatarBackground: map-get($pxb-blue, 50),
@@ -51,7 +51,7 @@
         removeIconColor: map-get($warn, 100),
         removeIconHoverColor: map-get($pxb-white, 50),
         disabledColor: map-get($pxb-black, 400),
-        disabledBackground: rgba(map-get($pxb-black, 200), .24),
+        disabledBackground: rgba(map-get($pxb-black, 200), 0.24),
         removeIconDisabledColor: map-get($pxb-black, 400),
         avatarColor: map-get($warn, 500),
         avatarBackground: map-get($warn, 50),
@@ -65,7 +65,7 @@
         removeIconColor: map-get($pxb-gray, 200),
         removeIconHoverColor: map-get($pxb-gray, 50),
         disabledColor: map-get($pxb-black, 400),
-        disabledBackground: rgba(map-get($pxb-black, 200), .24),
+        disabledBackground: rgba(map-get($pxb-black, 200), 0.24),
         removeIconDisabledColor: map-get($pxb-black, 400),
         avatarColor: map-get($pxb-white, 50),
         avatarBackground: map-get($pxb-black, 700),
@@ -73,7 +73,7 @@
     );
     @include pxb-mat-chip-default($chipPrimary, $chipAccent, $chipWarn, $chipDefault);
     .mat-chip.mat-chip-disabled .mat-chip-avatar {
-        opacity: .5;
+        opacity: 0.5;
     }
 
     /* input fields */

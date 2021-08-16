@@ -120,19 +120,17 @@
         hoverBackground: map-get($pxb-gray, 100),
         removeIconColor: map-get($pxb-gray, 500),
         removeIconHoverColor: map-get($pxb-gray, 900),
-        disabledColor: rgba(map-get($pxb-gray, 900), .3),
+        disabledColor: rgba(map-get($pxb-gray, 900), 0.3),
         disabledBackground: map-get($pxb-white, 500),
-        removeIconDisabledColor: rgba(map-get($pxb-gray, 900), .3),
+        removeIconDisabledColor: rgba(map-get($pxb-gray, 900), 0.3),
         avatarColor: map-get($pxb-white, 50),
         avatarBackground: map-get($primary, 500),
-        avatarDisabledColor: map-get($pxb-white, 50)
+        avatarDisabledColor: map-get($pxb-white, 50),
     );
     @include pxb-mat-chip-default($chipPrimary, $chipAccent, $chipWarn, $chipDefault);
     .mat-chip.mat-chip-disabled .mat-chip-avatar {
-        opacity: .5;
-
-
-    }/* Chips-Outline */
+        opacity: 0.5;
+    } /* Chips-Outline */
     $chipOutlinePrimary: (
         color: map-get($primary, 500),
         hoverColor: map-get($primary, 500),
@@ -142,7 +140,7 @@
         removeIconHoverColor: map-get($primary, 500),
         avatarColor: map-get($primary, 500),
         avatarBackground: map-get($primary, 100),
-        avatarDisabledColor:  map-get($primary, 500),
+        avatarDisabledColor: map-get($primary, 500),
     );
     $chipOutlineAccent: (
         color: map-get($accent, 500),
@@ -153,7 +151,7 @@
         removeIconHoverColor: map-get($accent, 500),
         avatarColor: map-get($primary, 500),
         avatarBackground: map-get($primary, 100),
-        avatarDisabledColor:  map-get($primary, 500),
+        avatarDisabledColor: map-get($primary, 500),
     );
     $chipOutlineWarn: (
         color: map-get($warn, 500),
@@ -164,7 +162,7 @@
         removeIconHoverColor: map-get($warn, 500),
         avatarColor: map-get($warn, 500),
         avatarBackground: map-get($warn, 100),
-        avatarDisabledColor:  map-get($warn, 500),
+        avatarDisabledColor: map-get($warn, 500),
     );
     $chipOutlineDefault: (
         color: map-get($foreground, text),
@@ -178,15 +176,16 @@
         avatarDisabledColor: map-get($pxb-white, 50),
     );
     @include pxb-mat-chip-outline($chipOutlinePrimary, $chipOutlineAccent, $chipOutlineWarn, $chipOutlineDefault);
-    .mat-chip[variant='stroked'], .mat-chip[variant='outline'] {
+    .mat-chip[variant='stroked'],
+    .mat-chip[variant='outline'] {
         &:not([color]) {
-            border-color: rgba(66, 78, 84, 0.12)!important;
+            border-color: rgba(66, 78, 84, 0.12) !important;
         }
         &.mat-chip-disabled {
             color: rgba(66, 78, 84, 0.3) !important;
-            border-color: rgba(66, 78, 84, 0.12)!important;
+            border-color: rgba(66, 78, 84, 0.12) !important;
             .mat-chip-remove {
-                color: rgba(66, 78, 84, 0.3) !important
+                color: rgba(66, 78, 84, 0.3) !important;
             }
         }
     }
