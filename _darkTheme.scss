@@ -14,26 +14,67 @@
     $background: map-get($theme, background);
 
     /* Chips */
-    $chipText: map-get($pxb-white, 50);
+    $coloredChipText: map-get($pxb-white, 50);
     $chipPrimary: (
-        text: $chipText,
-        backgroundPalette: $primary,
+        color: map-get($pxb-white, 50),
+        hoverColor: map-get($pxb-white, 50),
+        background: map-get($primary, 500),
+        hoverBackground: map-get($primary, 300),
+        removeIconColor: map-get($primary, 100),
+        removeIconHoverColor: map-get($pxb-white, 50),
+        disabledColor: map-get($pxb-black, 400),
+        disabledBackground: rgba(map-get($pxb-black, 200), .24),
+        removeIconDisabledColor: map-get($pxb-black, 400),
+        avatarColor: map-get($primary, 500),
+        avatarBackground: map-get($pxb-blue, 50),
+        avatarDisabledColor: map-get($primary, 500),
     );
     $chipAccent: (
-        text: $chipText,
-        backgroundPalette: $accent,
+        color: map-get($pxb-white, 50),
+        hoverColor: map-get($pxb-white, 50),
+        background: map-get($accent, 500),
+        hoverBackground: map-get($accent, 300),
+        removeIconColor: map-get($accent, 100),
+        removeIconHoverColor: map-get($pxb-white, 50),
+        disabledColor: map-get($pxb-black, 400),
+        disabledBackground: rgba(map-get($pxb-black, 200), .24),
+        removeIconDisabledColor: map-get($pxb-black, 400),
+        avatarColor: map-get($primary, 500),
+        avatarBackground: map-get($pxb-blue, 50),
+        avatarDisabledColor: map-get($primary, 500),
     );
     $chipWarn: (
-        text: $chipText,
-        backgroundPalette: $pxb-red,
+        color: map-get($pxb-white, 50),
+        hoverColor: map-get($pxb-white, 50),
+        background: map-get($warn, 500),
+        hoverBackground: map-get($warn, 300),
+        removeIconColor: map-get($warn, 100),
+        removeIconHoverColor: map-get($pxb-white, 50),
+        disabledColor: map-get($pxb-black, 400),
+        disabledBackground: rgba(map-get($pxb-black, 200), .24),
+        removeIconDisabledColor: map-get($pxb-black, 400),
+        avatarColor: map-get($warn, 500),
+        avatarBackground: map-get($warn, 50),
+        avatarDisabledColor: map-get($warn, 500),
     );
     $chipDefault: (
-        text: map-get($foreground, text),
-        backgroundPalette: $pxb-black,
-        remove: map-get($pxb-black, 200),
-        removeHover: map-get($pxb-black, 100),
+        color: map-get($pxb-black, 50),
+        hoverColor: map-get($pxb-black, 50),
+        background: map-get($pxb-black, 500),
+        hoverBackground: map-get($pxb-black, 400),
+        removeIconColor: map-get($pxb-gray, 200),
+        removeIconHoverColor: map-get($pxb-gray, 50),
+        disabledColor: map-get($pxb-black, 400),
+        disabledBackground: rgba(map-get($pxb-black, 200), .24),
+        removeIconDisabledColor: map-get($pxb-black, 400),
+        avatarColor: map-get($pxb-white, 50),
+        avatarBackground: map-get($pxb-black, 700),
+        avatarDisabledColor: map-get($pxb-black, 400),
     );
-    @include pxb-mat-chip($chipPrimary, $chipAccent, $chipWarn, $chipDefault);
+    @include pxb-mat-chip-default($chipPrimary, $chipAccent, $chipWarn, $chipDefault);
+    .mat-chip.mat-chip-disabled .mat-chip-avatar {
+        opacity: .5;
+    }
 
     /* input fields */
     $inputPrimary: (
