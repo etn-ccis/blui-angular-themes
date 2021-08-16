@@ -94,6 +94,7 @@
         background: transparent;
         .mat-chip-avatar:not(.mat-icon) {
             color: map-get($palette, avatarDisabledColor);
+            background-color: map-get($palette, avatarDisabledBackground);
         }
         .mat-chip-remove {
             color: map-get($palette, removeIconDisabledColor);

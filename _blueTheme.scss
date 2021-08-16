@@ -130,7 +130,9 @@
     @include pxb-mat-chip-default($chipPrimary, $chipAccent, $chipWarn, $chipDefault);
     .mat-chip.mat-chip-disabled .mat-chip-avatar {
         opacity: 0.5;
-    } /* Chips-Outline */
+    }
+
+    /* Chips-Outline */
     $chipOutlinePrimary: (
         color: map-get($primary, 500),
         hoverColor: map-get($primary, 500),
@@ -141,6 +143,7 @@
         avatarColor: map-get($primary, 500),
         avatarBackground: map-get($primary, 100),
         avatarDisabledColor: map-get($primary, 500),
+        avatarDisabledBackground: map-get($primary, 100),
     );
     $chipOutlineAccent: (
         color: map-get($accent, 500),
@@ -152,6 +155,7 @@
         avatarColor: map-get($primary, 500),
         avatarBackground: map-get($primary, 100),
         avatarDisabledColor: map-get($primary, 500),
+        avatarDisabledBackground: map-get($primary, 100),
     );
     $chipOutlineWarn: (
         color: map-get($warn, 500),
@@ -163,6 +167,7 @@
         avatarColor: map-get($warn, 500),
         avatarBackground: map-get($warn, 100),
         avatarDisabledColor: map-get($warn, 500),
+        avatarDisabledBackground: map-get($warn, 100),
     );
     $chipOutlineDefault: (
         color: map-get($foreground, text),
@@ -174,6 +179,7 @@
         avatarColor: map-get($pxb-white, 50),
         avatarBackground: map-get($pxb-gray, 500),
         avatarDisabledColor: map-get($pxb-white, 50),
+        avatarDisabledBackground: map-get($pxb-gray, 500),
     );
     @include pxb-mat-chip-outline($chipOutlinePrimary, $chipOutlineAccent, $chipOutlineWarn, $chipOutlineDefault);
     .mat-chip[variant='stroked'],
