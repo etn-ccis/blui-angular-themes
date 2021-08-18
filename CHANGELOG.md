@@ -6,6 +6,10 @@
 
 -   Added new `stroked` variant for `<mat-chip>` and adjusted default chip theme.
 
+### Changed
+
+-   Changed default `<mat-chip>` size to be 18x18 pixels.
+
 ## v6.1.1 (June 30, 2021)
 
 ### Fixed
