@@ -132,9 +132,9 @@
         }
         &.mat-chip-disabled {
             color: map-get($pxb-black, 400) !important;
-            border-color: rgba(161, 167, 170, 0.32) !important;
+            border-color: rgba(map-get($pxb-black, 200), 0.32) !important;
             .mat-chip-remove {
-                color: map-get($pxb-black, 400) !important;
+                color: rgba(map-get($pxb-black, 200), .24) !important;
             }
         }
     }
