@@ -173,7 +173,7 @@
         color: map-get($foreground, text),
         hoverColor: map-get($foreground, text),
         background: map-get($pxb-white, 50),
-        hoverBackground: map-get($pxb-white, 200),
+        hoverBackground: map-get($pxb-gray, 100),
         removeIconColor: map-get($pxb-gray, 500),
         removeIconHoverColor: map-get($pxb-black, 500),
         avatarColor: map-get($pxb-white, 50),
@@ -184,15 +184,15 @@
     @include pxb-mat-chip-outline($chipOutlinePrimary, $chipOutlineAccent, $chipOutlineWarn, $chipOutlineDefault);
     .mat-chip[variant='stroked'],
     .mat-chip[variant='outline'] {
-        &:not([color]) {
-            border-color: rgba(66, 78, 84, 0.12) !important;
-        }
         &.mat-chip-disabled {
-            color: rgba(66, 78, 84, 0.3) !important;
-            border-color: rgba(66, 78, 84, 0.12) !important;
+            color: rgba(66, 78, 84, 0.3);
+            border-color: rgba(66, 78, 84, 0.12);
             .mat-chip-remove {
-                color: rgba(66, 78, 84, 0.3) !important;
+                color: rgba(66, 78, 84, 0.3);
             }
+        }
+        &:not([color]):not(.mat-chip-disabled) {
+            border-color: rgba(66, 78, 84, 0.12);
         }
     }
     .mat-chip.mat-standard-chip::after {

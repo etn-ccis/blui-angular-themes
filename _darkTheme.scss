@@ -87,6 +87,7 @@
         avatarBackground: map-get($primary, 100),
         avatarDisabledColor: map-get($primary, 500),
         avatarDisabledBackground: map-get($primary, 100),
+        removeIconDisabledColor: rgba(map-get($pxb-black, 200), 0.24),
     );
     $chipOutlineAccent: (
         color: map-get($accent, 200),
@@ -99,6 +100,7 @@
         avatarBackground: map-get($primary, 100),
         avatarDisabledColor: map-get($primary, 500),
         avatarDisabledBackground: map-get($primary, 100),
+        removeIconDisabledColor: rgba(map-get($pxb-black, 200), 0.24),
     );
     $chipOutlineWarn: (
         color: map-get($warn, 200),
@@ -111,6 +113,7 @@
         avatarBackground: map-get($warn, 100),
         avatarDisabledColor: map-get($warn, 500),
         avatarDisabledBackground: map-get($warn, 100),
+        removeIconDisabledColor: rgba(map-get($pxb-black, 200), 0.24),
     );
     $chipOutlineDefault: (
         color: map-get($foreground, text),
@@ -123,19 +126,20 @@
         avatarBackground: map-get($pxb-black, 600),
         avatarDisabledColor: map-get($pxb-black, 50),
         avatarDisabledBackground: map-get($pxb-black, 600),
+        removeIconDisabledColor: rgba(map-get($pxb-black, 200), 0.24),
     );
     @include pxb-mat-chip-outline($chipOutlinePrimary, $chipOutlineAccent, $chipOutlineWarn, $chipOutlineDefault);
     .mat-chip[variant='stroked'],
     .mat-chip[variant='outline'] {
-        &:not([color]) {
-            border-color: rgba(161, 167, 170, 0.32) !important;
-        }
         &.mat-chip-disabled {
-            color: map-get($pxb-black, 400) !important;
-            border-color: rgba(map-get($pxb-black, 200), 0.32) !important;
+            color: rgba(map-get($pxb-black, 300), 0.36);
+            border-color: rgba(map-get($pxb-black, 200), 0.36);
             .mat-chip-remove {
-                color: rgba(map-get($pxb-black, 200), .24) !important;
+                color: rgba(map-get($pxb-black, 300), 0.36);
             }
+        }
+        &:not([color]):not(.mat-chip-disabled) {
+            border-color: rgba(map-get($pxb-black, 200), 0.36);
         }
     }
     .mat-chip.mat-standard-chip::after {

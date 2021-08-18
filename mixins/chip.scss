@@ -1,7 +1,7 @@
 @import '../utility';
 
 @mixin pxb-mat-chip-default($primary, $accent, $warn, $default) {
-    .mat-chip:not([varaint='outline']) {
+    .mat-chip:not([variant='outline']):not([variant='stroked']) {
         &.mat-primary {
             @include chips-filled($primary);
         }
@@ -91,6 +91,7 @@
     }
 
     &.mat-chip-disabled {
+        opacity: 1;
         background: transparent;
         .mat-chip-avatar:not(.mat-icon) {
             color: map-get($palette, avatarDisabledColor);
