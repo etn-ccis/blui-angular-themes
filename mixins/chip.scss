@@ -11,7 +11,7 @@
         &.mat-warn {
             @include chips-filled($warn);
         }
-        &:not([color]) {
+        &:not([color='primary']):not([color='accent']):not([color='warn']) {
             @include chips-filled($default);
         }
     }

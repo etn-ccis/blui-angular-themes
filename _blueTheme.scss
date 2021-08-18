@@ -191,7 +191,7 @@
                 color: rgba(66, 78, 84, 0.3);
             }
         }
-        &:not([color]):not(.mat-chip-disabled) {
+        &:not([color='primary']):not([color='accent']):not([color='warn']):not(.mat-chip-disabled) {
             border-color: rgba(66, 78, 84, 0.12);
         }
     }

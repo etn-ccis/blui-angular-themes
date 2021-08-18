@@ -138,7 +138,7 @@
                 color: rgba(map-get($pxb-black, 300), 0.36);
             }
         }
-        &:not([color]):not(.mat-chip-disabled) {
+        &:not([color='primary']):not([color='accent']):not([color='warn']):not(.mat-chip-disabled) {
             border-color: rgba(map-get($pxb-black, 200), 0.36);
         }
     }
