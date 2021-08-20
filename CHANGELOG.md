@@ -8,7 +8,7 @@
 
 ### Changed
 
--   Changed default `<mat-chip>` size to be 18x18 pixels.
+-   Default `<mat-chip>` size to be 18x18 pixels.
 
 ## v6.1.1 (June 30, 2021)
 
