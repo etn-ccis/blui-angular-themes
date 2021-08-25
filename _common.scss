@@ -3,4 +3,14 @@
     .mat-form-field {
         line-height: 1.24;
     }
+
+    .mat-chip .mat-chip-avatar.mat-icon {
+        height: 18px;
+        width: 18px;
+        font-size: 18px;
+        margin: 0 8px;
+    }
+    .mat-chip .mat-chip-avatar {
+        font-size: 0.625rem;
+    }
 }
