@@ -1,6 +1,6 @@
 # Changelog
 
-## v6.2.0 (August 24, 2021)
+## v6.2.0 (August 25, 2021)
 
 ### Added
 
@@ -8,7 +8,7 @@
 
 ### Changed
 
--   Default `<mat-chip>` size to be 18x18 pixels.
+-   Default `<mat-chip>` icon size to be 18x18 pixels.
 
 ## v6.1.1 (June 30, 2021)
 
