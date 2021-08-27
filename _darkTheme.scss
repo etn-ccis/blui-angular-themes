@@ -127,24 +127,18 @@
         avatarDisabledColor: map-get($pxb-black, 50),
         avatarDisabledBackground: map-get($pxb-black, 600),
         removeIconDisabledColor: rgba(map-get($pxb-black, 200), 0.24),
+        borderColor: rgba(map-get($pxb-black, 200), 0.36)
     );
-    @include pxb-mat-chip-outline($chipOutlinePrimary, $chipOutlineAccent, $chipOutlineWarn, $chipOutlineDefault);
-    .mat-chip[variant='stroked'],
-    .mat-chip[variant='outline'] {
-        &.mat-chip-disabled {
-            color: rgba(map-get($pxb-black, 300), 0.36);
-            border-color: rgba(map-get($pxb-black, 200), 0.36);
-            .mat-chip-remove {
-                color: rgba(map-get($pxb-black, 300), 0.36);
-            }
-        }
-        &:not([color='primary']):not([color='accent']):not([color='warn']):not(.mat-chip-disabled) {
-            border-color: rgba(map-get($pxb-black, 200), 0.36);
-        }
-    }
+    $chipOutlineDisabled: (
+        color: rgba(map-get($pxb-black, 300), 0.36),
+        borderColor: rgba(map-get($pxb-black, 200), 0.36),
+        removeIconColor: rgba(map-get($pxb-black, 300), 0.36),
+    );
+    @include pxb-mat-chip-outline($chipOutlinePrimary, $chipOutlineAccent, $chipOutlineWarn, $chipOutlineDefault, $chipOutlineDisabled);
     .mat-chip.mat-standard-chip::after {
         background: transparent;
     }
+
 
     /* input fields */
     $inputPrimary: (

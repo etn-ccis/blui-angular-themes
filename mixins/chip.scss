@@ -1,35 +1,62 @@
 @import '../utility';
 
-@mixin pxb-mat-chip-default($primary, $accent, $warn, $default) {
+@mixin pxb-mat-chip-default($primary, $accent, $warn, $unselected) {
     .mat-chip:not([variant='outline']):not([variant='stroked']) {
-        &.mat-primary {
-            @include chips-filled($primary);
+        &.mat-chip-selected {
+            &.mat-primary {
+                @include chips-filled($primary);
+            }
+            &.mat-accent {
+                @include chips-filled($accent);
+            }
+            &.mat-warn {
+                @include chips-filled($warn);
+            }
         }
-        &.mat-accent {
-            @include chips-filled($accent);
-        }
-        &.mat-warn {
-            @include chips-filled($warn);
-        }
-        &:not([color='primary']):not([color='accent']):not([color='warn']) {
-            @include chips-filled($default);
+        &:not(.mat-chip-selected) {
+            @include chips-filled($unselected);
         }
     }
 }
-@mixin pxb-mat-chip-outline($primary, $accent, $warn, $default) {
+@mixin pxb-mat-chip-outline($primary, $accent, $warn, $unselected, $disabled) {
     .mat-chip[variant='outline'],
     .mat-chip[variant='stroked'] {
-        &.mat-primary {
-            @include chips-outline($primary);
+        &.mat-chip-selected {
+            &.mat-primary {
+                @include chips-outline($primary);
+            }
+
+            &.mat-accent {
+                @include chips-outline($accent);
+            }
+
+            &.mat-warn {
+                @include chips-outline($warn);
+            }
         }
-        &.mat-accent {
-            @include chips-outline($accent);
+
+        /* Mat chips that aren't selected will all use the same $unselected styles regardless of color. */
+        &:not(.mat-chip-selected),
+        &:not(.mat-chip-selected).mat-primary,
+        &:not(.mat-chip-selected).mat-accent,
+        &:not(.mat-chip-selected).mat-warn {
+            @include chips-outline($unselected);
+            &:not(.mat-chip-disabled) {
+                border-color: map-get($unselected, borderColor);
+            }
         }
-        &.mat-warn {
-            @include chips-outline($warn);
-        }
-        &:not([color]) {
-            @include chips-outline($default);
+
+        /* Outlined chips all default to the same disabled styles regardless of color. */
+        &.mat-chip-disabled,
+        &.mat-chip-disabled.mat-primary,
+        &.mat-chip-disabled.mat-accent,
+        &.mat-chip-disabled.mat-warn
+        {
+            color: map-get($disabled, color);
+            border-color: map-get($disabled, borderColor);
+            .mat-chip-remove {
+                color: map-get($disabled, removeIconColor);
+            }
         }
     }
 }
