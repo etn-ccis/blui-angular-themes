@@ -50,8 +50,7 @@
         &.mat-chip-disabled,
         &.mat-chip-disabled.mat-primary,
         &.mat-chip-disabled.mat-accent,
-        &.mat-chip-disabled.mat-warn
-        {
+        &.mat-chip-disabled.mat-warn {
             color: map-get($disabled, color);
             border-color: map-get($disabled, borderColor);
             .mat-chip-remove {
