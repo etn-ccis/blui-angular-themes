@@ -4,7 +4,8 @@
 
 ### Added
 
--  Added theme support for `UserMenuHeaderComponent`. 
+-  Added theme support for `<pxb-user-menu>`'s header. 
+-  Red text highlight color for invalid form fields.
 
 ## v6.2.1 (August 30, 2021)
 
