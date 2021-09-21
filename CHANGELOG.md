@@ -1,5 +1,11 @@
 # Changelog
 
+## v6.3.0 (Not Published Yet)
+
+### Added
+
+-  Added theme support for `UserMenuHeaderComponent`. 
+
 ## v6.2.1 (August 30, 2021)
 
 ### Fixed
