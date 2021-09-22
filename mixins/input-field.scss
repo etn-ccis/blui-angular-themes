@@ -1,6 +1,11 @@
 @import '../utility';
 
 @mixin pxb-mat-form-field($primaryPalette, $warnPalette, $disablePalette) {
+    input {
+        font-family: 'Open Sans';
+        color: map-get($primaryPalette, userInputText);
+    }
+
     .mat-form-field {
         &.mat-primary {
             @include colored-input-styles($primaryPalette);

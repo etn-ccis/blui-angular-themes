@@ -151,6 +151,7 @@
         placeholder: map-get($foreground, disabled),
         hint: map-get($foreground, secondary-text),
         filledBackgroundColor: rgba(map-get($pxb-black, 800), 0.5),
+        userInputText: map-get($foreground, text),
         label: (
             withoutValue: map-get($foreground, secondary-text),
             withValue: map-get($foreground, text),
