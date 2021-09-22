@@ -38,6 +38,7 @@
         placeholder: map-get($pxb-black, 100),
         hint: map-get($warn, 500),
         filledBackgroundColor: map-get($pxb-white, 200),
+        highlightColor: rgba(map-get($warn, 500), 0.2),
         label: (
             withoutValue: map-get($warn, 500),
             withValue: map-get($warn, 500),
