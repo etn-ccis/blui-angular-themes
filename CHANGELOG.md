@@ -4,7 +4,12 @@
 
 ### Added
 
--  Added theme support for `UserMenuHeaderComponent`. 
+-  Added theme support for `UserMenuHeaderComponent`.
+
+
+### Changed
+
+-  Changed `<mat-button-toggle-group>` default height to 36px.
 
 ## v6.2.1 (August 30, 2021)
 
