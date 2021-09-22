@@ -446,7 +446,7 @@
             color: map-get($primary, 500);
         }
 
-        .pxb-info-list-item .mat-list-item-content {
+        .pxb-info-list-item .pxb-info-list-item-icon-wrapper  {
             color: map-get($foreground, text);
         }
     }
