@@ -11,6 +11,10 @@
 
 -  Fixed light theme active item icon color for `<pxb-drawer>`.
 
+### Changed
+
+-  Changed `<mat-button-toggle-group>` default height to 36px.
+
 ## v6.2.1 (August 30, 2021)
 
 ### Fixed
