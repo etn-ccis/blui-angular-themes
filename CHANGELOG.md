@@ -6,7 +6,7 @@
 
 -  Added theme support for `UserMenuHeaderComponent`. 
 -  Red text highlight color for invalid form fields.
--  Added theme support for HTML element `<input>`.
+-  Applied Open Sans font family to HTML `<input>` elements.
 
 ## v6.2.1 (August 30, 2021)
 

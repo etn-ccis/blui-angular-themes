@@ -22,7 +22,6 @@
         placeholder: map-get($pxb-black, 100),
         hint: map-get($foreground, secondary-text),
         filledBackgroundColor: map-get($pxb-white, 200),
-        userInputText: map-get($foreground, text),
         label: (
             withoutValue: map-get($foreground, hint-text),
             withValue: map-get($foreground, text),

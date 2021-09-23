@@ -3,7 +3,6 @@
 @mixin pxb-mat-form-field($primaryPalette, $warnPalette, $disablePalette) {
     input {
         font-family: 'Open Sans';
-        color: map-get($primaryPalette, userInputText);
     }
 
     .mat-form-field {
