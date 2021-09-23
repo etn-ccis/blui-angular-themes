@@ -2,7 +2,7 @@
     "name": "@pxblue/angular-themes",
     "author": "PX Blue <pxblue@eaton.com>",
     "license": "BSD-3-Clause",
-    "version": "6.3.0-beta.0",
+    "version": "6.3.0-beta.1",
     "description": "Angular themes for PX Blue applications",
     "scripts": {
         "initialize": "bash scripts/initializeSubmodule.sh",

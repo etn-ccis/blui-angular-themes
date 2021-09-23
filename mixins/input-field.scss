@@ -97,6 +97,16 @@
             color: map-get($palette, hint);
         }
 
+        /* User Input Text */
+        &.mat-form-field-invalid {
+            .mat-input-element::selection {
+                background-color: map-get($palette, highlightColor);
+            }
+            .mat-input-element::-moz-selection {
+                background-color: map-get($palette, highlightColor);
+            }
+        }
+
         /* Standard / Legacy Variant */
         &.mat-form-field-appearance-legacy,
         &.mat-form-field-appearance-standard,
