@@ -6,6 +6,7 @@
 
 -  Added theme support for `UserMenuHeaderComponent`.
 -  Red text highlight color for invalid form fields.
+-  Applied Open Sans font family to HTML `<input>` elements.
 
 ### Fixed
 
