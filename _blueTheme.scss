@@ -432,9 +432,11 @@
     /* PXB Drawer */
     .pxb-drawer {
         background-color: map-get($pxb-white, 50);
+
         .pxb-drawer-nested-nav-item .mat-expansion-panel {
             background-color: map-get($pxb-white, 200);
         }
+
         .pxb-drawer-nav-item-active-highlight {
             opacity: 0.05;
         }
@@ -444,7 +446,8 @@
         .pxb-drawer-nav-item-active .pxb-info-list-item .pxb-info-list-item-icon-wrapper {
             color: map-get($primary, 500);
         }
-        .pxb-info-list-item .mat-list-item-content .mat-list-icon {
+
+        .pxb-info-list-item .pxb-info-list-item-icon-wrapper  {
             color: map-get($foreground, text);
         }
     }
