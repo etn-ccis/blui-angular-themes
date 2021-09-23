@@ -5,7 +5,11 @@
 ### Added
 
 -  Added theme support for `UserMenuHeaderComponent`.
+-  Red text highlight color for invalid form fields.
 
+### Fixed
+
+-  Fixed light theme active item icon color for `<pxb-drawer>`.
 
 ### Changed
 
@@ -15,7 +19,7 @@
 
 ### Fixed
 
--  Fixed bug in `<mat-chip>` styles where non-selected chips appeared as selected. 
+-  Fixed bug in `<mat-chip>` styles where non-selected chips appeared as selected.
 
 ## v6.2.0 (August 25, 2021)
 
