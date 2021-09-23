@@ -14,7 +14,17 @@
         font-size: 0.625rem;
     }
 
-    .mat-button-toggle .mat-button-toggle-label-content {
-        line-height: 36px;
+    .mat-button-toggle-group {
+        height: 36px;
+        box-sizing: border-box;
+        .mat-button-toggle-button {
+            height: 100%;
+        }
+        .mat-button-toggle {
+            height: 100%;
+            .mat-button-toggle-label-content {
+                line-height: 100%;
+            }
+        }
     }
 }
