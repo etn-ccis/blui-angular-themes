@@ -1,26 +1,26 @@
 # Changelog
 
-## v6.3.0 (September 23, 2021)
+## v6.3.0 (September 28, 2021)
 
 ### Added
 
--  Added theme support for `UserMenuHeaderComponent`.
--  Red text highlight color for invalid form fields.
--  Applied Open Sans font family to HTML `<input>` elements.
+-   Added theme support for `UserMenuHeaderComponent`.
+-   Red text highlight color for invalid form fields.
+-   Applied Open Sans font family to HTML `<input>` elements.
 
 ### Fixed
 
--  Fixed light theme active item icon color for `<pxb-drawer>`.
+-   Fixed light theme active item icon color for `<pxb-drawer>`.
 
 ### Changed
 
--  Changed `<mat-button-toggle-group>` default height to 36px.
+-   Changed `<mat-button-toggle-group>` default height to 36px.
 
 ## v6.2.1 (August 30, 2021)
 
 ### Fixed
 
--  Fixed bug in `<mat-chip>` styles where non-selected chips appeared as selected.
+-   Fixed bug in `<mat-chip>` styles where non-selected chips appeared as selected.
 
 ## v6.2.0 (August 25, 2021)
 
