@@ -1,6 +1,10 @@
 @import '../utility';
 
 @mixin pxb-mat-form-field($primaryPalette, $warnPalette, $disablePalette) {
+    input {
+        font-family: 'Open Sans';
+    }
+
     .mat-form-field {
         &.mat-primary {
             @include colored-input-styles($primaryPalette);
@@ -95,6 +99,16 @@
         /* Hint */
         .mat-hint {
             color: map-get($palette, hint);
+        }
+
+        /* User Input Text */
+        &.mat-form-field-invalid {
+            .mat-input-element::selection {
+                background-color: map-get($palette, highlightColor);
+            }
+            .mat-input-element::-moz-selection {
+                background-color: map-get($palette, highlightColor);
+            }
         }
 
         /* Standard / Legacy Variant */

@@ -167,6 +167,7 @@
         placeholder: map-get($foreground, disabled),
         hint: map-get($warn, 200),
         filledBackgroundColor: rgba(255, 255, 255, 0.1),
+        highlightColor: rgba(map-get($warn, 500), 0.5),
         label: (
             withoutValue: map-get($warn, 200),
             withValue: map-get($warn, 200),

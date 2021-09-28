@@ -13,4 +13,18 @@
     .mat-chip .mat-chip-avatar {
         font-size: 0.625rem;
     }
+
+    .mat-button-toggle-group {
+        height: 36px;
+        box-sizing: border-box;
+        .mat-button-toggle-button {
+            height: 100%;
+        }
+        .mat-button-toggle {
+            height: 100%;
+            .mat-button-toggle-label-content {
+                line-height: 100%;
+            }
+        }
+    }
 }

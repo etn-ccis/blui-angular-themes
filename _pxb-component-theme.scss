@@ -135,7 +135,9 @@
     }
     .pxb-user-menu-overlay,
     .pxb-user-menu-bottomsheet {
-        .pxb-drawer-header-content.mat-toolbar-single-row.mat-toolbar {
+        .pxb-drawer-header-content.mat-toolbar-single-row.mat-toolbar,
+        .pxb-user-menu-header-content.mat-toolbar-single-row.mat-toolbar,
+        {
             background-color: unset;
             color: unset;
         }
