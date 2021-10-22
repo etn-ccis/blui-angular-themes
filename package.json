@@ -1,6 +1,6 @@
 {
     "name": "@brightlayer-ui/angular-themes",
-    "author": "PX Blue <brightlayer-ui@eaton.com>",
+    "author": "Brightlayer UI <brightlayer-ui@eaton.com>",
     "license": "BSD-3-Clause",
     "version": "6.3.0",
     "description": "Angular themes for PX Blue applications",
@@ -11,8 +11,8 @@
         "link:themes": "bash ./scripts/linkThemes.sh",
         "test": "bash ./scripts/buildTest.sh",
         "prettier": "prettier \"**/**.{css,scss,html,md}\" --write",
-        "publish:package": "set npm_config_yes=true && npx -p @brightlayer-ui/publish pxb-publish",
-        "tag:package": "npx -p @brightlayer-ui/tag pxb-tag",
+        "publish:package": "set npm_config_yes=true && npx -p @brightlayer-ui/publish blui-publish",
+        "tag:package": "npx -p @brightlayer-ui/tag blui-tag",
         "precommit": "yarn initialize && yarn install:dependencies && yarn prettier && yarn test",
         "update:submodule": "git submodule update --remote"
     },

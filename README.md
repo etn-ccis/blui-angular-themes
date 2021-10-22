@@ -48,10 +48,10 @@ You can then apply the theme to your application by adding the proper class to y
 
 ```HTML
 // Default Theme
-<body class="pxb-blue">
+<body class="blui-blue">
 
 // Dark Theme
-<body class="pxb-blue-dark">
+<body class="blui-blue-dark">
 ```
 
 > If you do not specify a theme class, your application will use the default Material theme.

@@ -1,6 +1,6 @@
 @import '../utility';
 
-@mixin pxb-mat-form-field($primaryPalette, $warnPalette, $disablePalette) {
+@mixin blui-mat-form-field($primaryPalette, $warnPalette, $disablePalette) {
     input {
         font-family: 'Open Sans';
     }

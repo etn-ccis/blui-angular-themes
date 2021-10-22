@@ -25,8 +25,8 @@ echo -ne "  font mixin: "
 if [ ! -f ./_fonts.scss ]; then echo -e "${RED}Not Found${NC}" && exit 1; else echo -e "${GREEN}Found${NC}"; fi
 echo -ne "  typography mixin: "
 if [ ! -f ./_typography.scss ]; then echo -e "${RED}Not Found${NC}" && exit 1; else echo -e "${GREEN}Found${NC}"; fi
-echo -ne "  pxb components theme mixin: "
-if [ ! -f ./_pxb-component-theme.scss ]; then echo -e "${RED}Not Found${NC}" && exit 1; else echo -e "${GREEN}Found${NC}"; fi
+echo -ne "  blui components theme mixin: "
+if [ ! -f ./_blui-component-theme.scss ]; then echo -e "${RED}Not Found${NC}" && exit 1; else echo -e "${GREEN}Found${NC}"; fi
 echo -ne "  material theme mixin: "
 if [ ! -d ./mixins ]; then echo -e "${RED}Not Found${NC}" && exit 1; else echo -e "${GREEN}Found${NC}"; fi
 

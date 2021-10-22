@@ -1,4 +1,4 @@
-@mixin pxb-mat-tab($text, $background, $activeText, $activeBackground, $underline) {
+@mixin blui-mat-tab($text, $background, $activeText, $activeBackground, $underline) {
     .mat-tab-group {
         .mat-tab-label {
             color: $text;
