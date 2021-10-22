@@ -1,27 +1,27 @@
 # PX Blue themes for Angular applications
 
-[![](https://img.shields.io/circleci/project/github/pxblue/angular-themes/master.svg?style=flat)](https://circleci.com/gh/pxblue/angular-themes/tree/master)
-[![](https://img.shields.io/npm/v/@pxblue/angular-themes.svg?label=@pxblue/angular-themes&style=flat)](https://www.npmjs.com/package/@pxblue/angular-themes)
+[![](https://img.shields.io/circleci/project/github/brightlayer-ui/angular-themes/master.svg?style=flat)](https://circleci.com/gh/brightlayer-ui/angular-themes/tree/master)
+[![](https://img.shields.io/npm/v/@brightlayer-ui/angular-themes.svg?label=@brightlayer-ui/angular-themes&style=flat)](https://www.npmjs.com/package/@brightlayer-ui/angular-themes)
 
 This package provides theming support for Eaton applications using the PX Blue design system. It includes resources for developers using Angular w/ [Angular Material](https://www.npmjs.com/package/@angular/material). This package comes with two theme options: a Blue theme (standard) and a Dark theme.
 
 For other frameworks, check out our related packages:
 
--   [@pxblue/react-themes](https://www.npmjs.com/package/@pxblue/react-themes)
--   [@pxblue/react-native-themes](https://www.npmjs.com/package/@pxblue/react-native-themes)
+-   [@brightlayer-ui/react-themes](https://www.npmjs.com/package/@brightlayer-ui/react-themes)
+-   [@brightlayer-ui/react-native-themes](https://www.npmjs.com/package/@brightlayer-ui/react-native-themes)
 
 ## Installation
 
 Install with npm
 
 ```shell
-npm install --save @pxblue/angular-themes
+npm install --save @brightlayer-ui/angular-themes
 ```
 
 or yarn
 
 ```shell
-yarn add @pxblue/angular-themes
+yarn add @brightlayer-ui/angular-themes
 ```
 
 ## Usage
@@ -31,8 +31,8 @@ In order to use the PX Blue themes and font (Open Sans), you will need to modify
 ```js
 "styles": [
     "src/styles.scss",
-    "./node_modules/@pxblue/angular-themes/theme.scss",
-    "./node_modules/@pxblue/angular-themes/open-sans.scss"
+    "./node_modules/@brightlayer-ui/angular-themes/theme.scss",
+    "./node_modules/@brightlayer-ui/angular-themes/open-sans.scss"
 ],
 ```
 
@@ -40,8 +40,8 @@ Alternatively, you can also import the theme file in your top-level SCSS file.
 
 ```scss
 // in styles.scss or your top-level scss file
-import '~@pxblue/angular-themes/theme.scss'
-import '~@pxblue/angular-themes/open-sans.scss'
+import '~@brightlayer-ui/angular-themes/theme.scss'
+import '~@brightlayer-ui/angular-themes/open-sans.scss'
 ```
 
 You can then apply the theme to your application by adding the proper class to your application's body element:
@@ -70,10 +70,10 @@ Before:
 After:
 
 ```js
-'./node_modules/@pxblue/angular-themes/open-sans.scss';
+'./node_modules/@brightlayer-ui/angular-themes/open-sans.scss';
 
 ```
 
 ## Demo
 
-[View on Stackblitz](https://stackblitz.com/github/pxblue/angular-showcase-demo/tree/master)
+[View on Stackblitz](https://stackblitz.com/github/brightlayer-ui/angular-showcase-demo/tree/master)
