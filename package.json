@@ -3,7 +3,7 @@
     "author": "Brightlayer UI <brightlayer-ui@eaton.com>",
     "license": "BSD-3-Clause",
     "version": "6.3.0",
-    "description": "Angular themes for PX Blue applications",
+    "description": "Angular themes for Brightlayer UI applications",
     "scripts": {
         "initialize": "bash scripts/initializeSubmodule.sh",
         "install:dependencies": "cd demos/showcase && yarn && cd ../..",

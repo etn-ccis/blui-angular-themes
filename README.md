@@ -1,9 +1,9 @@
-# PX Blue themes for Angular applications
+# Brightlayer UI themes for Angular applications
 
 [![](https://img.shields.io/circleci/project/github/brightlayer-ui/angular-themes/master.svg?style=flat)](https://circleci.com/gh/brightlayer-ui/angular-themes/tree/master)
 [![](https://img.shields.io/npm/v/@brightlayer-ui/angular-themes.svg?label=@brightlayer-ui/angular-themes&style=flat)](https://www.npmjs.com/package/@brightlayer-ui/angular-themes)
 
-This package provides theming support for Eaton applications using the PX Blue design system. It includes resources for developers using Angular w/ [Angular Material](https://www.npmjs.com/package/@angular/material). This package comes with two theme options: a Blue theme (standard) and a Dark theme.
+This package provides theming support for Eaton applications using the Brightlayer UI design system. It includes resources for developers using Angular w/ [Angular Material](https://www.npmjs.com/package/@angular/material). This package comes with two theme options: a Blue theme (standard) and a Dark theme.
 
 For other frameworks, check out our related packages:
 
@@ -26,7 +26,7 @@ yarn add @brightlayer-ui/angular-themes
 
 ## Usage
 
-In order to use the PX Blue themes and font (Open Sans), you will need to modify your angular.json file "styles" entries (there is one under "build" and one under "test") to include the PX Blue themes and Open Sans reference:
+In order to use the Brightlayer UI themes and font (Open Sans), you will need to modify your angular.json file "styles" entries (there is one under "build" and one under "test") to include the Brightlayer UI themes and Open Sans reference:
 
 ```js
 "styles": [
@@ -58,7 +58,7 @@ You can then apply the theme to your application by adding the proper class to y
 
 ### Updating From Version 5 ~> 6
 
-In version 6, we have migrated from the deprecated `typeface-open-sans` package to `@fontsource/open-sans` (bundled with the PX Blue themes). You'll need to update your Open Sans references in angular.json:
+In version 6, we have migrated from the deprecated `typeface-open-sans` package to `@fontsource/open-sans` (bundled with the Brightlayer UI themes). You'll need to update your Open Sans references in angular.json:
 
 Before:
 

@@ -37,7 +37,7 @@ $custom-typography: mat-typography-config(
 /*
 ** Include the Material base styles
 **
-** NOTE: material theme will use our PX Blue custom typography
+** NOTE: material theme will use our Brightlayer UI custom typography
 ** There is currently not a way to specify different custom fonts for different themes
 */
 @include mat-core($custom-typography);
@@ -72,7 +72,7 @@ $material-theme: mat-light-theme($material-theme-primary, $material-theme-accent
                 slider-off-active: rgba(black, 0.38),
             ),
             background: (
-                status-bar: map_get($mat-grey, 300),
+                status-bar: map_get($mat-grey, 300), /* should we be using blui-color instead of mat-color */
                 app-bar: map-get($blui-gray, 50),
                 background: map-get($blui-white, 200),
                 hover: rgba(black, 0.04),
@@ -137,7 +137,7 @@ $blui-blue-theme: blui-light-theme($blui-blue-primary, $blui-blue-accent, $blui-
                 disabled-button: rgba(white, 0.12),
                 raised-button: map-get($blui-black, 500),
                 focused-button: $light-focused,
-                selected-button: map_get($mat-grey, 900),
+                selected-button: map_get($mat-grey, 900), 
                 selected-disabled-button: map_get($mat-grey, 800),
                 disabled-button-toggle: black,
                 unselected-chip: map_get($mat-grey, 700),
