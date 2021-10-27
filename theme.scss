@@ -55,16 +55,16 @@ $material-theme: mat-light-theme($material-theme-primary, $material-theme-accent
         mat-light-theme($primary, $accent, $warn),
         (
             foreground: (
-                text: map-get($blui-black, 500),
-                secondary-text: map-get($blui-gray, 500),
-                hint-text: map-get($blui-gray, 500),
-                base: map-get($blui-darkBlack, 900),
+                text: map-get($pxb-black, 500),
+                secondary-text: map-get($pxb-gray, 500),
+                hint-text: map-get($pxb-gray, 500),
+                base: map-get($pxb-darkBlack, 900),
                 divider: rgba(66, 78, 84, 0.12),
                 dividers: $dark-dividers,
                 disabled: rgba(66, 78, 84, 0.3),
                 disabled-button: rgba(black, 0.26),
                 disabled-text: rgba(66, 78, 84, 0.3),
-                elevation: map-get($blui-darkBlack, 900),
+                elevation: map-get($pxb-darkBlack, 900),
                 icon: rgba(black, 0.54),
                 icons: rgba(black, 0.54),
                 slider-min: rgba(black, 0.87),
@@ -72,30 +72,30 @@ $material-theme: mat-light-theme($material-theme-primary, $material-theme-accent
                 slider-off-active: rgba(black, 0.38),
             ),
             background: (
-                status-bar: map_get($mat-grey, 300), /* should we be using blui-color instead of mat-color */
-                app-bar: map-get($blui-gray, 50),
-                background: map-get($blui-white, 200),
+                status-bar: map_get($mat-grey, 300), 
+                app-bar: map-get($pxb-gray, 50),
+                background: map-get($pxb-white, 200),
                 hover: rgba(black, 0.04),
-                card: map-get($blui-white, 50),
-                dialog: map-get($blui-white, 50),
+                card: map-get($pxb-white, 50),
+                dialog: map-get($pxb-white, 50),
                 disabled-button: rgba(114, 126, 132, 0.12),
-                raised-button: map-get($blui-white, 50),
+                raised-button: map-get($pxb-white, 50),
                 focused-button: $dark-focused,
-                selected-button: map-get($blui-gray, 300),
-                selected-disabled-button: map-get($blui-gray, 400),
-                disabled-button-toggle: map-get($blui-gray, 200),
-                unselected-chip: map-get($blui-gray, 300),
-                disabled-list-option: map-get($blui-gray, 200),
+                selected-button: map-get($pxb-gray, 300),
+                selected-disabled-button: map-get($pxb-gray, 400),
+                disabled-button-toggle: map-get($pxb-gray, 200),
+                unselected-chip: map-get($pxb-gray, 300),
+                disabled-list-option: map-get($pxb-gray, 200),
             ),
         )
     );
 }
 
-$blui-blue-primary: mat-palette($blui-blue);
-$blui-blue-accent: mat-palette($blui-lightBlue, 500);
-$blui-blue-warn: mat-palette($blui-red, 500);
-$blui-blue-theme: blui-light-theme($blui-blue-primary, $blui-blue-accent, $blui-blue-warn);
-.blui-blue {
+$pxb-blue-primary: mat-palette($pxb-blue);
+$pxb-blue-accent: mat-palette($pxb-lightBlue, 500);
+$pxb-blue-warn: mat-palette($pxb-red, 500);
+$blui-blue-theme: pxb-light-theme($pxb-blue-primary, $pxb-blue-accent, $pxb-blue-warn);
+.pxb-blue {
     @include angular-material-theme($blui-blue-theme);
     @include reasonable-margins();
     @include bodyfont();
@@ -111,31 +111,31 @@ $blui-blue-theme: blui-light-theme($blui-blue-primary, $blui-blue-accent, $blui-
         mat-dark-theme($primary, $accent, $warn),
         (
             foreground: (
-                text: map-get($blui-black, 50),
-                secondary-text: map-get($blui-black, 200),
-                hint-text: map-get($blui-gray, 300),
-                base: map-get($blui-white, 50),
-                divider: rgba(map-get($blui-black, 200), 0.36),
-                dividers: rgba(map-get($blui-black, 200), 0.36),
-                disabled: rgba(map-get($blui-black, 300), 0.36),
+                text: map-get($pxb-black, 50),
+                secondary-text: map-get($pxb-black, 200),
+                hint-text: map-get($pxb-gray, 300),
+                base: map-get($pxb-white, 50),
+                divider: rgba(map-get($pxb-black, 200), 0.36),
+                dividers: rgba(map-get($pxb-black, 200), 0.36),
+                disabled: rgba(map-get($pxb-black, 300), 0.36),
                 disabled-button: rgba(white, 0.3),
-                disabled-text: rgba(map-get($blui-black, 300), 0.36),
-                elevation: map-get($blui-darkBlack, 900),
-                icon: map-get($blui-black, 50),
-                icons: map-get($blui-black, 50),
-                slider-min: map-get($blui-black, 50),
+                disabled-text: rgba(map-get($pxb-black, 300), 0.36),
+                elevation: map-get($pxb-darkBlack, 900),
+                icon: map-get($pxb-black, 50),
+                icons: map-get($pxb-black, 50),
+                slider-min: map-get($pxb-black, 50),
                 slider-off: rgba(white, 0.3),
                 slider-off-active: rgba(white, 0.3),
             ),
             background: (
-                status-bar: map-get($blui-darkBlack, 900),
-                app-bar: map-get($blui-darkBlack, 100),
-                background: map-get($blui-darkBlack, 100),
+                status-bar: map-get($pxb-darkBlack, 900),
+                app-bar: map-get($pxb-darkBlack, 100),
+                background: map-get($pxb-darkBlack, 100),
                 hover: rgba(white, 0.04),
-                card: map-get($blui-black, 900),
-                dialog: map-get($blui-black, 900),
+                card: map-get($pxb-black, 900),
+                dialog: map-get($pxb-black, 900),
                 disabled-button: rgba(white, 0.12),
-                raised-button: map-get($blui-black, 500),
+                raised-button: map-get($pxb-black, 500),
                 focused-button: $light-focused,
                 selected-button: map_get($mat-grey, 900), 
                 selected-disabled-button: map_get($mat-grey, 800),
@@ -146,11 +146,11 @@ $blui-blue-theme: blui-light-theme($blui-blue-primary, $blui-blue-accent, $blui-
         )
     );
 }
-$blui-blue-dark-primary: mat-palette($blui-blue);
-$blui-blue-dark-accent: mat-palette($blui-lightBlue, 200);
-$blui-blue-dark-warn: mat-palette($blui-red, 200);
-$blui-blue-dark-theme: blui-dark-theme($blui-blue-dark-primary, $blui-blue-dark-accent, $blui-blue-dark-warn);
-.blui-blue-dark {
+$blui-blue-dark-primary: mat-palette($pxb-blue);
+$blui-blue-dark-accent: mat-palette($pxb-lightBlue, 200);
+$blui-blue-dark-warn: mat-palette($pxb-red, 200);
+$blui-blue-dark-theme: blui-dark-theme($pxb-blue-dark-primary, $pxb-blue-dark-accent, $pxb-blue-dark-warn);
+.pxb-blue-dark {
     @include angular-material-theme($blui-blue-dark-theme);
     @include reasonable-margins();
     @include bodyfont();
