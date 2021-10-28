@@ -1,4 +1,4 @@
-@mixin pxb-mat-slide-toggle($primaryPalette, $accentPalette, $warnPalette, $inactiveThumb) {
+@mixin blui-mat-slide-toggle($primaryPalette, $accentPalette, $warnPalette, $inactiveThumb) {
     .mat-slide-toggle {
         .mat-slide-toggle-thumb {
             /* Inactive Thumb Background */

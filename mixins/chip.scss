@@ -1,6 +1,6 @@
 @import '../utility';
 
-@mixin pxb-mat-chip-default($primary, $accent, $warn, $unselected) {
+@mixin blui-mat-chip-default($primary, $accent, $warn, $unselected) {
     .mat-chip:not([variant='outline']):not([variant='stroked']) {
         &.mat-chip-selected {
             &.mat-primary {
@@ -18,7 +18,7 @@
         }
     }
 }
-@mixin pxb-mat-chip-outline($primary, $accent, $warn, $unselected, $disabled) {
+@mixin blui-mat-chip-outline($primary, $accent, $warn, $unselected, $disabled) {
     .mat-chip[variant='outline'],
     .mat-chip[variant='stroked'] {
         &.mat-chip-selected {

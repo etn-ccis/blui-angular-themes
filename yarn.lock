@@ -9,27 +9,27 @@
   dependencies:
     tslib "^2.0.0"
 
+"@brightlayer-ui/colors@^3.0.0":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@brightlayer-ui/colors/-/colors-3.0.1.tgz#f085acf6b6b4266a01798c78bc25841d15e44b3e"
+  integrity sha512-AE9F6FN1EQWMoqFTak6q8MN3wg9et2u2SUs6HjYhcS3GVSHjMWVSsuJZ2aD5Lu9409Gfi6pBHDWsJZ5PyeLsdQ==
+  dependencies:
+    "@brightlayer-ui/types" "^2.0.0"
+
+"@brightlayer-ui/prettier-config@^1.0.2":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@brightlayer-ui/prettier-config/-/prettier-config-1.0.3.tgz#e40a7ae7435c6fd5118acbf249080e0aa81e93af"
+  integrity sha512-EYm3+V7Qd+oYEF+8FadsXAZqXryEHHbGnrV1BMp9selhABjceqUqXPVE4Sn3SKWQdBNJ3En2A3EzgrzRbvRTaw==
+
+"@brightlayer-ui/types@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@brightlayer-ui/types/-/types-2.0.0.tgz#d8adc0cdb96c164943adbad6e74043128a8b4112"
+  integrity sha512-DTCVwND6YC9qrkQl7pkFlN6QxDReJHtjuAiFU9HkXJN368vlw+fzHQ5/j4sB1sZl2eNwOgccv5ecl2XrlolOCw==
+
 "@fontsource/open-sans@^4.1.0":
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/@fontsource/open-sans/-/open-sans-4.1.0.tgz#d44b4495bd23d78018675e4e79973894e393c0ed"
   integrity sha512-sWDAAr6ESHJdBKXse6njvZem4sTZLILkugaEfAvpdFiaKBh2RnXTa4DJllDh5LzP0MLMUrfj/JAjMbKxWFo6pQ==
-
-"@pxblue/colors@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@pxblue/colors/-/colors-3.0.0.tgz#080fb5cfd5a08fea018ece7cac8022ed38f7878f"
-  integrity sha512-rMFW4an1V9M5KX4BiNzrbbaYe2fic4o9iGL8/bPYvITbeiwgAapyFX0VbMIoo8XKlIbNaxyn7oWnrxzI/tp8Rw==
-  dependencies:
-    "@pxblue/types" "^2.0.0"
-
-"@pxblue/prettier-config@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@pxblue/prettier-config/-/prettier-config-1.0.2.tgz#fb00503df6557b66c3d91d43c9101e614c35d2ec"
-  integrity sha512-/3cLBoTjZs3kV1ATPA/Sp0tsL7XmlV/b8HW/qt0jqR/uP5+cdXL2YIhMXQngLRa7PhpSkEiRIYK5sl0rKsXTUg==
-
-"@pxblue/types@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@pxblue/types/-/types-2.0.0.tgz#3df970352aca5256974a10a97d75a2264bad1eba"
-  integrity sha512-rHABCqYALGjrDxdCfw/v4mFsHhE9y9+vdSD3VHfIzA3HY1g1Bp/VWwEuEXWbtj2H5n75D+jkMQZ0rTqSKY3vLw==
 
 prettier@^2.0.4:
   version "2.1.2"

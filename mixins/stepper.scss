@@ -1,6 +1,6 @@
 @import '../utility';
 
-@mixin pxb-mat-stepper($stepperBackground, $stepperIcon, $stepperLabel) {
+@mixin blui-mat-stepper($stepperBackground, $stepperIcon, $stepperLabel) {
     /*stepper*/
     .mat-stepper-horizontal,
     .mat-stepper-vertical {
