@@ -1,6 +1,6 @@
 @import '../utility';
 
-@mixin pxb-mat-buttons($primaryPalette, $accentPalette, $warnPalette, $defaultPalette) {
+@mixin blui-mat-buttons($primaryPalette, $accentPalette, $warnPalette, $defaultPalette) {
     .mat-icon-button {
         @include icon-button-helper($primaryPalette, $accentPalette, $warnPalette, $defaultPalette);
     }

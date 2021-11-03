@@ -1,9 +1,9 @@
 {
-    "name": "@pxblue/angular-themes",
-    "author": "PX Blue <pxblue@eaton.com>",
+    "name": "@brightlayer-ui/angular-themes",
+    "author": "Brightlayer UI <brightlayer-ui@eaton.com>",
     "license": "BSD-3-Clause",
     "version": "6.3.0",
-    "description": "Angular themes for PX Blue applications",
+    "description": "Angular themes for Brightlayer UI applications",
     "scripts": {
         "initialize": "bash scripts/initializeSubmodule.sh",
         "install:dependencies": "cd demos/showcase && yarn && cd ../..",
@@ -11,28 +11,28 @@
         "link:themes": "bash ./scripts/linkThemes.sh",
         "test": "bash ./scripts/buildTest.sh",
         "prettier": "prettier \"**/**.{css,scss,html,md}\" --write",
-        "publish:package": "set npm_config_yes=true && npx -p @pxblue/publish pxb-publish",
-        "tag:package": "npx -p @pxblue/tag pxb-tag",
+        "publish:package": "set npm_config_yes=true && npx -p @brightlayer-ui/publish blui-publish",
+        "tag:package": "npx -p @brightlayer-ui/tag blui-tag -s -blui-angular-themes",
         "precommit": "yarn initialize && yarn install:dependencies && yarn prettier && yarn test",
         "update:submodule": "git submodule update --remote"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/pxblue/angular-themes.git"
+        "url": "git+https://github.com/brightlayer-ui/angular-themes.git"
     },
     "bugs": {
-        "url": "https://github.com/pxblue/angular-themes/issues"
+        "url": "https://github.com/brightlayer-ui/angular-themes/issues"
     },
-    "homepage": "https://github.com/pxblue/angular-themes/tree/master",
+    "homepage": "https://github.com/brightlayer-ui/angular-themes/tree/master",
     "keywords": [
-        "PXBlue",
+        "Brightlayer UI",
         "themes",
         "Eaton",
         "Power",
         "Xpert",
         "Angular"
     ],
-    "prettier": "@pxblue/prettier-config",
+    "prettier": "@brightlayer-ui/prettier-config",
     "files": [
         "mixins",
         "package.json",
@@ -42,12 +42,12 @@
         "*.scss"
     ],
     "dependencies": {
-        "@pxblue/colors": "^3.0.0",
+        "@brightlayer-ui/colors": "^3.0.0",
         "@fontsource/open-sans": "^4.1.0"
     },
     "devDependencies": {
         "@angular/material": ">=8.2.0",
-        "@pxblue/prettier-config": "^1.0.2",
+        "@brightlayer-ui/prettier-config": "^1.0.2",
         "prettier": "^2.0.4"
     },
     "peerDependencies": {
