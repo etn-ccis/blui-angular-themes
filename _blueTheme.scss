@@ -465,4 +465,13 @@
         background-color: unset;
         opacity: 0.5;
     }
+
+    /* mat-select panel  */
+    .mat-option.mat-active {
+        background-color: rgba(66, 78, 84, 0.05);
+    }
+    
+    .mat-select-panel .mat-option.mat-selected:not(.mat-option-multiple) {
+        background-color: rgba(66, 78, 84, 0.05);
+    }
 }
