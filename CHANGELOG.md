@@ -1,5 +1,9 @@
 # Changelog
+## v6.3.1 (December 2, 2021)
 
+### Fixed
+
+-   Fixed default active item background color in `<mat-select-panel>`.
 ## v6.3.0 (November 3, 2021)
 
 ### Changed
