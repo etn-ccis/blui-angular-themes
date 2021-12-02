@@ -184,9 +184,9 @@
         borderColor: rgba(map-get($blui-black, 500), .12),
     );
     $chipOutlineDisabled: (
-        color: rgba(map-get($blui-black, 500), .03),
+        color: rgba(map-get($blui-black, 500), .3),
         borderColor: rgba(map-get($blui-black, 500), .12),
-        removeIconColor: rgba(map-get($blui-black, 500), .03),
+        removeIconColor: rgba(map-get($blui-black, 500), .3),
     );
     @include blui-mat-chip-outline(
         $chipOutlinePrimary,
@@ -289,7 +289,7 @@
             text: map-get($blui-black, 500),
             background: transparent,
             backgroundHover: rgba(map-get($blui-black, 500), .05),
-            border: rgba(map-get($blui-black, 500), .03),
+            border: rgba(map-get($blui-black, 500), .3),
         ),
         fill: (
             text: map-get($blui-black, 500),
