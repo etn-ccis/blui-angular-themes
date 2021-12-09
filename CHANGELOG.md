@@ -3,9 +3,8 @@
 ## v6.3.1 (Not yet published)
 
 ### Fixed
+-   Fixed disabled slider color in `<mat-slider>`.
 
--   Fixed default active item background color in `<mat-select-panel>`.
--   
 ## v6.3.0 (November 3, 2021)
 
 ### Changed

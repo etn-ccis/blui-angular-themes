@@ -465,6 +465,10 @@
             .mat-slider-thumb {
                 background-color: map-get($foreground, disabled);
             }
+
+            .mat-slider-track-fill {
+                background-color: map-get($blui-gray, 500);
+            }
         }
     }
     .mat-slider-horizontal .mat-slider-track-background,

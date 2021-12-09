@@ -422,6 +422,10 @@
             .mat-slider-thumb {
                 background-color: map-get($foreground, disabled);
             }
+
+            .mat-slider-track-fill {
+                background-color: map-get($blui-gray, 300);
+            }
         }
     }
     .mat-slider-horizontal .mat-slider-track-background,
@@ -467,11 +471,11 @@
     }
 
     /* mat-select panel  */
-    .mat-option.mat-active {
-        background-color: rgba(map-get($blui-black, 500), .05);
-    }
+    // .mat-option.mat-active {
+    //     background-color: rgba(map-get($blui-black, 500), .05);
+    // }
     
-    .mat-select-panel .mat-option.mat-selected:not(.mat-option-multiple) {
-        background-color: rgba(map-get($blui-black, 500), .05);
-    }
+    // .mat-select-panel .mat-option.mat-selected:not(.mat-option-multiple) {
+    //     background-color: rgba(map-get($blui-black, 500), .05);
+    // }
 }
