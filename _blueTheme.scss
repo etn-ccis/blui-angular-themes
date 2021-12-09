@@ -471,11 +471,11 @@
     }
 
     /* mat-select panel  */
-    .mat-option.mat-active {
-        background-color: rgba(map-get($blui-black, 500), .05);
-    }
+    // .mat-option.mat-active {
+    //     background-color: rgba(map-get($blui-black, 500), .05);
+    // }
     
-    .mat-select-panel .mat-option.mat-selected:not(.mat-option-multiple) {
-        background-color: rgba(map-get($blui-black, 500), .05);
-    }
+    // .mat-select-panel .mat-option.mat-selected:not(.mat-option-multiple) {
+    //     background-color: rgba(map-get($blui-black, 500), .05);
+    // }
 }
