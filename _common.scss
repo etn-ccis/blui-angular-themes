@@ -27,16 +27,19 @@
             }
         }
     }
-        .mat-expansion-panel {
-            .mat-expansion-panel-header {
+    .mat-expansion-panel {
+        .mat-expansion-panel-header {
+            .mat-expansion-indicator {
+                margin-top: -8px;
+            }
+            &.mat-expanded {
                 .mat-expansion-indicator {
-                    margin-top: -8px;
-                }
-                &.mat-expanded {
-                    .mat-expansion-indicator {
-                        margin-top: 4px;
-                    }
+                    margin-top: 4px;
                 }
             }
         }
+    }
+    .mat-tooltip {
+        font-size: 12px;
+    }
 }
