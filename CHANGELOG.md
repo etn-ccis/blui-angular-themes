@@ -1,7 +1,9 @@
 # Changelog
 
 ## v6.3.1 (Not yet published)
+### Changed
 
+-   Changed default font-size of tooltip text to `12px`.
 ### Fixed
 -   Fixed disabled slider color in `<mat-slider>`.
 
