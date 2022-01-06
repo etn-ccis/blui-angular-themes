@@ -3,6 +3,11 @@
 ## v6.3.1 (Not yet published)
 
 ### Fixed
+-   Fixed chevron icon in `<mat-expansion-panel-header>`.
+
+## v6.3.1 (Not yet published)
+
+### Fixed
 -   Fixed disabled slider color in `<mat-slider>`.
 
 ## v6.3.0 (November 3, 2021)
