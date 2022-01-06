@@ -1,13 +1,13 @@
 # Changelog
 
 ## v6.3.1 (Not yet published)
+
+### Fixed
+
+-   Fixed non-center aligned chevron in <mat-expansion-panel-header>
 ### Changed
 
 -   Changed default font-size of `.mat-tooltip` text to `12px`.
-### Fixed
--   Fixed chevron icon in `<mat-expansion-panel-header>`.
-
-## v6.3.1 (Not yet published)
 
 ### Fixed
 -   Fixed disabled slider color in `<mat-slider>`.
