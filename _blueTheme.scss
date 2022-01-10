@@ -5,6 +5,7 @@
 @import './mixins/input-field';
 @import './mixins/chip';
 @import './mixins/button';
+@import './mixins/button-toggle.scss';
 @import './mixins/tab';
 @import './mixins/stepper';
 @import './mixins/slide-toggle';
@@ -329,6 +330,15 @@
             background-color: rgba(114, 126, 132, 0.12);
         }
     }
+
+    /* Button Toggle Group */
+    
+    
+    
+    
+    @include blui-mat-button-toggle-default();
+    @include blui-mat-button-toggle-checked-default();
+
 
     /* Tabs */
     $tabText: map-get($primary, 500);
