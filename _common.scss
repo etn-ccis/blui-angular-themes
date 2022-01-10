@@ -29,6 +29,9 @@
     }
     .mat-expansion-panel {
         .mat-expansion-panel-header {
+            height: 48px !important;
+            border-radius: 0;
+            padding-left: 16px;
             .mat-expansion-indicator {
                 margin-top: -8px;
             }
