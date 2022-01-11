@@ -1,141 +1,166 @@
 @import '../utility';
 
 @mixin blui-mat-button-toggle-default() {  
-    .mat-button-toggle-group-appearance-standard {
+    .mat-button-toggle-group-appearance-standard:not([variant='outline']):not([variant='filled']) {
         border: 1px solid transparent;
         border-radius: 0;
         .mat-button-toggle-appearance-standard:first-of-type {
             .mat-button-toggle-button {
-                border: 1px solid #e7e9ea;
                 border-radius: 4px 0 0 4px;
             }
         }
         .mat-button-toggle-appearance-standard:nth-of-type(1n+1):not(:first-of-type):not(:last-of-type) {
             .mat-button-toggle-button {
-                border: 1px solid #e7e9ea;
-                border-left-width: 0;
-                border-right-width: 0;
                 border-radius: 0;
             }
         }
         .mat-button-toggle-appearance-standard:last-of-type {
             .mat-button-toggle-button {
-                border: 1px solid #e7e9ea;
-                // border-left-width: 0;
                 border-radius: 0 4px 4px 0px
             }
         }
+        .mat-button-toggle-appearance-standard {
+            .mat-button-toggle-button {
+                border: 1px solid #e7e9ea;
+            }
+        }
+
+        .mat-button-toggle-appearance-standard:nth-of-type(1n+1):not(:first-of-type):not(:last-of-type) .mat-button-toggle-button { 
+           border-left: 0;
+        }
+
+        .mat-button-toggle-appearance-standard:last-of-type .mat-button-toggle-button {
+            border-left: 0 ;
+         }
+         .mat-button-toggle-checked.mat-button-toggle-appearance-standard:first-of-type .mat-button-toggle-button {   
+            border: 1px solid #A1A7AA5C ; 
+         }
+         .mat-button-toggle-checked.mat-button-toggle-appearance-standard:nth-of-type(1n+1):not(:first-of-type):not(:last-of-type) .mat-button-toggle-button {   
+            border: 1px solid #A1A7AA5C ; 
+            margin-left: -1px;
+         }
+         .mat-button-toggle-checked.mat-button-toggle-appearance-standard:nth-of-type(1n+1):not(:first-of-type):not(:last-of-type) + .mat-button-toggle-appearance-standard {
+            margin-left: -1px;
+         }
+         .mat-button-toggle-checked.mat-button-toggle-appearance-standard:last-of-type .mat-button-toggle-button{
+            border: 1px solid #A1A7AA5C;
+            margin-left: -1px;
+         }
+    }
+
+    .mat-button-toggle-checked {
+        background-color: transparent;
     }
     
 }
 
-@mixin blui-mat-button-toggle-checked-default() {
+@mixin blui-mat-button-toggle-outlined-default() {
+    .mat-button-toggle-group-appearance-standard[variant='outline'] {
+        border: 1px solid transparent;
+        border-radius: 0;
+        .mat-button-toggle-appearance-standard:first-of-type {
+            .mat-button-toggle-button {
+                border-radius: 4px 0 0 4px;
+            }
+        }
+        .mat-button-toggle-appearance-standard:nth-of-type(1n+1):not(:first-of-type):not(:last-of-type) {
+            .mat-button-toggle-button {
+                border-radius: 0;
+            }
+        }
+        .mat-button-toggle-appearance-standard:last-of-type {
+            .mat-button-toggle-button {
+                border-radius: 0 4px 4px 0px
+            }
+        }
+        .mat-button-toggle-appearance-standard {
+            .mat-button-toggle-button {
+                border: 1px solid #e7e9ea;
+            }
+        }
+
+        .mat-button-toggle-appearance-standard:nth-of-type(1n+1):not(:first-of-type):not(:last-of-type) .mat-button-toggle-button { 
+           border-left: 0;
+        }
+
+        .mat-button-toggle-appearance-standard:last-of-type .mat-button-toggle-button {
+            border-left: 0 ;
+         }
+         .mat-button-toggle-checked.mat-button-toggle-appearance-standard:first-of-type .mat-button-toggle-button {   
+            border: 1px solid #007BC1 ; 
+         }
+         .mat-button-toggle-checked.mat-button-toggle-appearance-standard:nth-of-type(1n+1):not(:first-of-type):not(:last-of-type) .mat-button-toggle-button {   
+            border: 1px solid #007BC1 ; 
+            margin-left: -1px;
+         }
+         .mat-button-toggle-checked.mat-button-toggle-appearance-standard:nth-of-type(1n+1):not(:first-of-type):not(:last-of-type) + .mat-button-toggle-appearance-standard {
+            margin-left: -1px;
+         }
+         .mat-button-toggle-checked.mat-button-toggle-appearance-standard:last-of-type .mat-button-toggle-button{
+            border: 1px solid #007BC1;
+            margin-left: -1px;
+         }
+    }
     .mat-button-toggle-checked {
         background-color: transparent;
     }
-    .mat-button-toggle-group-appearance-standard {
-        // .mat-button-toggle-appearance-standard.mat-button-toggle-checked:first-of-type {
-        //     .mat-button-toggle-button {
-        //         border: 1px solid #A1A7AA5C;
-        //     }   
-        // }
-        
-    
+}
+
+@mixin blui-mat-button-toggle-filled-default() {
+    .mat-button-toggle-group-appearance-standard[variant='filled'] {
+        border: 1px solid transparent;
+        border-radius: 0;
+        .mat-button-toggle-appearance-standard:first-of-type {
+            .mat-button-toggle-button {
+                border-radius: 4px 0 0 4px;
+            }
+        }
+        .mat-button-toggle-appearance-standard:nth-of-type(1n+1):not(:first-of-type):not(:last-of-type) {
+            .mat-button-toggle-button {
+                border-radius: 0;
+            }
+        }
+        .mat-button-toggle-appearance-standard:last-of-type {
+            .mat-button-toggle-button {
+                border-radius: 0 4px 4px 0px
+            }
+        }
         .mat-button-toggle-appearance-standard {
-            &.mat-button-toggle-checked {
-                &:first-of-type {
-                    .mat-button-toggle-button {
-                        border: 1px solid #A1A7AA5C;
-                        color: green;
-                    } 
-                }
-            }
-            &:not(.mat-button-toggle-checked):nth-of-type(1n+1):not(:first-of-type):not(:last-of-type) {
-                .mat-button-toggle-button {
-                    border-left-width: 0;
-                    color: yellow;
-                }
-            }
-    
-            &:not(.mat-button-toggle-checked):last-of-type {
-                .mat-button-toggle-button {
-                    border-left-width: 1px;
-                    color: pink;
-                }
+            .mat-button-toggle-button {
+                border: 1px solid #007BC1;
+                color: #007BC1;
             }
         }
 
-        .mat-button-toggle-appearance-standard {
-            &.mat-button-toggle-checked {
-                &:nth-of-type(1n+1):not(:first-of-type):not(:last-of-type) {
-                    .mat-button-toggle-button {
-                        border: 1px solid #A1A7AA5C;
-                        color: purple;
-                    } 
-                }
-            }
-            &:not(.mat-button-toggle-checked):first-of-type {
-                .mat-button-toggle-button {
-                    border-right-width: 0;
-                    color: blue;
-                }
-            }
-    
-            &:not(.mat-button-toggle-checked):last-of-type {
-                .mat-button-toggle-button {
-                    border-left-width: 0;
-                    color: red;
-                }
-            }
+        .mat-button-toggle-appearance-standard:nth-of-type(1n+1):not(:first-of-type):not(:last-of-type) .mat-button-toggle-button { 
+           border-left: 0;
         }
 
-        .mat-button-toggle-appearance-standard {
-            &.mat-button-toggle-checked {
-                &:last-of-type {
-                    .mat-button-toggle-button {
-                        border: 1px solid #A1A7AA5C;
-                        color: royalblue;
-                    } 
-                }
-            }
-            &:not(.mat-button-toggle-checked):nth-of-type(1n+1):not(:first-of-type):not(:last-of-type) {
-                .mat-button-toggle-button {
-                    border-right-width: 0;
-                    color: rosybrown;
-                }
-            }
-    
-            &:not(.mat-button-toggle-checked):first-of-type {
-                .mat-button-toggle-button {
-                    border-right-width: 1px;
-                    color: brown;
-                }
-            }
-        }
-    
+        .mat-button-toggle-appearance-standard:last-of-type .mat-button-toggle-button {
+            border-left: 0 ;
+         }
+         .mat-button-toggle-checked.mat-button-toggle-appearance-standard:first-of-type .mat-button-toggle-button {   
+            border: 1px solid #007BC1 ;
+            background-color: #007BC1;
+            color: #FFFFFF;
+         }
+         .mat-button-toggle-checked.mat-button-toggle-appearance-standard:nth-of-type(1n+1):not(:first-of-type):not(:last-of-type) .mat-button-toggle-button {   
+            border: 1px solid #007BC1 ; 
+            background-color: #007BC1;
+            color: #FFFFFF;
+            margin-left: -1px;
+         }
+         .mat-button-toggle-checked.mat-button-toggle-appearance-standard:nth-of-type(1n+1):not(:first-of-type):not(:last-of-type) + .mat-button-toggle-appearance-standard {
+            margin-left: -1px;
+         }
+         .mat-button-toggle-checked.mat-button-toggle-appearance-standard:last-of-type .mat-button-toggle-button{
+            border: 1px solid #007BC1;
+            background-color: #007BC1;
+            color: #FFFFFF;
+            margin-left: -1px;
+         }
     }
-    
-
-    // .mat-button-toggle-appearance-standard.mat-button-toggle-checked:first-of-type {
-    //     .mat-button-toggle-button {
-    //         border: 1px solid #A1A7AA5C;
-    //     }
-    // }
-
-    // .mat-button-toggle-appearance-standard.mat-button-toggle-checked:nth-of-type(1n+1):not(:first-of-type):not(:last-of-type) {
-    //     .mat-button-toggle-button {
-    //         border: 1px solid #A1A7AA5C;
-    //     }
-    // }
-
-    // .mat-button-toggle-appearance-standard.mat-button-toggle-checked:last-of-type {
-    //     .mat-button-toggle-button {
-    //         border: 1px solid #A1A7AA5C;
-    //     }
-    // }
-    // .mat-button-toggle.mat-button-toggle-checked .mat-button-toggle-button {
-    //     background-color: #007BC10D;
-    //     color: #007BC1;
-    //     border: 1px solid #A1A7AA5C;
-    // }
+    .mat-button-toggle-checked {
+        background-color: transparent;
+    }
 }

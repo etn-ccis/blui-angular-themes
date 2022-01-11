@@ -337,7 +337,8 @@
     
     
     @include blui-mat-button-toggle-default();
-    @include blui-mat-button-toggle-checked-default();
+    @include blui-mat-button-toggle-outlined-default();
+    @include blui-mat-button-toggle-filled-default();
 
 
     /* Tabs */
