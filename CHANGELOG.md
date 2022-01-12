@@ -4,12 +4,12 @@
 
 ### Fixed
 
--   Fixed non-center aligned chevron in <mat-expansion-panel-header> ([#50](https://github.com/brightlayer-ui/angular-themes/issues/50))
--   Fixed disabled slider color in `<mat-slider>`.
+-   Fixed non-center aligned chevron in `<mat-expansion-panel-header>` ([#50](https://github.com/brightlayer-ui/angular-themes/issues/50))
+-   Fixed disabled slider color in `<mat-slider>`. ([#27](https://github.com/brightlayer-ui/angular-themes/issues/27))
 
 ### Changed
 
--   Changed default font-size of `.mat-tooltip` text to `12px`.
+-   Changed default font-size of `.mat-tooltip` text to `12px`.([#10](https://github.com/brightlayer-ui/angular-themes/issues/10))
 
 ## v6.3.0 (November 3, 2021)
 
