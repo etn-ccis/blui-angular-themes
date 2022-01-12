@@ -6,6 +6,7 @@
 
 -   Fixed non-center aligned chevron in <mat-expansion-panel-header>
 -   Fixed disabled slider color in `<mat-slider>`.
+-   Fixed text color of active option in `mat-select`.
 
 ### Changed
 
