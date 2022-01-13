@@ -1,6 +1,6 @@
 @import '../utility';
 
-@mixin blui-mat-button-toggle-default($palette) {  
+@mixin blui-mat-button-toggle-default($palette) {
     .mat-button-toggle-group-appearance-standard:not([variant='outline']):not([variant='filled']) {
         .mat-button-toggle-appearance-standard {
             .mat-button-toggle-button {
@@ -23,7 +23,7 @@
                     border-color: map-get($palette, selectedBorderColor);
                 }
             }
-            &:nth-of-type(1n+1) {
+            &:nth-of-type(1n + 1) {
                 &:not(:first-of-type) {
                     &:not(:last-of-type) {
                         .mat-button-toggle-button {
@@ -39,7 +39,6 @@
             }
         }
     }
-
 }
 
 @mixin blui-mat-button-toggle-outline($palette) {
@@ -58,7 +57,7 @@
                     border-color: map-get($palette, selectedBorderColor);
                 }
             }
-            &:nth-of-type(1n+1) {
+            &:nth-of-type(1n + 1) {
                 &:not(:first-of-type) {
                     &:not(:last-of-type) {
                         .mat-button-toggle-button {
@@ -75,7 +74,6 @@
         }
     }
 }
-
 
 @mixin blui-mat-button-toggle-filled($palette) {
     .mat-button-toggle-group-appearance-standard[variant='filled'] {
@@ -98,7 +96,7 @@
                     border-color: map-get($palette, selectedBorderColor);
                 }
             }
-            &:nth-of-type(1n+1) {
+            &:nth-of-type(1n + 1) {
                 &:not(:first-of-type) {
                     &:not(:last-of-type) {
                         .mat-button-toggle-button {

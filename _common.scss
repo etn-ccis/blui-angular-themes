@@ -37,7 +37,7 @@
                     border-radius: 4px 0 0 4px;
                 }
             }
-            &:nth-of-type(1n+1):not(:first-of-type):not(:last-of-type) {
+            &:nth-of-type(1n + 1):not(:first-of-type):not(:last-of-type) {
                 .mat-button-toggle-button {
                     border-radius: 0;
                     border-left: 0;
@@ -53,7 +53,7 @@
                 background-color: transparent;
             }
             .mat-button-toggle-button {
-                border: 1px solid; 
+                border: 1px solid;
             }
         }
 
@@ -64,7 +64,7 @@
                     border: 1px solid;
                 }
             }
-            &:nth-of-type(1n+1) {
+            &:nth-of-type(1n + 1) {
                 &:not(:first-of-type) {
                     &:not(:last-of-type) {
                         .mat-button-toggle-button {
@@ -86,7 +86,6 @@
                 }
             }
         }
-        
     }
     .mat-expansion-panel {
         .mat-expansion-panel-header {
