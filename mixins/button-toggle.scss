@@ -52,6 +52,13 @@
 
         // checked toggle button
         .mat-button-toggle-checked.mat-button-toggle-appearance-standard {
+            .mat-button-toggle-button {
+                background-color: map-get($palette, activeBackgroundColor);
+                color: map-get($palette, activeTextColor);
+            }
+        }
+
+        .mat-button-toggle-checked.mat-button-toggle-appearance-standard {
             &:first-of-type {
                 .mat-button-toggle-button {
                     border-color: map-get($palette, selectedBorderColor);
@@ -80,6 +87,7 @@
         .mat-button-toggle-appearance-standard {
             .mat-button-toggle-button {
                 border-color: map-get($palette, unselectedBorderColor);
+                color: map-get($palette, inactiveTextColor);
             }
         }
 
@@ -90,6 +98,7 @@
                 color: map-get($palette, activeTextColor);
             }
         }
+        
         .mat-button-toggle-checked.mat-button-toggle-appearance-standard {
             &:first-of-type {
                 .mat-button-toggle-button {
