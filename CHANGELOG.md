@@ -6,6 +6,7 @@
 
 -   Fixed non-center aligned chevron in <mat-expansion-panel-header> ([#50](https://github.com/brightlayer-ui/angular-themes/issues/50))
 -   Fixed disabled slider color in `<mat-slider>`.
+-   Fixed text color of active option in `mat-select`.
 
 ### Changed
 
