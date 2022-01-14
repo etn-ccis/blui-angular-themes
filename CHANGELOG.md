@@ -8,6 +8,7 @@
 -   Fixed disabled slider color in `<mat-slider>`.
 
 ### Added
+
 -   Added new `outline` and `filled` variant for `<mat-toggle-button>`.([#19](https://github.com/brightlayer-ui/angular-themes/issues/19))
 
 ### Changed

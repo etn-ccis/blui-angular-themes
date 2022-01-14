@@ -302,7 +302,6 @@
         selectedBorderColor: rgba(map-get($blui-black, 200), 0.36),
         unselectedBorderColor: rgba(map-get($blui-black, 200), 0.36),
     );
-    @include blui-mat-button-toggle-default($buttonToggleDefault);
 
     /* Button Toggle Group Outline */
     $buttonToggleOutline: (
@@ -312,7 +311,6 @@
         selectedBorderColor: map-get($blui-blue, 200),
         unselectedBorderColor: rgba(map-get($blui-black, 200), 0.36),
     );
-    @include blui-mat-button-toggle-outline($buttonToggleOutline);
 
     /* Button Toggle Group Filled */
     $buttonToggleFilled: (
@@ -322,7 +320,8 @@
         selectedBorderColor: map-get($blui-blue, 500),
         unselectedBorderColor: map-get($blui-blue, 500),
     );
-    @include blui-mat-button-toggle-filled($buttonToggleFilled);
+
+    @include blui-mat-button-toggle($buttonToggleDefault, $buttonToggleOutline, $buttonToggleFilled);
 
     /* Tabs */
     $tabText: map-get($foreground, secondary-text);
