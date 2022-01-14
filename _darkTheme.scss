@@ -402,14 +402,18 @@
         background-color: map-get($blui-darkBlack, 100);
         &.mat-primary {
             background-color: map-get($blui-black, 800);
+            color: map-get($blui-black, 50);;
         }
         &.mat-accent {
-            color: map-get($foreground, text);
             background-color: map-get($blui-black, 900);
+            color: map-get($foreground, text);
         }
         &.mat-warn {
             background-color: map-get($blui-red, 500);
             color: map-get($blui-white, 50);
+            .mat-icon-button:not([color]) {
+                color: map-get($blui-white, 50);
+            }
         }
     }
 
