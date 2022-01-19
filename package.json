@@ -28,8 +28,6 @@
         "Brightlayer UI",
         "themes",
         "Eaton",
-        "Power",
-        "Xpert",
         "Angular"
     ],
     "prettier": "@brightlayer-ui/prettier-config",
