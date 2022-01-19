@@ -586,10 +586,8 @@
     }
     /* mat-select panel  */
     .mat-select-panel {
-        &.mat-primary {
-            .mat-option.mat-selected:not(.mat-option-disabled) {
-                color: map-get($blui-black, 50);
-            }
+        .mat-option.mat-selected:not(.mat-option-disabled) {
+            color: map-get($blui-black, 50);
         }
     }
 }
