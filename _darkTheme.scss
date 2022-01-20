@@ -587,7 +587,7 @@
     /* mat-select panel  */
     .mat-select-panel {
         .mat-option.mat-selected:not(.mat-option-disabled) {
-            color: map-get($blui-black, 50);
+            color: map-get($foreground, text);
         }
     }
 }
