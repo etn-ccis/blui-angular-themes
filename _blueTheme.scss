@@ -479,10 +479,8 @@
     //     background-color: rgba(map-get($blui-black, 500), .05);
     // }
     .mat-select-panel {
-        &.mat-primary {
-            .mat-option.mat-selected:not(.mat-option-disabled) {
-                color: map-get($blui-black, 500);
-            }
+        .mat-option.mat-selected:not(.mat-option-disabled) {
+            color: map-get($foreground, text);
         }
     }
 }
