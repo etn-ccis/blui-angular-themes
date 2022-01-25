@@ -4,7 +4,7 @@
 
 ### Changed
 
--  Changed `mat-table` header styles. ([#36](https://github.com/brightlayer-ui/angular-themes/issues/36))
+-   Changed `mat-table` header styles. ([#36](https://github.com/brightlayer-ui/angular-themes/issues/36))
 
 ### Fixed
 
