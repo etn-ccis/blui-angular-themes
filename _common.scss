@@ -48,4 +48,12 @@
         font-size: 0.875rem;
         font-weight: 600;
     }
+    .mat-row {
+        min-height: 3.25rem;
+    }
+    td.mat-cell {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        font-size: 0.875rem;
+    }
 }
