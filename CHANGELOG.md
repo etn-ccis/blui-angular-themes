@@ -2,6 +2,10 @@
 
 ## v6.3.1 (Not yet published)
 
+### Changed
+
+-   Changed `mat-table` header styles. ([#36](https://github.com/brightlayer-ui/angular-themes/issues/36))
+
 ### Fixed
 
 -   Fixed non-center aligned chevron in `<mat-expansion-panel-header>`. ([#50](https://github.com/brightlayer-ui/angular-themes/issues/50))
