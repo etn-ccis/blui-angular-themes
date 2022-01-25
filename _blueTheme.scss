@@ -488,12 +488,4 @@
     th.mat-header-cell {
         color: map-get($foreground, text);
     }
-    /* .mat-sort-header-arrow[style] {
-        opacity: 1!important;;
-        color: rgba(map-get($foreground, secondary-text), 1);
-    }
-    .mat-sort-header-sorted .mat-sort-header-arrow {
-        color: map-get($foreground, secondary-text);
-    }
-    */
 }
