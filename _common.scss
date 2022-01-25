@@ -43,8 +43,8 @@
     .mat-tooltip {
         font-size: 12px;
     }
-
     .mat-row {
-        height: 52px;
+        height: unset;
+        min-height: 52px;
     }
 }
