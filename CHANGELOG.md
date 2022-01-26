@@ -4,7 +4,7 @@
 
 ### Added
 
--  Added `blui-inline` directive for `mat-button` which applies icon styles. ([#31](https://github.com/brightlayer-ui/angular-themes/issues/31)) 
+-  Added `blui-inline` attribute styles to apply icon formatting with a `mat-button`. ([#31](https://github.com/brightlayer-ui/angular-themes/issues/31)) 
 
 ### Fixed
 
