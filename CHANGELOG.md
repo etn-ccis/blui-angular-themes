@@ -2,6 +2,10 @@
 
 ## v6.3.1 (Not yet published)
 
+### Added
+
+-  Added `blui-inline` directive for `mat-button` which applies icon styles. ([#31](https://github.com/brightlayer-ui/angular-themes/issues/31)) 
+
 ### Fixed
 
 -   Fixed non-center aligned chevron in `<mat-expansion-panel-header>`. ([#50](https://github.com/brightlayer-ui/angular-themes/issues/50))
