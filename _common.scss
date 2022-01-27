@@ -43,7 +43,6 @@
     .mat-tooltip {
         font-size: 12px;
     }
-
     th.mat-header-cell {
         font-size: 0.875rem;
         font-weight: 600;
@@ -55,5 +54,9 @@
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
         font-size: 0.875rem;
+    }
+    th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }
