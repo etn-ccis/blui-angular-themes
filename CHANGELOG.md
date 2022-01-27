@@ -2,10 +2,6 @@
 
 ## v6.3.1 (Not yet published)
 
-### Changed
-
--   Changed `mat-table` header styles. ([#36](https://github.com/brightlayer-ui/angular-themes/issues/36))
-
 ### Fixed
 
 -   Fixed non-center aligned chevron in `<mat-expansion-panel-header>`. ([#50](https://github.com/brightlayer-ui/angular-themes/issues/50))
@@ -15,6 +11,8 @@
 
 ### Changed
 
+-   Changed `.mat-cell`, `.mat-header-cell` and `.mat-footer-cell` horizontal padding to `1rem` and vertical padding to `0.5rem`. ([#38](https://github.com/brightlayer-ui/angular-themes/issues/38))
+-   Changed `mat-table` header styles. ([#36](https://github.com/brightlayer-ui/angular-themes/issues/36))
 -   Changed default font-size of `.mat-tooltip` text to `12px`.([#10](https://github.com/brightlayer-ui/angular-themes/issues/10))
 -   Changed default height of `.mat-row` to `52px`.([#37](https://github.com/brightlayer-ui/angular-themes/issues/37))
 
