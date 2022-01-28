@@ -41,7 +41,7 @@
         }
     }
     .mat-tooltip {
-        font-size: 12px;
+        font-size: 0.75rem;
     }
 
     th.mat-header-cell {
@@ -49,7 +49,7 @@
         font-weight: 600;
     }
     .mat-row {
-        min-height: 3.25rem;
+        height: 3.25rem;
     }
     td.mat-cell {
         padding-top: 0.5rem;
