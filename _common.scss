@@ -33,18 +33,24 @@
         border-radius: 0;
         .mat-button-toggle-appearance-standard {
             &:first-of-type {
-                .mat-button-toggle-button {
+                .mat-button-toggle-button,
+                .mat-button-toggle-focus-overlay,
+                .mat-ripple.mat-button-toggle-ripple {
                     border-radius: 4px 0 0 4px;
                 }
             }
             &:nth-of-type(1n + 1):not(:first-of-type):not(:last-of-type) {
-                .mat-button-toggle-button {
+                .mat-button-toggle-button,
+                .mat-button-toggle-focus-overlay,
+                .mat-ripple.mat-button-toggle-ripple {
                     border-radius: 0;
                     border-left: 0;
                 }
             }
             &:last-of-type {
-                .mat-button-toggle-button {
+                .mat-button-toggle-button,
+                .mat-button-toggle-focus-overlay,
+                .mat-ripple.mat-button-toggle-ripple {
                     border-radius: 0 4px 4px 0px;
                     border-left: 0;
                 }
