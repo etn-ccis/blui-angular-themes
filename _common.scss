@@ -73,4 +73,11 @@
     [dir='rtl'] .mat-button-base[blui-inline] .mat-icon {
         margin: 0 -4px 0 8px;
     }
+
+    .mat-form-field-flex {
+        height: 56px;
+    }
+    .mat-form-field-appearance-fill .mat-form-field-flex {
+        padding: 0.75em 0.75em 0 0.75em;
+    }
 }
