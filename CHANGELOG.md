@@ -13,6 +13,10 @@
 -   Fixed text color of active option in `<mat-select>` for light and dark mode. ([#18](https://github.com/brightlayer-ui/angular-themes/issues/18))
 -   Fixed dark-mode text and icon color in `<mat-toolbar>`. ([#18](https://github.com/brightlayer-ui/angular-themes/issues/59))
 
+### Added
+
+-   Added new `outline` and `filled` variant for `<mat-toggle-button>`.([#19](https://github.com/brightlayer-ui/angular-themes/issues/19))
+
 ### Changed
 
 -   Changed default font-size of `.mat-tooltip` text to `12px`.([#10](https://github.com/brightlayer-ui/angular-themes/issues/10))
