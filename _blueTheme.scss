@@ -483,4 +483,9 @@
             color: map-get($foreground, text);
         }
     }
+
+    /* Mat Table */
+    th.mat-header-cell {
+        color: map-get($foreground, text);
+    }
 }
