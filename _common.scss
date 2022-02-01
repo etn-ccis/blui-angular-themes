@@ -27,6 +27,72 @@
             }
         }
     }
+    // Changing border behaviour of mat-button-toggle-group
+    .mat-button-toggle-group-appearance-standard {
+        border: 1px solid transparent;
+        border-radius: 0;
+        .mat-button-toggle-appearance-standard {
+            &:first-of-type {
+                .mat-button-toggle-button,
+                .mat-button-toggle-focus-overlay,
+                .mat-ripple.mat-button-toggle-ripple {
+                    border-radius: 4px 0 0 4px;
+                }
+            }
+            &:nth-of-type(1n + 1):not(:first-of-type):not(:last-of-type) {
+                .mat-button-toggle-button,
+                .mat-button-toggle-focus-overlay,
+                .mat-ripple.mat-button-toggle-ripple {
+                    border-radius: 0;
+                    border-left: 0;
+                }
+            }
+            &:last-of-type {
+                .mat-button-toggle-button,
+                .mat-button-toggle-focus-overlay,
+                .mat-ripple.mat-button-toggle-ripple {
+                    border-radius: 0 4px 4px 0px;
+                    border-left: 0;
+                }
+            }
+            &.mat-button-toggle-checked {
+                background-color: transparent;
+            }
+            .mat-button-toggle-button {
+                border: 1px solid;
+            }
+        }
+
+        // checked toggle button
+        .mat-button-toggle-checked.mat-button-toggle-appearance-standard {
+            &:first-of-type {
+                .mat-button-toggle-button {
+                    border: 1px solid;
+                }
+            }
+            &:nth-of-type(1n + 1) {
+                &:not(:first-of-type) {
+                    &:not(:last-of-type) {
+                        .mat-button-toggle-button {
+                            border: 1px solid;
+                            margin-left: -1px;
+                        }
+                        + {
+                            .mat-button-toggle-appearance-standard {
+                                margin-left: -1px;
+                            }
+                        }
+                    }
+                }
+            }
+            &:last-of-type {
+                .mat-button-toggle-button {
+                    border: 1px solid;
+                    margin-left: -1px;
+                }
+            }
+        }
+    }
     .mat-expansion-panel {
         .mat-expansion-panel-header {
             .mat-expansion-indicator {
@@ -43,7 +109,6 @@
     .mat-tooltip {
         font-size: 0.75rem;
     }
-
     th.mat-header-cell {
         font-size: 0.875rem;
         font-weight: 600;
@@ -56,8 +121,14 @@
         padding-bottom: 0.5rem;
         font-size: 0.875rem;
     }
-
-
+    th.mat-header-cell, td.mat-cell, td.mat-footer-cell, 
+    th.mat-header-cell:first-of-type, td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type, 
+    th.mat-header-cell:last-of-type, td.mat-cell:last-of-type, td.mat-footer-cell:last-of-type, 
+    [dir=rtl] th.mat-header-cell:first-of-type:not(:only-of-type), [dir=rtl] td.mat-cell:first-of-type:not(:only-of-type), [dir=rtl] td.mat-footer-cell:first-of-type:not(:only-of-type),
+    [dir=rtl] th.mat-header-cell:last-of-type:not(:only-of-type), [dir=rtl] td.mat-cell:last-of-type:not(:only-of-type), [dir=rtl] td.mat-footer-cell:last-of-type:not(:only-of-type) {
+        padding-left: 16px;
+        padding-right: 16px;
+    }    
     .mat-button-base[blui-inline] {
         .mat-button-wrapper {
             display: flex;
