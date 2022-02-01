@@ -294,6 +294,35 @@
         }
     }
 
+    /* Button Toggle Group Default */
+    $buttonToggleDefault: (
+        activeBackgroundColor: rgba(map-get($blui-blue, 500), 0.36),
+        activeTextColor: map-get($blui-blue, 200),
+        inactiveTextColor: map-get($blui-black, 200),
+        selectedBorderColor: rgba(map-get($blui-black, 200), 0.36),
+        unselectedBorderColor: rgba(map-get($blui-black, 200), 0.36),
+    );
+
+    /* Button Toggle Group Outline */
+    $buttonToggleOutline: (
+        activeBackgroundColor: rgba(map-get($blui-blue, 500), 0.36),
+        activeTextColor: map-get($blui-blue, 200),
+        inactiveTextColor: map-get($blui-black, 200),
+        selectedBorderColor: map-get($blui-blue, 200),
+        unselectedBorderColor: rgba(map-get($blui-black, 200), 0.36),
+    );
+
+    /* Button Toggle Group Filled */
+    $buttonToggleFilled: (
+        activeBackgroundColor: map-get($blui-blue, 500),
+        activeTextColor: map-get($blui-white, 50),
+        inactiveTextColor: map-get($blui-blue, 200),
+        selectedBorderColor: map-get($blui-blue, 500),
+        unselectedBorderColor: map-get($blui-blue, 500),
+    );
+
+    @include blui-mat-button-toggle($buttonToggleDefault, $buttonToggleOutline, $buttonToggleFilled);
+
     /* Tabs */
     $tabText: map-get($foreground, secondary-text);
     $tabBackground: map-get($blui-black, 900);

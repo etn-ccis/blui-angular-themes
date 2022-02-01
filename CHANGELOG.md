@@ -2,9 +2,10 @@
 
 ## v6.3.1 (Not yet published)
 
-### Changed
+### Added
 
--   Changed `mat-table` header styles. ([#36](https://github.com/brightlayer-ui/angular-themes/issues/36))
+-   Added `blui-inline` attribute styles to `mat-button`. ([#31](https://github.com/brightlayer-ui/angular-themes/issues/31)) 
+-   Added new `outline` and `filled` variant for `<mat-toggle-button>`.([#19](https://github.com/brightlayer-ui/angular-themes/issues/19))
 
 ### Fixed
 
@@ -15,8 +16,10 @@
 
 ### Changed
 
+-   Updated table styles to match design specifications ([#38](https://github.com/brightlayer-ui/angular-themes/issues/38), [#36](https://github.com/brightlayer-ui/angular-themes/issues/36)).
 -   Changed default font-size of `.mat-tooltip` text to `12px`.([#10](https://github.com/brightlayer-ui/angular-themes/issues/10))
 -   Changed default height of `.mat-row` to `52px`.([#37](https://github.com/brightlayer-ui/angular-themes/issues/37))
+-   Changed `mat-table` header styles. ([#36](https://github.com/brightlayer-ui/angular-themes/issues/36))
 
 ## v6.3.0 (November 3, 2021)
 
