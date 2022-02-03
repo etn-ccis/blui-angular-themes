@@ -173,8 +173,8 @@
             }
             &.mat-form-field-appearance-fill {
                 .mat-form-field-flex, .mat-form-field-subscript-wrapper {
-                    padding-left: 16px;
-                    padding-right: 12px;
+                    padding-left: 12px;
+                    padding-right: 16px;
                 }
             }
         }
@@ -187,8 +187,10 @@
         margin-right: 8px;
     }
     .mat-form-field-suffix, .mat-form-field-prefix {
-        height: 1.5rem;
-        width: 1.5rem;
+        .mat-icon {
+            height: 1.5rem;
+            width: 1.5rem;
+        }
     }
 
     .mat-form-field-wrapper {
@@ -253,6 +255,9 @@
             }
             .mat-form-field-suffix, .mat-form-field-prefix {
                 margin-bottom: 0.75rem;
+            }
+            .mat-form-field-infix {
+                padding-top: 0.125rem;
             }
         }
 
