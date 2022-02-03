@@ -19,9 +19,9 @@
 
     /* input fields */
     $inputPrimary: (
-        icon: map-get($foreground, hint-text),
+        icon: map-get($foreground, secondary-text),
         placeholder: map-get($blui-black, 100),
-        hint: map-get($foreground, secondary-text),
+        hint: map-get($foreground, hint-text),
         filledBackgroundColor: map-get($blui-white, 200),
         label: (
             withoutValue: map-get($foreground, hint-text),
@@ -35,7 +35,7 @@
         ),
     );
     $inputWarn: (
-        icon: map-get($foreground, hint-text),
+        icon: map-get($foreground, secondary-text),
         placeholder: map-get($blui-black, 100),
         hint: map-get($warn, 500),
         filledBackgroundColor: map-get($blui-white, 200),
