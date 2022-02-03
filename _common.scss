@@ -156,8 +156,8 @@
     }
 
 
-    $ltrOutlinePadding:  0 0.75rem 0 1rem;
-    $rtlOutlinePadding:  0 1rem 0 0.75rem;
+    $ltrOutlinePadding:  0 12px 0 16px;
+    $rtlOutlinePadding:  0 16px 0 12px;
     [dir='rtl'] {
         .mat-form-field {
 
@@ -173,8 +173,8 @@
             }
             &.mat-form-field-appearance-fill {
                 .mat-form-field-flex, .mat-form-field-subscript-wrapper {
-                    padding-left: 1rem;
-                    padding-right: 0.75rem;
+                    padding-left: 16px;
+                    padding-right: 12px;
                 }
             }
         }
@@ -248,8 +248,8 @@
 
         &.mat-form-field-appearance-fill {
             .mat-form-field-flex, .mat-form-field-subscript-wrapper  {
-                padding-left: 1rem;
-                padding-right: 0.75rem;
+                padding-left: 16px;
+                padding-right: 12px;
             }
             .mat-form-field-suffix, .mat-form-field-prefix {
                 margin-bottom: 0.75rem;
