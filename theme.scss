@@ -71,7 +71,7 @@ $material-theme: mat.define-light-theme($material-theme-primary, $material-theme
                 slider-off-active: rgba(black, 0.38),
             ),
             background: (
-                status-bar: mat.get-color-from-palette(mat.$gray-palette, 300),
+                status-bar: mat.get-color-from-palette(mat.$light-theme-background-palette, status-bar),
                 app-bar: map-get(blui.$blui-gray, 50),
                 background: map-get(blui.$blui-white, 200),
                 hover: rgba(black, 0.04),
@@ -166,7 +166,7 @@ $blui-blue-dark-accent: mat.define-palette(blui.$blui-lightBlue, 200);
 $blui-blue-dark-warn: mat.define-palette(blui.$blui-red, 200);
 $blui-blue-dark-theme: blui-dark-theme($blui-blue-dark-primary, $blui-blue-dark-accent, $blui-blue-dark-warn);
 .blui-blue-dark {
-    @include mat.core-theme($blui-blue-dark-theme);
+    @include mat.all-component-themes($blui-blue-dark-theme);
     @include margins.reasonable-margins();
     @include fonts.bodyfont();
     @include typography.typography();
