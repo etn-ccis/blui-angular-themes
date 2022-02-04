@@ -121,14 +121,24 @@
         padding-bottom: 0.5rem;
         font-size: 0.875rem;
     }
-    th.mat-header-cell, td.mat-cell, td.mat-footer-cell, 
-    th.mat-header-cell:first-of-type, td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type, 
-    th.mat-header-cell:last-of-type, td.mat-cell:last-of-type, td.mat-footer-cell:last-of-type, 
-    [dir=rtl] th.mat-header-cell:first-of-type:not(:only-of-type), [dir=rtl] td.mat-cell:first-of-type:not(:only-of-type), [dir=rtl] td.mat-footer-cell:first-of-type:not(:only-of-type),
-    [dir=rtl] th.mat-header-cell:last-of-type:not(:only-of-type), [dir=rtl] td.mat-cell:last-of-type:not(:only-of-type), [dir=rtl] td.mat-footer-cell:last-of-type:not(:only-of-type) {
+    th.mat-header-cell,
+    td.mat-cell,
+    td.mat-footer-cell,
+    th.mat-header-cell:first-of-type,
+    td.mat-cell:first-of-type,
+    td.mat-footer-cell:first-of-type,
+    th.mat-header-cell:last-of-type,
+    td.mat-cell:last-of-type,
+    td.mat-footer-cell:last-of-type,
+    [dir='rtl'] th.mat-header-cell:first-of-type:not(:only-of-type),
+    [dir='rtl'] td.mat-cell:first-of-type:not(:only-of-type),
+    [dir='rtl'] td.mat-footer-cell:first-of-type:not(:only-of-type),
+    [dir='rtl'] th.mat-header-cell:last-of-type:not(:only-of-type),
+    [dir='rtl'] td.mat-cell:last-of-type:not(:only-of-type),
+    [dir='rtl'] td.mat-footer-cell:last-of-type:not(:only-of-type) {
         padding-left: 16px;
         padding-right: 16px;
-    }    
+    }
     .mat-button-base[blui-inline] {
         .mat-button-wrapper {
             display: flex;
@@ -143,5 +153,116 @@
     }
     [dir='rtl'] .mat-button-base[blui-inline] .mat-icon {
         margin: 0 -4px 0 8px;
+    }
+
+
+    $ltrOutlinePadding:  0 12px 0 16px;
+    $rtlOutlinePadding:  0 16px 0 12px;
+    [dir='rtl'] {
+        .mat-form-field {
+
+            .mat-form-field-prefix {
+                margin-right: 0px;
+                margin-left: 8px;
+            }
+
+            &.mat-form-field-appearance-outline {
+                .mat-form-field-flex, .mat-form-field-subscript-wrapper {
+                    padding: $rtlOutlinePadding;
+                }
+            }
+            &.mat-form-field-appearance-fill {
+                .mat-form-field-flex, .mat-form-field-subscript-wrapper {
+                    padding-left: 12px;
+                    padding-right: 16px;
+                }
+            }
+        }
+    }
+
+    .mat-form-field-flex {
+        height: 3.5rem;
+    }
+    .mat-form-field-prefix {
+        margin-right: 8px;
+    }
+    .mat-form-field-suffix, .mat-form-field-prefix {
+        .mat-icon {
+            height: 1.5rem;
+            width: 1.5rem;
+        }
+    }
+
+    .mat-form-field-wrapper {
+        //  padding-bottom: 1.2rem;
+    }
+    .mat-form-field {
+        transition: margin 125ms;
+        .mat-form-field-flex {
+            align-items: center;
+        }
+
+        .mat-form-field-infix,
+        .mat-form-field-prefix,
+        .mat-form-field-suffix {
+            transition: margin 125ms;
+        }
+
+        &.mat-form-field-appearance-standard,
+        &.mat-form-field-appearance-legacy {
+            &.mat-form-field-should-float .mat-form-field-label {
+                margin-top: 0.25rem;
+            }
+            &:not(.mat-form-field-should-float) .mat-form-field-infix {
+                margin-top: -1.125rem;
+            }
+            .mat-form-field-suffix, .mat-form-field-prefix {
+                margin-bottom: 0.25rem;
+            }
+            .mat-form-field-infix {
+                padding: 0.4375rem 0;
+                line-height: 1.5rem;
+            }
+            .mat-form-field-flex {
+                padding-top: 0.75rem;
+            }
+            .mat-form-field-wrapper {
+                padding-bottom: 1.34375rem;
+            }
+        }
+        &.mat-form-field-appearance-outline {
+            .mat-form-field-flex, .mat-form-field-subscript-wrapper  {
+                padding: $ltrOutlinePadding;
+            }
+            &.mat-form-field-should-float .mat-form-field-label {
+                margin-top: 0px;
+            }
+            &.mat-form-field-should-float .mat-form-field-infix {
+                margin-top: -0.25rem;
+            }
+            .mat-form-field-infix {
+                margin-top: 0;
+            }
+            .mat-form-field-suffix, .mat-form-field-prefix {
+                margin-bottom: 0.25rem;
+            }
+        }
+
+        &.mat-form-field-appearance-fill {
+            .mat-form-field-flex, .mat-form-field-subscript-wrapper  {
+                padding-left: 16px;
+                padding-right: 12px;
+            }
+            .mat-form-field-suffix, .mat-form-field-prefix {
+                margin-bottom: 0.75rem;
+            }
+            .mat-form-field-infix {
+                padding-top: 0.125rem;
+            }
+        }
+
+        .mat-form-field-subscript-wrapper {
+            margin-top: 0.25rem;
+        }
     }
 }

@@ -44,11 +44,11 @@
         "@fontsource/open-sans": "^4.1.0"
     },
     "devDependencies": {
-        "@angular/material": ">=8.2.0",
+        "@angular/material": "^12.2.13",
         "@brightlayer-ui/prettier-config": "^1.0.2",
         "prettier": "^2.0.4"
     },
     "peerDependencies": {
-        "@angular/material": ">=8.2.0"
+        "@angular/material": "^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0 || ^12.0.0"
     }
 }

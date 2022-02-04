@@ -21,6 +21,7 @@
             .mat-form-field-underline,
             .mat-form-field-outline-thick,
             .mat-form-field-suffix,
+            .mat-form-field-prefix,
             input::-webkit-input-placeholder {
                 color: map-get($disablePalette, text);
             }
@@ -87,7 +88,7 @@
         }
 
         /* Icon */
-        .mat-form-field-suffix {
+        .mat-form-field-suffix, .mat-form-field-prefix {
             color: map-get($palette, icon);
         }
 
