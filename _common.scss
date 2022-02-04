@@ -27,11 +27,54 @@
             }
         }
     }
-    // Changing border behaviour of mat-button-toggle-group
+
+    [dir='rtl'] {
+        .mat-button-toggle-group-appearance-standard {
+            .mat-button-toggle-appearance-standard {
+                &:first-of-type {
+                    .mat-button-toggle-button,
+                    .mat-button-toggle-focus-overlay,
+                    .mat-ripple.mat-button-toggle-ripple {
+                        border-radius: 0 4px 4px 0;
+                    }
+                }
+
+                &:last-of-type {
+                    .mat-button-toggle-button,
+                    .mat-button-toggle-focus-overlay,
+                    .mat-ripple.mat-button-toggle-ripple {
+                        border-radius: 4px 0 0 4px;
+                    }
+                }
+                &:not(:first-of-type) {
+                    margin-left: 0px;
+                    margin-right: -1px;
+                }
+            }
+            .mat-button-toggle-checked.mat-button-toggle-appearance-standard {
+                border-width: 1px;
+                .mat-button-toggle-button {
+                    margin-right: 0px;
+                    margin-left: -1px;
+                }
+                + {
+                    .mat-button-toggle-appearance-standard {
+                        margin-right: 0px;
+                    }
+                }
+            }
+        }
+    }
+
     .mat-button-toggle-group-appearance-standard {
-        border: 1px solid transparent;
+        border: 0;
         border-radius: 0;
+
         .mat-button-toggle-appearance-standard {
+            .mat-button-toggle-button {
+                border: 1px solid;
+            }
+
             &:first-of-type {
                 .mat-button-toggle-button,
                 .mat-button-toggle-focus-overlay,
@@ -39,60 +82,40 @@
                     border-radius: 4px 0 0 4px;
                 }
             }
-            &:nth-of-type(1n + 1):not(:first-of-type):not(:last-of-type) {
-                .mat-button-toggle-button,
-                .mat-button-toggle-focus-overlay,
-                .mat-ripple.mat-button-toggle-ripple {
-                    border-radius: 0;
-                    border-left: 0;
-                }
-            }
+
             &:last-of-type {
                 .mat-button-toggle-button,
                 .mat-button-toggle-focus-overlay,
                 .mat-ripple.mat-button-toggle-ripple {
                     border-radius: 0 4px 4px 0px;
-                    border-left: 0;
                 }
             }
+
+            &:not(:first-of-type) {
+                margin-left: -1px;
+            }
+
             &.mat-button-toggle-checked {
                 background-color: transparent;
-            }
-            .mat-button-toggle-button {
-                border: 1px solid;
             }
         }
 
         // checked toggle button
         .mat-button-toggle-checked.mat-button-toggle-appearance-standard {
-            &:first-of-type {
-                .mat-button-toggle-button {
-                    border: 1px solid;
-                }
+            border-width: 1px;
+
+            .mat-button-toggle-button {
+                margin-right: -1px;
             }
-            &:nth-of-type(1n + 1) {
-                &:not(:first-of-type) {
-                    &:not(:last-of-type) {
-                        .mat-button-toggle-button {
-                            border: 1px solid;
-                            margin-left: -1px;
-                        }
-                        + {
-                            .mat-button-toggle-appearance-standard {
-                                margin-left: -1px;
-                            }
-                        }
-                    }
-                }
-            }
-            &:last-of-type {
-                .mat-button-toggle-button {
-                    border: 1px solid;
-                    margin-left: -1px;
+
+            + {
+                .mat-button-toggle-appearance-standard {
+                    margin-left: 0px;
                 }
             }
         }
     }
+
     .mat-expansion-panel {
         .mat-expansion-panel-header {
             .mat-expansion-indicator {
@@ -155,24 +178,24 @@
         margin: 0 -4px 0 8px;
     }
 
-
-    $ltrOutlinePadding:  0 12px 0 16px;
-    $rtlOutlinePadding:  0 16px 0 12px;
+    $ltrOutlinePadding: 0 12px 0 16px;
+    $rtlOutlinePadding: 0 16px 0 12px;
     [dir='rtl'] {
         .mat-form-field {
-
             .mat-form-field-prefix {
                 margin-right: 0px;
                 margin-left: 8px;
             }
 
             &.mat-form-field-appearance-outline {
-                .mat-form-field-flex, .mat-form-field-subscript-wrapper {
+                .mat-form-field-flex,
+                .mat-form-field-subscript-wrapper {
                     padding: $rtlOutlinePadding;
                 }
             }
             &.mat-form-field-appearance-fill {
-                .mat-form-field-flex, .mat-form-field-subscript-wrapper {
+                .mat-form-field-flex,
+                .mat-form-field-subscript-wrapper {
                     padding-left: 12px;
                     padding-right: 16px;
                 }
@@ -186,7 +209,8 @@
     .mat-form-field-prefix {
         margin-right: 8px;
     }
-    .mat-form-field-suffix, .mat-form-field-prefix {
+    .mat-form-field-suffix,
+    .mat-form-field-prefix {
         .mat-icon {
             height: 1.5rem;
             width: 1.5rem;
@@ -216,7 +240,8 @@
             &:not(.mat-form-field-should-float) .mat-form-field-infix {
                 margin-top: -1.125rem;
             }
-            .mat-form-field-suffix, .mat-form-field-prefix {
+            .mat-form-field-suffix,
+            .mat-form-field-prefix {
                 margin-bottom: 0.25rem;
             }
             .mat-form-field-infix {
@@ -231,7 +256,8 @@
             }
         }
         &.mat-form-field-appearance-outline {
-            .mat-form-field-flex, .mat-form-field-subscript-wrapper  {
+            .mat-form-field-flex,
+            .mat-form-field-subscript-wrapper {
                 padding: $ltrOutlinePadding;
             }
             &.mat-form-field-should-float .mat-form-field-label {
@@ -243,17 +269,20 @@
             .mat-form-field-infix {
                 margin-top: 0;
             }
-            .mat-form-field-suffix, .mat-form-field-prefix {
+            .mat-form-field-suffix,
+            .mat-form-field-prefix {
                 margin-bottom: 0.25rem;
             }
         }
 
         &.mat-form-field-appearance-fill {
-            .mat-form-field-flex, .mat-form-field-subscript-wrapper  {
+            .mat-form-field-flex,
+            .mat-form-field-subscript-wrapper {
                 padding-left: 16px;
                 padding-right: 12px;
             }
-            .mat-form-field-suffix, .mat-form-field-prefix {
+            .mat-form-field-suffix,
+            .mat-form-field-prefix {
                 margin-bottom: 0.75rem;
             }
             .mat-form-field-infix {
