@@ -6,32 +6,32 @@ All rights reserved.
 This code is licensed under the BSD-3 license found in the LICENSE file in the root directory of this source tree and at https://opensource.org/licenses/BSD-3-Clause.
 **/
 
-@import '~@angular/material/_theming.scss';
-@import '~@brightlayer-ui/colors/palette.scss';
-@import './blui-component-theme';
-@import './margins';
-@import './fonts';
-@import './typography';
-@import './darkTheme';
-@import './blueTheme';
-@import './common';
+@use '@angular/material' as mat;
+@use '@brightlayer-ui/colors/palette.scss' as blui;
+
+@use './blui-component-theme';
+@use './margins';
+@use './fonts';
+@use './typography';
+@use './darkTheme';
+@use './blueTheme';
+@use './common';
 
 // Custom Typography Sizes & Weights
-$custom-typography: mat-typography-config(
+$custom-typography: mat.define-typography-config(
     $font-family: '"Open Sans", Arial, Helvetica, sans-serif;',
-    $display-4: mat-typography-level(6rem, 1.167, 300),
-    $display-3: mat-typography-level(3.75rem, 1.2, 300),
-    $display-2: mat-typography-level(3rem, 1.167, 400),
-    $display-1: mat-typography-level(2.125rem, 1.235, 400),
-    $headline: mat-typography-level(1.5rem, 1.334, 400),
-    $title: mat-typography-level(1.25rem, 1.6, 600),
-    $subheading-2: mat-typography-level(1rem, 1.75, 400),
-    $subheading-1: mat-typography-level(0.875rem, 1.57, 600),
-    $body-2: mat-typography-level(0.875rem, 1.43, 500),
-    $body-1: mat-typography-level(1rem, 1.5, 400),
-    $caption: mat-typography-level(0.75rem, 1.66, 400),
-    $button: mat-typography-level(0.875rem, 1, 600),
-    $input: mat-typography-level(inherit, 1.125, 400),
+    $display-4: mat.define-typography-level(6rem, 1.167, 300),
+    $display-2: mat.define-typography-level(3rem, 1.167, 400),
+    $display-1: mat.define-typography-level(2.125rem, 1.235, 400),
+    $headline: mat.define-typography-level(1.5rem, 1.334, 400),
+    $title: mat.define-typography-level(1.25rem, 1.6, 600),
+    $subheading-2: mat.define-typography-level(1rem, 1.75, 400),
+    $subheading-1: mat.define-typography-level(0.875rem, 1.57, 600),
+    $body-2: mat.define-typography-level(0.875rem, 1.43, 500),
+    $body-1: mat.define-typography-level(1rem, 1.5, 400),
+    $caption: mat.define-typography-level(0.75rem, 1.66, 400),
+    $button: mat.define-typography-level(0.875rem, 1, 600),
+    $input: mat.define-typography-level(inherit, 1.125, 400),
 );
 
 /*
@@ -40,31 +40,30 @@ $custom-typography: mat-typography-config(
 ** NOTE: material theme will use our Brightlayer UI custom typography
 ** There is currently not a way to specify different custom fonts for different themes
 */
-@include mat-core($custom-typography);
+@include mat.core($custom-typography);
 
 // Material default theme colors
-$material-theme-primary: mat-palette($mat-indigo, 700, 300, 900);
-$material-theme-accent: mat-palette($mat-light-blue);
-$material-theme-warn: mat-palette($mat-deep-orange, A200);
-$material-theme: mat-light-theme($material-theme-primary, $material-theme-accent, $material-theme-warn);
-@include angular-material-theme($material-theme);
+$material-theme-primary: mat.define-palette(mat.$indigo-palette, 500);
+$material-theme-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$material-theme-warn: mat.define-palette(mat.$red-palette);
+$material-theme: mat.define-light-theme($material-theme-primary, $material-theme-accent, $material-theme-warn);
 
 // Blue Theme
 @function blui-light-theme($primary, $accent, $warn) {
     @return map-merge(
-        mat-light-theme($primary, $accent, $warn),
+        mat.define-light-theme($primary, $accent, $warn),
         (
             foreground: (
-                text: map-get($blui-black, 500),
-                secondary-text: map-get($blui-gray, 500),
-                hint-text: map-get($blui-gray, 500),
-                base: map-get($blui-darkBlack, 900),
-                divider: rgba(map-get($blui-black, 500), .12),
-                dividers: $dark-dividers,
-                disabled: rgba(map-get($blui-black, 500), .3),
+                text: map-get(blui.$blui-black, 500),
+                secondary-text: map-get(blui.$blui-gray, 500),
+                hint-text: map-get(blui.$blui-gray, 500),
+                base: map-get(blui.$blui-darkBlack, 900),
+                divider: rgba(map-get(blui.$blui-black, 500), .12),
+                dividers: mat.get-color-from-palette(mat.$light-theme-foreground-palette, dividers),
+                disabled: rgba(map-get(blui.$blui-black, 500), .3),
                 disabled-button: rgba(black, 0.26),
-                disabled-text: rgba(map-get($blui-black, 500), .3),
-                elevation: map-get($blui-darkBlack, 900),
+                disabled-text: rgba(map-get(blui.$blui-black, 500), .3),
+                elevation: map-get(blui.$blui-darkBlack, 900),
                 icon: rgba(black, 0.54),
                 icons: rgba(black, 0.54),
                 slider-min: rgba(black, 0.87),
@@ -72,90 +71,107 @@ $material-theme: mat-light-theme($material-theme-primary, $material-theme-accent
                 slider-off-active: rgba(black, 0.38),
             ),
             background: (
-                status-bar: map_get($mat-grey, 300), 
-                app-bar: map-get($blui-gray, 50),
-                background: map-get($blui-white, 200),
+                status-bar: mat.get-color-from-palette(mat.$gray-palette, 300),
+                app-bar: map-get(blui.$blui-gray, 50),
+                background: map-get(blui.$blui-white, 200),
                 hover: rgba(black, 0.04),
-                card: map-get($blui-white, 50),
-                dialog: map-get($blui-white, 50),
+                card: map-get(blui.$blui-white, 50),
+                dialog: map-get(blui.$blui-white, 50),
                 disabled-button: rgba(114, 126, 132, 0.12),
-                raised-button: map-get($blui-white, 50),
-                focused-button: $dark-focused,
-                selected-button: map-get($blui-gray, 300),
-                selected-disabled-button: map-get($blui-gray, 400),
-                disabled-button-toggle: map-get($blui-gray, 200),
-                unselected-chip: map-get($blui-gray, 300),
-                disabled-list-option: map-get($blui-gray, 200),
+                raised-button: map-get(blui.$blui-white, 50),
+                focused-button: mat.get-color-from-palette(mat.$light-theme-background-palette, focused-button),
+                selected-button: map-get(blui.$blui-gray, 300),
+                selected-disabled-button: map-get(blui.$blui-gray, 400),
+                disabled-button-toggle: map-get(blui.$blui-gray, 200),
+                unselected-chip: map-get(blui.$blui-gray, 300),
+                disabled-list-option: map-get(blui.$blui-gray, 200),
             ),
         )
     );
 }
 
-$blui-blue-primary: mat-palette($blui-blue);
-$blui-blue-accent: mat-palette($blui-lightBlue, 500);
-$blui-blue-warn: mat-palette($blui-red, 500);
+
+$blui-blue-primary: mat.define-palette(blui.$blui-blue);
+$blui-blue-accent: mat.define-palette(blui.$blui-lightBlue, 500);
+$blui-blue-warn: mat.define-palette(blui.$blui-red, 500);
 $blui-blue-theme: blui-light-theme($blui-blue-primary, $blui-blue-accent, $blui-blue-warn);
+
+/*
+$my-primary: mat.define-palette(mat.$indigo-palette, 500);
+$my-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+$my-theme: mat.define-light-theme((
+    color: (
+        primary: $my-primary,
+        accent: $my-accent,
+    )
+));
+*/
+
+
+
 .blui-blue {
-    @include angular-material-theme($blui-blue-theme);
-    @include reasonable-margins();
-    @include bodyfont();
-    @include typography();
-    @include common();
-    @include blui-components-theme($blui-blue-theme);
-    @include bluetheme($blui-blue-theme);
+    @include mat.all-component-themes($blui-blue-theme);
+    @include margins.reasonable-margins();
+    @include fonts.bodyfont();
+    @include typography.typography();
+    @include common.common();
+    @include blui-component-theme.blui-components-theme($blui-blue-theme);
+    @include blueTheme.bluetheme($blui-blue-theme);
 }
 
 // Blue Dark Theme
 @function blui-dark-theme($primary, $accent, $warn) {
     @return map-merge(
-        mat-dark-theme($primary, $accent, $warn),
+            mat.define-dark-theme($primary, $accent, $warn),
         (
             foreground: (
-                text: map-get($blui-black, 50),
-                secondary-text: map-get($blui-black, 200),
-                hint-text: map-get($blui-gray, 300),
-                base: map-get($blui-white, 50),
-                divider: rgba(map-get($blui-black, 200), 0.36),
-                dividers: rgba(map-get($blui-black, 200), 0.36),
-                disabled: rgba(map-get($blui-black, 300), 0.36),
+                text: map-get(blui.$blui-black, 50),
+                secondary-text: map-get(blui.$blui-black, 200),
+                hint-text: map-get(blui.$blui-gray, 300),
+                base: map-get(blui.$blui-white, 50),
+                divider: rgba(map-get(blui.$blui-black, 200), 0.36),
+                dividers: rgba(map-get(blui.$blui-black, 200), 0.36),
+                disabled: rgba(map-get(blui.$blui-black, 300), 0.36),
                 disabled-button: rgba(white, 0.3),
-                disabled-text: rgba(map-get($blui-black, 300), 0.36),
-                elevation: map-get($blui-darkBlack, 900),
-                icon: map-get($blui-black, 50),
-                icons: map-get($blui-black, 50),
-                slider-min: map-get($blui-black, 50),
+                disabled-text: rgba(map-get(blui.$blui-black, 300), 0.36),
+                elevation: map-get(blui.$blui-darkBlack, 900),
+                icon: map-get(blui.$blui-black, 50),
+                icons: map-get(blui.$blui-black, 50),
+                slider-min: map-get(blui.$blui-black, 50),
                 slider-off: rgba(white, 0.3),
                 slider-off-active: rgba(white, 0.3),
             ),
             background: (
-                status-bar: map-get($blui-darkBlack, 900),
-                app-bar: map-get($blui-darkBlack, 100),
-                background: map-get($blui-darkBlack, 100),
+                status-bar: map-get(blui.$blui-darkBlack, 900),
+                app-bar: map-get(blui.$blui-darkBlack, 100),
+                background: map-get(blui.$blui-darkBlack, 100),
                 hover: rgba(white, 0.04),
-                card: map-get($blui-black, 900),
-                dialog: map-get($blui-black, 900),
+                card: map-get(blui.$blui-black, 900),
+                dialog: map-get(blui.$blui-black, 900),
                 disabled-button: rgba(white, 0.12),
-                raised-button: map-get($blui-black, 500),
-                focused-button: $light-focused,
-                selected-button: map_get($mat-grey, 900), 
-                selected-disabled-button: map_get($mat-grey, 800),
+                raised-button: map-get(blui.$blui-black, 500),
+                focused-button: mat.get-color-from-palette(mat.$dark-theme-background-palette, focused-button),
+                selected-button: mat.get-color-from-palette(mat.$dark-theme-background-palette, selected-button),
+                selected-disabled-button: mat.get-color-from-palette(mat.$dark-theme-background-palette, selected-disabled-button),
                 disabled-button-toggle: black,
-                unselected-chip: map_get($mat-grey, 700),
+                unselected-chip: mat.get-color-from-palette(mat.$dark-theme-background-palette, unselected-chip),
                 disabled-list-option: black,
             ),
         )
     );
 }
-$blui-blue-dark-primary: mat-palette($blui-blue);
-$blui-blue-dark-accent: mat-palette($blui-lightBlue, 200);
-$blui-blue-dark-warn: mat-palette($blui-red, 200);
+$blui-blue-dark-primary: mat.define-palette(blui.$blui-blue);
+$blui-blue-dark-accent: mat.define-palette(blui.$blui-lightBlue, 200);
+$blui-blue-dark-warn: mat.define-palette(blui.$blui-red, 200);
 $blui-blue-dark-theme: blui-dark-theme($blui-blue-dark-primary, $blui-blue-dark-accent, $blui-blue-dark-warn);
 .blui-blue-dark {
-    @include angular-material-theme($blui-blue-dark-theme);
-    @include reasonable-margins();
-    @include bodyfont();
-    @include typography();
-    @include common();
-    @include blui-components-theme($blui-blue-dark-theme);
-    @include darktheme($blui-blue-dark-theme);
+    @include mat.core-theme($blui-blue-dark-theme);
+    @include margins.reasonable-margins();
+    @include fonts.bodyfont();
+    @include typography.typography();
+    @include common.common();
+    @include blui-component-theme.blui-components-theme($blui-blue-dark-theme);
+    @include darkTheme.darktheme($blui-blue-dark-theme);
 }
+

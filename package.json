@@ -14,7 +14,8 @@
         "publish:package": "set npm_config_yes=true && npx -p @brightlayer-ui/publish blui-publish",
         "tag:package": "npx -p @brightlayer-ui/tag blui-tag -s -blui-angular-themes",
         "precommit": "yarn initialize && yarn install:dependencies && yarn prettier && yarn test",
-        "update:submodule": "git submodule update --remote"
+        "update:submodule": "git submodule update --remote",
+        "build": "sass theme.scss"
     },
     "repository": {
         "type": "git",
@@ -44,11 +45,12 @@
         "@fontsource/open-sans": "^4.1.0"
     },
     "devDependencies": {
-        "@angular/material": "^12.2.13",
+        "@angular/material": "^13.2.1",
         "@brightlayer-ui/prettier-config": "^1.0.2",
-        "prettier": "^2.0.4"
+        "prettier": "^2.0.4",
+        "sass": "^1.49.7"
     },
     "peerDependencies": {
-        "@angular/material": "^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0 || ^12.0.0"
+        "@angular/material": "^13.0.0"
     }
 }
