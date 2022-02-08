@@ -96,19 +96,6 @@ $blui-blue-accent: mat.define-palette(blui.$blui-lightBlue, 500);
 $blui-blue-warn: mat.define-palette(blui.$blui-red, 500);
 $blui-blue-theme: blui-light-theme($blui-blue-primary, $blui-blue-accent, $blui-blue-warn);
 
-/*
-$my-primary: mat.define-palette(mat.$indigo-palette, 500);
-$my-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
-
-$my-theme: mat.define-light-theme((
-    color: (
-        primary: $my-primary,
-        accent: $my-accent,
-    )
-));
-*/
-
-
 
 .blui-blue {
     @include mat.all-component-themes($blui-blue-theme);
