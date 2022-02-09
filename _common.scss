@@ -278,7 +278,6 @@
     }
 
 
-
     $ltrOutlinePadding: 0 12px 0 16px;
     $rtlOutlinePadding: 0 16px 0 12px;
     [dir='rtl'] {
@@ -334,7 +333,7 @@
         &.mat-form-field-appearance-standard,
         &.mat-form-field-appearance-legacy {
             .mat-input-element {
-                margin-bottom: 1rem;
+                margin-bottom: 1.25rem;
             }
             &.mat-form-field-should-float .mat-form-field-label {
                 margin-top: 0.25rem;
@@ -344,7 +343,7 @@
             }
             .mat-form-field-suffix,
             .mat-form-field-prefix {
-                margin-bottom: .5rem;
+                margin-bottom: .75rem;
             }
             .mat-form-field-infix {
                 padding: 0.4375rem 0;
