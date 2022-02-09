@@ -279,7 +279,6 @@
 
 
 
-
     $ltrOutlinePadding: 0 12px 0 16px;
     $rtlOutlinePadding: 0 16px 0 12px;
     [dir='rtl'] {
@@ -370,14 +369,14 @@
                 margin-top: -0rem;
             }
             &.mat-form-field-should-float .mat-form-field-infix {
-                margin-top: -0.5rem;
+                margin-top: -0.625rem;
             }
             .mat-form-field-infix {
-                margin-top: -0.25rem;
+                margin-top: -0.125rem;
             }
             .mat-form-field-suffix,
             .mat-form-field-prefix {
-                margin-bottom: 0.5rem;
+                margin-bottom: 0.375rem;
             }
         }
 
@@ -400,4 +399,5 @@
             margin-top: 0.25rem;
         }
     }
+
 }
