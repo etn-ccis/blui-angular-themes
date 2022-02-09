@@ -338,6 +338,9 @@
             &.mat-form-field-should-float .mat-form-field-label {
                 margin-top: 0.25rem;
             }
+            &.mat-form-field-should-float .mat-input-element {
+                margin-bottom: 0.5em;
+            }
             &:not(.mat-form-field-should-float) .mat-form-field-infix {
                 margin-top: -.5rem;
             }
@@ -398,5 +401,6 @@
             margin-top: 0.25rem;
         }
     }
+
 
 }
