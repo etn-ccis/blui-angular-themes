@@ -180,10 +180,12 @@
     [dir='rtl'] .mat-button-base[blui-inline] .mat-icon {
         margin: 0 -4px 0 8px;
     }
+
+
     $ltrOutlinePadding: 0 12px 0 16px;
     $rtlOutlinePadding: 0 16px 0 12px;
     [dir='rtl'] {
-        .mat-form-field:not([blui-condensed]) {
+        .mat-form-field:not([blui-input]) {
             .mat-form-field-prefix {
                 margin-right: 0px;
                 margin-left: 8px;
@@ -204,7 +206,16 @@
             }
         }
     }
-    .mat-form-field:not([blui-condensed]) {
+
+    .mat-form-field-appearance-legacy {
+        .mat-form-field-prefix, .mat-form-field-suffix {
+            .mat-icon-button {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .mat-form-field:not([blui-input]) {
         .mat-form-field-prefix {
             margin-right: 8px;
         }
@@ -216,7 +227,10 @@
                 width: 1.5rem;
             }
             .mat-button-base {
-                margin: 0 -0.5rem;
+                margin: 0.25rem -0.5rem 0 -0.5rem;
+                .mat-icon {
+                    line-height: 1.5rem;
+                }
             }
         }
 
@@ -282,7 +296,7 @@
     $ltrOutlinePadding: 0 12px 0 16px;
     $rtlOutlinePadding: 0 16px 0 12px;
     [dir='rtl'] {
-        .mat-form-field[blui-condensed] {
+        .mat-form-field[blui-input] {
             .mat-form-field-prefix {
                 margin-right: 0px;
                 margin-left: 8px;
@@ -303,7 +317,7 @@
             }
         }
     }
-    .mat-form-field[blui-condensed] {
+    .mat-form-field[blui-input] {
         transition: margin 125ms;
 
         .mat-form-field-suffix,
@@ -313,7 +327,10 @@
                 width: 1.5rem;
             }
             .mat-button-base {
-                margin: 0 -0.5rem;
+                margin: 0.25rem -0.5rem 0 -0.5rem;
+                .mat-icon {
+                    line-height: 1.5rem;
+                }
             }
         }
 
@@ -405,6 +422,4 @@
             margin-top: 0.25rem;
         }
     }
-
-
 }
