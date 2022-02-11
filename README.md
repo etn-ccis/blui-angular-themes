@@ -56,6 +56,40 @@ You can then apply the theme to your application by adding the proper class to y
 
 > If you do not specify a theme class, your application will use the default Material theme.
 
+# Custom Classes and Attributes
+
+Brightlayer UI provides some custom classes and attributes that can be used to further align it with Material Design specifications.
+
+### `blui-inline`
+
+`blui-inline` is an attribute that can be placed on a `mat-button` that applies custom icon-sizing and placement.
+
+#### Usage
+
+```
+<button blui-inline mat-flat-button color="primary">
+    <mat-icon>download</mat-icon>
+    <span>Download</span>
+</button>
+```
+
+### `blui-input`
+
+`blui-input` is an attribute that can be applied to a `mat-form-field` to standardize the height to be `56px`.
+
+#### Usage
+
+```ts
+<mat-form-field blui-input appearance="standard">
+    <input matInput placeholder="Placeholder" />
+    <mat-label>Legacy</mat-label>
+    <mat-hint>Hint</mat-hint>
+    <mat-hint align="end">0/10</mat-hint>
+    <mat-icon matSuffix>info</mat-icon>
+    <mat-icon matPrefix>info</mat-icon>
+</mat-form-field>
+```
+
 ### Updating From Version 5 ~> 6
 
 In version 6, we have migrated from the deprecated `typeface-open-sans` package to `@fontsource/open-sans` (bundled with the Brightlayer UI themes). You'll need to update your Open Sans references in angular.json:
