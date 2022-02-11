@@ -1,6 +1,6 @@
 # Changelog
 
-## v6.4.0 (February 10, 2022)
+## v6.4.0 (February 11, 2022)
 
 ### Added
 
