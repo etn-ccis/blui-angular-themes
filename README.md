@@ -90,7 +90,7 @@ Brightlayer UI provides some custom classes and attributes that can be used to f
 </mat-form-field>
 ```
 
-### Updating From Version 5 ~> 6
+## Updating From Version 5 ~> 6
 
 In version 6, we have migrated from the deprecated `typeface-open-sans` package to `@fontsource/open-sans` (bundled with the Brightlayer UI themes). You'll need to update your Open Sans references in angular.json:
 
