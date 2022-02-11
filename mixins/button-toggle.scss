@@ -1,0 +1,56 @@
+@mixin blui-mat-button-toggle($default, $outline, $filled) {
+    .mat-button-toggle-group-appearance-standard:not([variant='outline']):not([variant='filled']) {
+        @include blui-mat-button-toggle-shared($default);
+    }
+    .mat-button-toggle-group-appearance-standard[variant='outline'] {
+        @include blui-mat-button-toggle-shared($outline);
+    }
+    .mat-button-toggle-group-appearance-standard[variant='filled'] {
+        @include blui-mat-button-toggle-shared($filled);
+    }
+}
+
+@mixin blui-mat-button-toggle-shared($palette) {
+    .mat-button-toggle-appearance-standard {
+        .mat-button-toggle-button {
+            @include borderColor(map-get($palette, unselectedBorderColor));
+            color: map-get($palette, inactiveTextColor);
+        }
+    }
+
+    // checked toggle button
+    .mat-button-toggle-checked.mat-button-toggle-appearance-standard {
+        .mat-button-toggle-button {
+            background-color: map-get($palette, activeBackgroundColor);
+            color: map-get($palette, activeTextColor);
+        }
+    }
+
+    .mat-button-toggle-checked.mat-button-toggle-appearance-standard {
+        &:first-of-type {
+            .mat-button-toggle-button {
+                @include borderColor(map-get($palette, selectedBorderColor));
+            }
+        }
+        &:nth-of-type(1n + 1) {
+            &:not(:first-of-type) {
+                &:not(:last-of-type) {
+                    .mat-button-toggle-button {
+                        @include borderColor(map-get($palette, selectedBorderColor));
+                    }
+                }
+            }
+        }
+        &:last-of-type {
+            .mat-button-toggle-button {
+                @include borderColor(map-get($palette, selectedBorderColor));
+            }
+        }
+    }
+}
+
+@mixin borderColor($color) {
+    border-color: $color;
+    border-right-color: $color;
+    border-left-color: $color;
+}

@@ -2,7 +2,7 @@
     "name": "@brightlayer-ui/angular-themes",
     "author": "Brightlayer UI <brightlayer-ui@eaton.com>",
     "license": "BSD-3-Clause",
-    "version": "6.3.0",
+    "version": "6.4.0",
     "description": "Angular themes for Brightlayer UI applications",
     "scripts": {
         "initialize": "bash scripts/initializeSubmodule.sh",
@@ -28,8 +28,6 @@
         "Brightlayer UI",
         "themes",
         "Eaton",
-        "Power",
-        "Xpert",
         "Angular"
     ],
     "prettier": "@brightlayer-ui/prettier-config",
@@ -46,11 +44,11 @@
         "@fontsource/open-sans": "^4.1.0"
     },
     "devDependencies": {
-        "@angular/material": ">=8.2.0",
+        "@angular/material": "^12.2.13",
         "@brightlayer-ui/prettier-config": "^1.0.2",
         "prettier": "^2.0.4"
     },
     "peerDependencies": {
-        "@angular/material": ">=8.2.0"
+        "@angular/material": "^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0 || ^12.0.0"
     }
 }

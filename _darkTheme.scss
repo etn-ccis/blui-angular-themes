@@ -294,6 +294,35 @@
         }
     }
 
+    /* Button Toggle Group Default */
+    $buttonToggleDefault: (
+        activeBackgroundColor: rgba(map-get($blui-blue, 500), 0.36),
+        activeTextColor: map-get($blui-blue, 200),
+        inactiveTextColor: map-get($blui-black, 200),
+        selectedBorderColor: rgba(map-get($blui-black, 200), 0.36),
+        unselectedBorderColor: rgba(map-get($blui-black, 200), 0.36),
+    );
+
+    /* Button Toggle Group Outline */
+    $buttonToggleOutline: (
+        activeBackgroundColor: rgba(map-get($blui-blue, 500), 0.36),
+        activeTextColor: map-get($blui-blue, 200),
+        inactiveTextColor: map-get($blui-black, 200),
+        selectedBorderColor: map-get($blui-blue, 200),
+        unselectedBorderColor: rgba(map-get($blui-black, 200), 0.36),
+    );
+
+    /* Button Toggle Group Filled */
+    $buttonToggleFilled: (
+        activeBackgroundColor: map-get($blui-blue, 500),
+        activeTextColor: map-get($blui-white, 50),
+        inactiveTextColor: map-get($blui-blue, 200),
+        selectedBorderColor: map-get($blui-blue, 500),
+        unselectedBorderColor: map-get($blui-blue, 500),
+    );
+
+    @include blui-mat-button-toggle($buttonToggleDefault, $buttonToggleOutline, $buttonToggleFilled);
+
     /* Tabs */
     $tabText: map-get($foreground, secondary-text);
     $tabBackground: map-get($blui-black, 900);
@@ -402,14 +431,18 @@
         background-color: map-get($blui-darkBlack, 100);
         &.mat-primary {
             background-color: map-get($blui-black, 800);
+            color: map-get($blui-black, 50);
         }
         &.mat-accent {
-            color: map-get($foreground, text);
             background-color: map-get($blui-black, 900);
+            color: map-get($foreground, text);
         }
         &.mat-warn {
             background-color: map-get($blui-red, 500);
             color: map-get($blui-white, 50);
+            .mat-icon-button:not([color]) {
+                color: map-get($blui-white, 50);
+            }
         }
     }
 
@@ -464,6 +497,10 @@
         &.mat-slider-disabled {
             .mat-slider-thumb {
                 background-color: map-get($foreground, disabled);
+            }
+
+            .mat-slider-track-fill {
+                background-color: map-get($blui-gray, 500);
             }
         }
     }
@@ -575,5 +612,16 @@
     .mat-list-item-disabled {
         background-color: unset;
         opacity: 0.5;
+    }
+    /* mat-select panel  */
+    .mat-select-panel {
+        .mat-option.mat-selected:not(.mat-option-disabled) {
+            color: map-get($foreground, text);
+        }
+    }
+
+    /* Mat Table */
+    th.mat-header-cell {
+        color: map-get($foreground, text);
     }
 }

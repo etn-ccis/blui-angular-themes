@@ -1,5 +1,26 @@
 # Changelog
 
+## v6.4.0 (February 11, 2022)
+
+### Added
+
+-   Added `blui-inline` attribute styles to `mat-button`. ([#31](https://github.com/brightlayer-ui/angular-themes/issues/31))
+-   Added `blui-input` attribute styles to `mat-form-field`.
+-   Added new `outline` and `filled` variant for `<mat-toggle-button>`.([#19](https://github.com/brightlayer-ui/angular-themes/issues/19))
+
+### Fixed
+
+-   Fixed non-center aligned chevron in `<mat-expansion-panel-header>`. ([#50](https://github.com/brightlayer-ui/angular-themes/issues/50))
+-   Fixed disabled slider color in `<mat-slider>`. ([#27](https://github.com/brightlayer-ui/angular-themes/issues/27))
+-   Fixed text color of active option in `<mat-select>` for light and dark mode. ([#18](https://github.com/brightlayer-ui/angular-themes/issues/18))
+-   Fixed dark-mode text and icon color in `<mat-toolbar>`. ([#18](https://github.com/brightlayer-ui/angular-themes/issues/59))
+
+### Changed
+
+-   Updated `mat-form-field` styles ([#48](https://github.com/brightlayer-ui/angular-themes/issues/48)).
+-   Updated table styles to match design specifications ([#36](https://github.com/brightlayer-ui/angular-themes/issues/36), ([#37](https://github.com/brightlayer-ui/angular-themes/issues/37)), [#38](https://github.com/brightlayer-ui/angular-themes/issues/38)).
+-   Changed default font-size of `.mat-tooltip` text to `12px`.([#10](https://github.com/brightlayer-ui/angular-themes/issues/10))
+
 ## v6.3.0 (November 3, 2021)
 
 ### Changed
