@@ -5,6 +5,7 @@
 ### Added
 
 -   Added `blui-inline` attribute styles to `mat-button`. ([#31](https://github.com/brightlayer-ui/angular-themes/issues/31))
+-   Added `blui-input` attribute styles to `mat-form-field`.
 -   Added new `outline` and `filled` variant for `<mat-toggle-button>`.([#19](https://github.com/brightlayer-ui/angular-themes/issues/19))
 
 ### Fixed
