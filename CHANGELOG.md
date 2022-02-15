@@ -1,5 +1,12 @@
 # Changelog
 
+## v7.0.0 (not published)
+
+### Added
+
+-  Added support for Angular v13. 
+
+
 ## v6.4.0 (February 11, 2022)
 
 ### Added

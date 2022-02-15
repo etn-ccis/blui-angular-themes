@@ -32,3 +32,77 @@
         text-transform: uppercase;
     }
 }
+
+@mixin blui_typography() {
+    .blui-h1 {
+        font-size: 6rem;
+        font-weight: 300;
+        line-height: 1.167em;
+    }
+    .blui-h2 {
+        font-size: 3.75rem;
+        font-weight: 300;
+        line-height: 1.2em;
+    }
+    .blui-h3 {
+        font-weight: 400;
+        font-size: 3rem;
+        line-height: 1.167em;
+    }
+    .blui-h4 {
+        font-weight: 400;
+        font-size: 2.125rem;
+        line-height: 1.235em;
+    }
+    .blui-h5 {
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 1.334;
+    }
+    .blui-h6 {
+        font-weight: 600;
+        font-size: 1.25rem;
+        line-height: 1.6em;
+    }
+    .blui-subtitle-1 {
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1.75em;
+    }
+    .blui-subtitle-2 {
+        font-weight: 600;
+        font-size: 0.875rem;
+        line-height: 1.57em;
+    }
+    .blui-body-1 {
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.5em;
+    }
+    .blui-body-2 {
+        font-weight: 400;
+        font-size: 0.875rem;
+        line-height: 1.43em;
+    }
+    .blui-button {
+        font-weight: 600;
+        font-size: 0.875rem;
+        text-transform: uppercase;
+        line-height: 1.75em;
+    }
+    .blui-caption {
+        font-weight: 400;
+        font-size: 0.75rem;
+        line-height: 1.67em;
+    }
+    .blui-overline {
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.125rem;
+        line-height: 2.66;
+        text-transform: uppercase;
+        line-height: 2.67em;
+    }
+
+}
+
