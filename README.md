@@ -90,6 +90,21 @@ Brightlayer UI provides some custom classes and attributes that can be used to f
 </mat-form-field>
 ```
 
+### `blui` Typography
+
+Our [Brightlayer UI Typography guidelines](https://brightlayer-ui.github.io/style/typography) align with Material Design's recommended naming convention and size specifications.   
+We have included a custom set of `blui-[name]` classes to match our documentation, eliminating the need to cross-reference Angular Material's default typography naming convention to find a specific correct font. 
+
+#### Usage
+
+```
+<div class="blui-headline-1">Headline 1</div>
+<div class="blui-headline-2">Headline 2</div>
+...
+<div class="blui-overline">Overline</div>
+````
+
+
 ## Updating From Version 5 ~> 6
 
 In version 6, we have migrated from the deprecated `typeface-open-sans` package to `@fontsource/open-sans` (bundled with the Brightlayer UI themes). You'll need to update your Open Sans references in angular.json:
