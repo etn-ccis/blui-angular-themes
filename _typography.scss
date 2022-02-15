@@ -24,16 +24,13 @@
         font-weight: 600;
     }
 
-    .mat-overline {
+    .mat-overline, .blui-overline {
         font-size: 0.75rem;
         font-weight: 600;
         letter-spacing: 0.125rem;
         line-height: 2.66;
         text-transform: uppercase;
     }
-}
-
-@mixin blui_typography() {
     .blui-headline-1 {
         font-size: 6rem;
         font-weight: 300;
@@ -95,14 +92,5 @@
         font-size: 0.75rem;
         line-height: 1.67em;
     }
-    .blui-overline {
-        font-size: 0.75rem;
-        font-weight: 600;
-        letter-spacing: 0.125rem;
-        line-height: 2.66;
-        text-transform: uppercase;
-        line-height: 2.67em;
-    }
-
 }
 
