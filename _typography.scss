@@ -34,32 +34,32 @@
 }
 
 @mixin blui_typography() {
-    .blui-h1 {
+    .blui-headline-1 {
         font-size: 6rem;
         font-weight: 300;
         line-height: 1.167em;
     }
-    .blui-h2 {
+    .blui-headline-2 {
         font-size: 3.75rem;
         font-weight: 300;
         line-height: 1.2em;
     }
-    .blui-h3 {
+    .blui-headline-3 {
         font-weight: 400;
         font-size: 3rem;
         line-height: 1.167em;
     }
-    .blui-h4 {
+    .blui-headline-4 {
         font-weight: 400;
         font-size: 2.125rem;
         line-height: 1.235em;
     }
-    .blui-h5 {
+    .blui-headline-5 {
         font-weight: 400;
         font-size: 1.5rem;
         line-height: 1.334;
     }
-    .blui-h6 {
+    .blui-headline-6 {
         font-weight: 600;
         font-size: 1.25rem;
         line-height: 1.6em;
