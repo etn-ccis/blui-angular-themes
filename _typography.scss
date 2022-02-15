@@ -20,10 +20,6 @@
         margin-bottom: 0;
     }
 
-    .mat-body-2 {
-        font-weight: 600;
-    }
-
     .mat-overline, .blui-overline {
         font-size: 0.75rem;
         font-weight: 600;
@@ -31,63 +27,63 @@
         line-height: 2.66;
         text-transform: uppercase;
     }
-    .blui-headline-1 {
+    .blui-headline-1, .mat-display-4 {
         font-size: 6rem;
         font-weight: 300;
         line-height: 1.167em;
     }
-    .blui-headline-2 {
+    .blui-headline-2, .mat-display-3 {
         font-size: 3.75rem;
         font-weight: 300;
         line-height: 1.2em;
     }
-    .blui-headline-3 {
+    .blui-headline-3, .mat-display-2 {
         font-weight: 400;
         font-size: 3rem;
         line-height: 1.167em;
     }
-    .blui-headline-4 {
+    .blui-headline-4, .mat-display-1 {
         font-weight: 400;
         font-size: 2.125rem;
         line-height: 1.235em;
     }
-    .blui-headline-5 {
+    .blui-headline-5, .mat-headline {
         font-weight: 400;
         font-size: 1.5rem;
         line-height: 1.334;
     }
-    .blui-headline-6 {
+    .blui-headline-6, .mat-title {
         font-weight: 600;
         font-size: 1.25rem;
         line-height: 1.6em;
     }
-    .blui-subtitle-1 {
+    .blui-subtitle-1, .mat-subheading-1 {
         font-weight: 600;
         font-size: 1rem;
         line-height: 1.75em;
     }
-    .blui-subtitle-2 {
+    .blui-subtitle-2, .mat-subheading-2 {
         font-weight: 600;
         font-size: 0.875rem;
         line-height: 1.57em;
     }
-    .blui-body-1 {
+    .blui-body-1, .mat-body-1 {
         font-weight: 400;
         font-size: 1rem;
         line-height: 1.5em;
     }
-    .blui-body-2 {
+    .blui-body-2, .mat-body-2 {
         font-weight: 400;
         font-size: 0.875rem;
         line-height: 1.43em;
     }
-    .blui-button {
+    .blui-button, .mat-button {
         font-weight: 600;
         font-size: 0.875rem;
-        text-transform: uppercase;
+        text-transform: unset;
         line-height: 1.75em;
     }
-    .blui-caption {
+    .blui-caption, .mat-caption  {
         font-weight: 400;
         font-size: 0.75rem;
         line-height: 1.67em;
