@@ -1,5 +1,3 @@
-@import '../utility';
-
 @mixin blui-mat-chip-default($primary, $accent, $warn, $unselected) {
     .mat-chip:not([variant='outline']):not([variant='stroked']) {
         &.mat-chip-selected {

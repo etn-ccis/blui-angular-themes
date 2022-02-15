@@ -1,6 +1,6 @@
 // Import library functions for theme creation.
-@import '~@angular/material/theming';
-@import '~@brightlayer-ui/colors/palette.scss';
+@use '@angular/material' as mat;
+@use '@brightlayer-ui/colors/palette.scss' as blui;
 
 @mixin blui-components-theme($theme) {
     @include blui-empty-state-theme($theme);
@@ -20,14 +20,14 @@
     $background: map-get($theme, background);
     .blui-score-card {
         .blui-score-card-header {
-            background-color: mat-color($primary);
-            color: map-get($blui-white, 50);
+            background-color: map-get($primary, 500);
+            color: map-get(blui.$blui-white, 50);
             .mat-card-subtitle {
                 color: inherit;
             }
         }
         .blui-hero-primary-wrapper {
-            background-color: mat-color($background, card);
+            background-color: mat.get-color-from-palette($background, card);
         }
     }
 }
@@ -81,8 +81,8 @@
     $primary: map-get($theme, primary);
     $foreground: map-get($theme, foreground);
     .blui-list-item-tag {
-        background-color: mat-color($primary);
-        color: map-get($blui-white, 50);
+        background-color: map-get($primary, 500);
+        color: map-get(blui.$blui-white, 50);
     }
 }
 
@@ -116,7 +116,7 @@
         .blui-drawer-nav-item-rail {
             &:hover,
             &:focus {
-                background: mat-color($background, 'hover');
+                background: mat.get-color-from-palette($background, 'hover');
             }
         }
     }
