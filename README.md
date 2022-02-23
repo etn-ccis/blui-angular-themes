@@ -106,7 +106,7 @@ We have included a custom set of `blui-[name]` classes to match our documentatio
 
 #### Migration
 
-If you are using an older version of the themes package and wish to update, check out our [migration guide](./MIGRATION.md);
+If you are using an older version of the themes package and wish to update, check out our [migration guide](https://github.com/brightlayer-ui/angular-themes/blob/master/MIGRATION.md);
 
 ## Demo
 
