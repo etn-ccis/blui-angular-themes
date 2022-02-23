@@ -40,8 +40,8 @@ Alternatively, you can also import the theme file in your top-level SCSS file.
 
 ```scss
 // in styles.scss or your top-level scss file
-import '~@brightlayer-ui/angular-themes/theme.scss'
-import '~@brightlayer-ui/angular-themes/open-sans.scss'
+use '@brightlayer-ui/angular-themes/theme.scss'
+use '@brightlayer-ui/angular-themes/open-sans.scss'
 ```
 
 You can then apply the theme to your application by adding the proper class to your application's body element:
@@ -104,24 +104,9 @@ We have included a custom set of `blui-[name]` classes to match our documentatio
 <div class="blui-overline">Overline</div>
 ````
 
+#### Migration
 
-## Updating From Version 5 ~> 6
-
-In version 6, we have migrated from the deprecated `typeface-open-sans` package to `@fontsource/open-sans` (bundled with the Brightlayer UI themes). You'll need to update your Open Sans references in angular.json:
-
-Before:
-
-```js
-'./node_modules/typeface-open-sans';
-
-```
-
-After:
-
-```js
-'./node_modules/@brightlayer-ui/angular-themes/open-sans.scss';
-
-```
+If you are using an older version of the themes package and wish to update, check out our [migration guide](https://github.com/brightlayer-ui/angular-themes/blob/master/MIGRATION.md);
 
 ## Demo
 
