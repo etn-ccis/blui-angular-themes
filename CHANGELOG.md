@@ -1,5 +1,11 @@
 # Changelog
 
+## v6.4.1 (Not yet published)
+
+### Fixed
+
+-   Fixed bug where `blui-inline` didn't align buttons with prefix and postfix icons. ([#94](https://github.com/brightlayer-ui/angular-themes/issues/94))
+
 ## v6.4.0 (February 11, 2022)
 
 ### Added
