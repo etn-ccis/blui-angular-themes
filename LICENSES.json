@@ -1,0 +1,14 @@
+{
+    "@brightlayer-ui/colors@3.0.1": {
+        "licenses": "BSD-3-Clause",
+        "repository": "https://github.com/brightlayer-ui/colors",
+        "licenseUrl": "https://github.com/brightlayer-ui/colors/raw/master/LICENSE",
+        "parents": "@brightlayer-ui/angular-themes"
+    },
+    "@fontsource/open-sans@4.5.3": {
+        "licenses": "MIT",
+        "repository": "https://github.com/fontsource/fontsource",
+        "licenseUrl": "https://github.com/fontsource/fontsource",
+        "parents": "@brightlayer-ui/angular-themes"
+    }
+}
