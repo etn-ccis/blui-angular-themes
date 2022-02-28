@@ -366,7 +366,12 @@
         bar: rgba(map-get($warn, 200), 0.5),
     );
     $inactiveThumb: map-get($foreground, text);
-    @include slide-toggle.blui-mat-slide-toggle($slideTogglePrimary, $slideToggleAccent, $slideToggleWarn, $inactiveThumb);
+    @include slide-toggle.blui-mat-slide-toggle(
+        $slideTogglePrimary,
+        $slideToggleAccent,
+        $slideToggleWarn,
+        $inactiveThumb
+    );
 
     /* badge */
     .mat-badge-content {
