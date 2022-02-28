@@ -92,8 +92,8 @@ Brightlayer UI provides some custom classes and attributes that can be used to f
 
 ### `blui` Typography
 
-Our [Brightlayer UI Typography guidelines](https://brightlayer-ui.github.io/style/typography) align with Material Design's recommended naming convention and size specifications.   
-We have included a custom set of `blui-[name]` classes to match our documentation, eliminating the need to cross-reference Angular Material's default typography naming convention to find a specific correct font. 
+Our [Brightlayer UI Typography guidelines](https://brightlayer-ui.github.io/style/typography) align with Material Design's recommended naming convention and size specifications.  
+We have included a custom set of `blui-[name]` classes to match our documentation, eliminating the need to cross-reference Angular Material's default typography naming convention to find a specific correct font.
 
 #### Usage
 
@@ -102,7 +102,7 @@ We have included a custom set of `blui-[name]` classes to match our documentatio
 <div class="blui-headline-2">Headline 2</div>
 ...
 <div class="blui-overline">Overline</div>
-````
+```
 
 #### Migration
 

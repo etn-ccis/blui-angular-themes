@@ -395,7 +395,12 @@
         bar: rgba(map-get($warn, 500), 0.38),
     );
     $inactiveThumb: map-get(blui.$blui-white, 50);
-    @include slide-toggle.blui-mat-slide-toggle($slideTogglePrimary, $slideToggleAccent, $slideToggleWarn, $inactiveThumb);
+    @include slide-toggle.blui-mat-slide-toggle(
+        $slideTogglePrimary,
+        $slideToggleAccent,
+        $slideToggleWarn,
+        $inactiveThumb
+    );
     .mat-slide-toggle:not([color]).mat-checked .mat-ripple-element {
         background-color: rgba(map-get(blui.$blui-black, 500), 0.36);
     }

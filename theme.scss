@@ -58,11 +58,11 @@ $material-theme: mat.define-light-theme($material-theme-primary, $material-theme
                 secondary-text: map-get(blui.$blui-gray, 500),
                 hint-text: map-get(blui.$blui-gray, 500),
                 base: map-get(blui.$blui-darkBlack, 900),
-                divider: rgba(map-get(blui.$blui-black, 500), .12),
+                divider: rgba(map-get(blui.$blui-black, 500), 0.12),
                 dividers: mat.get-color-from-palette(mat.$light-theme-foreground-palette, dividers),
-                disabled: rgba(map-get(blui.$blui-black, 500), .3),
+                disabled: rgba(map-get(blui.$blui-black, 500), 0.3),
                 disabled-button: rgba(black, 0.26),
-                disabled-text: rgba(map-get(blui.$blui-black, 500), .3),
+                disabled-text: rgba(map-get(blui.$blui-black, 500), 0.3),
                 elevation: map-get(blui.$blui-darkBlack, 900),
                 icon: rgba(black, 0.54),
                 icons: rgba(black, 0.54),
@@ -90,12 +90,10 @@ $material-theme: mat.define-light-theme($material-theme-primary, $material-theme
     );
 }
 
-
 $blui-blue-primary: mat.define-palette(blui.$blui-blue);
 $blui-blue-accent: mat.define-palette(blui.$blui-lightBlue, 500);
 $blui-blue-warn: mat.define-palette(blui.$blui-red, 500);
 $blui-blue-theme: blui-light-theme($blui-blue-primary, $blui-blue-accent, $blui-blue-warn);
-
 
 .blui-blue {
     @include mat.all-component-themes($blui-blue-theme);
@@ -110,7 +108,7 @@ $blui-blue-theme: blui-light-theme($blui-blue-primary, $blui-blue-accent, $blui-
 // Blue Dark Theme
 @function blui-dark-theme($primary, $accent, $warn) {
     @return map-merge(
-            mat.define-dark-theme($primary, $accent, $warn),
+        mat.define-dark-theme($primary, $accent, $warn),
         (
             foreground: (
                 text: map-get(blui.$blui-black, 50),
@@ -140,7 +138,8 @@ $blui-blue-theme: blui-light-theme($blui-blue-primary, $blui-blue-accent, $blui-
                 raised-button: map-get(blui.$blui-black, 500),
                 focused-button: mat.get-color-from-palette(mat.$dark-theme-background-palette, focused-button),
                 selected-button: mat.get-color-from-palette(mat.$dark-theme-background-palette, selected-button),
-                selected-disabled-button: mat.get-color-from-palette(mat.$dark-theme-background-palette, selected-disabled-button),
+                selected-disabled-button:
+                    mat.get-color-from-palette(mat.$dark-theme-background-palette, selected-disabled-button),
                 disabled-button-toggle: black,
                 unselected-chip: mat.get-color-from-palette(mat.$dark-theme-background-palette, unselected-chip),
                 disabled-list-option: black,
@@ -161,4 +160,3 @@ $blui-blue-dark-theme: blui-dark-theme($blui-blue-dark-primary, $blui-blue-dark-
     @include blui-component-theme.blui-components-theme($blui-blue-dark-theme);
     @include darkTheme.darktheme($blui-blue-dark-theme);
 }
-

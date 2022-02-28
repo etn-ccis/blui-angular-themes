@@ -4,12 +4,12 @@
 
 ### Added
 
--  Added support for Angular v13. 
--  Added `blui` typography rules. ([#49](https://github.com/brightlayer-ui/angular-themes/issues/49))
+-   Added support for Angular v13.
+-   Added `blui` typography rules. ([#49](https://github.com/brightlayer-ui/angular-themes/issues/49))
 
 ### Changed
 
--  Changed Angular Material default typography ruleset to match specifications on our [documentation site](https://brightlayer-ui.github.io/style/typography).
+-   Changed Angular Material default typography ruleset to match specifications on our [documentation site](https://brightlayer-ui.github.io/style/typography).
 
 ## v6.4.1 (Not yet published)
 
