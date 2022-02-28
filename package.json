@@ -13,10 +13,11 @@
         "prettier": "prettier \"**/**.{css,scss,html,md}\" --write",
         "publish:package": "set npm_config_yes=true && npx -p @brightlayer-ui/publish blui-publish",
         "tag:package": "npx -p @brightlayer-ui/tag blui-tag -s -blui-angular-themes",
-        "precommit": "yarn initialize && yarn install:dependencies && yarn prettier && yarn test",
+        "precommit": "yarn initialize && yarn install:dependencies && yarn prettier && yarn test && yarn generate:licenses",
         "update:submodule": "git submodule update --remote",
         "copy-to-showcase": "yarn link:themes && cp refresh.scss demos/showcase/src",
-        "watch": "npm-watch"
+        "watch": "npm-watch",
+        "generate:licenses": "npm-license-crawler -onlyDirectDependencies -json LICENSES.json"
     },
     "watch": {
         "copy-to-showcase": "theme.scss"
@@ -51,6 +52,7 @@
     "devDependencies": {
         "@angular/material": "^13.2.1",
         "@brightlayer-ui/prettier-config": "^1.0.2",
+        "npm-license-crawler": "^0.2.1",
         "npm-watch": "^0.11.0",
         "prettier": "^2.0.4"
     },
