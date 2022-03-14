@@ -1,6 +1,6 @@
 # Changelog
 
-## v7.0.0 (not published)
+## v7.0.0 (March 14, 2022)
 
 ### Added
 
