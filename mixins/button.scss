@@ -1,4 +1,4 @@
-@import '../utility';
+@use '../utility' as util;
 
 @mixin blui-mat-buttons($primaryPalette, $accentPalette, $warnPalette, $defaultPalette) {
     .mat-icon-button {
@@ -23,7 +23,7 @@
 }
 
 @mixin icon-colors($palette) {
-    color: map-deep-get($palette, icon, text);
+    color: util.map-deep-get($palette, icon, text);
 }
 @mixin icon-button-helper($primaryPalette, $accentPalette, $warnPalette, $defaultPalette) {
     &.mat-primary {
@@ -41,10 +41,10 @@
 }
 
 @mixin default-colors($palette) {
-    color: map-deep-get($palette, outline, text);
-    background-color: map-deep-get($palette, outline, background);
+    color: util.map-deep-get($palette, outline, text);
+    background-color: util.map-deep-get($palette, outline, background);
     &:hover:not(.mat-button-disabled) {
-        background-color: map-deep-get($palette, outline, backgroundHover);
+        background-color: util.map-deep-get($palette, outline, backgroundHover);
     }
 }
 @mixin default-button-helper($primaryPalette, $accentPalette, $warnPalette, $defaultPalette) {
@@ -64,8 +64,8 @@
 
 @mixin stroked-colors($palette) {
     &:not(.mat-button-disabled) {
-        color: map-deep-get($palette, outline, text);
-        border-color: map-deep-get($palette, outline, border);
+        color: util.map-deep-get($palette, outline, text);
+        border-color: util.map-deep-get($palette, outline, border);
     }
 }
 @mixin stroked-button-helper($primaryPalette, $accentPalette, $warnPalette, $defaultPalette) {
@@ -84,14 +84,14 @@
 }
 
 @mixin raised-colors($palette) {
-    color: map-deep-get($palette, fill, text);
-    background-color: map-deep-get($palette, fill, background);
+    color: util.map-deep-get($palette, fill, text);
+    background-color: util.map-deep-get($palette, fill, background);
     &:hover:not(.mat-button-disabled) {
-        background-color: map-deep-get($palette, fill, backgroundHover);
+        background-color: util.map-deep-get($palette, fill, backgroundHover);
     }
     &.mat-button-disabled {
-        color: map-deep-get($palette, fill, disabled, text);
-        background-color: map-deep-get($palette, fill, disabled, background);
+        color: util.map-deep-get($palette, fill, disabled, text);
+        background-color: util.map-deep-get($palette, fill, disabled, background);
         border: none;
     }
 }
@@ -114,19 +114,19 @@
     border-left: 0 !important;
     border-right: 0 !important;
     .mat-button-toggle-button {
-        color: map-deep-get($palette, toggle, default, text);
-        background-color: map-deep-get($palette, toggle, default, background);
-        border-color: map-deep-get($palette, toggle, border);
+        color: util.map-deep-get($palette, toggle, default, text);
+        background-color: util.map-deep-get($palette, toggle, default, background);
+        border-color: util.map-deep-get($palette, toggle, border);
         &:hover:not(.mat-button-disabled) {
-            background-color: map-deep-get($palette, toggle, default, backgroundHover);
+            background-color: util.map-deep-get($palette, toggle, default, backgroundHover);
         }
     }
 
     &.mat-button-toggle-checked .mat-button-toggle-button {
-        color: map-deep-get($palette, toggle, active, text);
-        background-color: map-deep-get($palette, toggle, active, background);
+        color: util.map-deep-get($palette, toggle, active, text);
+        background-color: util.map-deep-get($palette, toggle, active, background);
         &:hover:not(.mat-button-disabled) {
-            background-color: map-deep-get($palette, toggle, active, backgroundHover);
+            background-color: util.map-deep-get($palette, toggle, active, backgroundHover);
         }
     }
 }

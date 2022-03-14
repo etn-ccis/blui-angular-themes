@@ -40,8 +40,8 @@ Alternatively, you can also import the theme file in your top-level SCSS file.
 
 ```scss
 // in styles.scss or your top-level scss file
-import '~@brightlayer-ui/angular-themes/theme.scss'
-import '~@brightlayer-ui/angular-themes/open-sans.scss'
+use '@brightlayer-ui/angular-themes/theme.scss'
+use '@brightlayer-ui/angular-themes/open-sans.scss'
 ```
 
 You can then apply the theme to your application by adding the proper class to your application's body element:
@@ -90,23 +90,23 @@ Brightlayer UI provides some custom classes and attributes that can be used to f
 </mat-form-field>
 ```
 
-## Updating From Version 5 ~> 6
+### `blui` Typography
 
-In version 6, we have migrated from the deprecated `typeface-open-sans` package to `@fontsource/open-sans` (bundled with the Brightlayer UI themes). You'll need to update your Open Sans references in angular.json:
+Our [Brightlayer UI Typography guidelines](https://brightlayer-ui.github.io/style/typography) align with Material Design's recommended naming convention and size specifications.  
+We have included a custom set of `blui-[name]` classes to match our documentation, eliminating the need to cross-reference Angular Material's default typography naming convention to find a specific correct font.
 
-Before:
-
-```js
-'./node_modules/typeface-open-sans';
+#### Usage
 
 ```
-
-After:
-
-```js
-'./node_modules/@brightlayer-ui/angular-themes/open-sans.scss';
-
+<div class="blui-headline-1">Headline 1</div>
+<div class="blui-headline-2">Headline 2</div>
+...
+<div class="blui-overline">Overline</div>
 ```
+
+#### Migration
+
+If you are using an older version of the themes package and wish to update, check out our [migration guide](https://github.com/brightlayer-ui/angular-themes/blob/master/MIGRATION.md);
 
 ## Demo
 

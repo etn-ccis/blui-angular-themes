@@ -1,5 +1,22 @@
 # Changelog
 
+## v7.0.0 (March 14, 2022)
+
+### Added
+
+-   Added support for Angular v13.
+-   Added `blui` typography rules. ([#49](https://github.com/brightlayer-ui/angular-themes/issues/49))
+
+### Changed
+
+-   Changed Angular Material default typography ruleset to match specifications on our [documentation site](https://brightlayer-ui.github.io/style/typography).
+
+## v6.4.1 (March 1, 2022)
+
+### Fixed
+
+-   Fixed bug where `blui-inline` didn't align buttons with prefix and postfix icons. ([#94](https://github.com/brightlayer-ui/angular-themes/issues/94))
+
 ## v6.4.0 (February 11, 2022)
 
 ### Added

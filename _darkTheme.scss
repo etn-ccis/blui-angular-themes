@@ -1,77 +1,79 @@
-@import '~@brightlayer-ui/colors/palette';
-@import './mixins/input-field';
-@import './mixins/chip';
-@import './mixins/button';
-@import './mixins/tab';
-@import './mixins/stepper';
-@import './mixins/slide-toggle';
+@use '@brightlayer-ui/colors/palette.scss' as blui;
+
+@use './mixins/input-field';
+@use './mixins/chip';
+@use './mixins/button';
+@use './mixins/button-toggle.scss';
+@use './mixins/tab';
+@use './mixins/stepper';
+@use './mixins/slide-toggle';
 
 @mixin darktheme($theme) {
     $primary: map-get($theme, primary);
     $accent: map-get($theme, accent);
-    $warn: $blui-red;
+    $warn: blui.$blui-red;
     $foreground: map-get($theme, foreground);
     $background: map-get($theme, background);
 
     /* Chips */
-    $coloredChipText: map-get($blui-white, 50);
+    $coloredChipText: map-get(blui.$blui-white, 50);
     $chipPrimary: (
-        color: map-get($blui-white, 50),
-        hoverColor: map-get($blui-white, 50),
+        color: map-get(blui.$blui-white, 50),
+        hoverColor: map-get(blui.$blui-white, 50),
         background: map-get($primary, 500),
         hoverBackground: map-get($primary, 300),
         removeIconColor: map-get($primary, 100),
-        removeIconHoverColor: map-get($blui-white, 50),
-        disabledColor: map-get($blui-black, 400),
-        disabledBackground: rgba(map-get($blui-black, 200), 0.24),
-        removeIconDisabledColor: map-get($blui-black, 400),
+        removeIconHoverColor: map-get(blui.$blui-white, 50),
+        disabledColor: map-get(blui.$blui-black, 400),
+        disabledBackground: rgba(map-get(blui.$blui-black, 200), 0.24),
+        removeIconDisabledColor: map-get(blui.$blui-black, 400),
         avatarColor: map-get($primary, 500),
-        avatarBackground: map-get($blui-blue, 50),
+        avatarBackground: map-get(blui.$blui-blue, 50),
         avatarDisabledColor: map-get($primary, 500),
     );
     $chipAccent: (
-        color: map-get($blui-white, 50),
-        hoverColor: map-get($blui-white, 50),
+        color: map-get(blui.$blui-white, 50),
+        hoverColor: map-get(blui.$blui-white, 50),
         background: map-get($accent, 500),
         hoverBackground: map-get($accent, 300),
         removeIconColor: map-get($accent, 100),
-        removeIconHoverColor: map-get($blui-white, 50),
-        disabledColor: map-get($blui-black, 400),
-        disabledBackground: rgba(map-get($blui-black, 200), 0.24),
-        removeIconDisabledColor: map-get($blui-black, 400),
+        removeIconHoverColor: map-get(blui.$blui-white, 50),
+        disabledColor: map-get(blui.$blui-black, 400),
+        disabledBackground: rgba(map-get(blui.$blui-black, 200), 0.24),
+        removeIconDisabledColor: map-get(blui.$blui-black, 400),
         avatarColor: map-get($primary, 500),
-        avatarBackground: map-get($blui-blue, 50),
+        avatarBackground: map-get(blui.$blui-blue, 50),
         avatarDisabledColor: map-get($primary, 500),
     );
     $chipWarn: (
-        color: map-get($blui-white, 50),
-        hoverColor: map-get($blui-white, 50),
+        color: map-get(blui.$blui-white, 50),
+        hoverColor: map-get(blui.$blui-white, 50),
         background: map-get($warn, 500),
         hoverBackground: map-get($warn, 300),
         removeIconColor: map-get($warn, 100),
-        removeIconHoverColor: map-get($blui-white, 50),
-        disabledColor: map-get($blui-black, 400),
-        disabledBackground: rgba(map-get($blui-black, 200), 0.24),
-        removeIconDisabledColor: map-get($blui-black, 400),
+        removeIconHoverColor: map-get(blui.$blui-white, 50),
+        disabledColor: map-get(blui.$blui-black, 400),
+        disabledBackground: rgba(map-get(blui.$blui-black, 200), 0.24),
+        removeIconDisabledColor: map-get(blui.$blui-black, 400),
         avatarColor: map-get($warn, 500),
         avatarBackground: map-get($warn, 50),
         avatarDisabledColor: map-get($warn, 500),
     );
     $chipDefault: (
-        color: map-get($blui-black, 50),
-        hoverColor: map-get($blui-black, 50),
-        background: map-get($blui-black, 500),
-        hoverBackground: map-get($blui-black, 400),
-        removeIconColor: map-get($blui-gray, 200),
-        removeIconHoverColor: map-get($blui-gray, 50),
-        disabledColor: map-get($blui-black, 400),
-        disabledBackground: rgba(map-get($blui-black, 200), 0.24),
-        removeIconDisabledColor: map-get($blui-black, 400),
-        avatarColor: map-get($blui-white, 50),
-        avatarBackground: map-get($blui-black, 700),
-        avatarDisabledColor: map-get($blui-black, 400),
+        color: map-get(blui.$blui-black, 50),
+        hoverColor: map-get(blui.$blui-black, 50),
+        background: map-get(blui.$blui-black, 500),
+        hoverBackground: map-get(blui.$blui-black, 400),
+        removeIconColor: map-get(blui.$blui-gray, 200),
+        removeIconHoverColor: map-get(blui.$blui-gray, 50),
+        disabledColor: map-get(blui.$blui-black, 400),
+        disabledBackground: rgba(map-get(blui.$blui-black, 200), 0.24),
+        removeIconDisabledColor: map-get(blui.$blui-black, 400),
+        avatarColor: map-get(blui.$blui-white, 50),
+        avatarBackground: map-get(blui.$blui-black, 700),
+        avatarDisabledColor: map-get(blui.$blui-black, 400),
     );
-    @include blui-mat-chip-default($chipPrimary, $chipAccent, $chipWarn, $chipDefault);
+    @include chip.blui-mat-chip-default($chipPrimary, $chipAccent, $chipWarn, $chipDefault);
     .mat-chip.mat-chip-disabled .mat-chip-avatar {
         opacity: 0.5;
     }
@@ -87,7 +89,7 @@
         avatarBackground: map-get($primary, 100),
         avatarDisabledColor: map-get($primary, 500),
         avatarDisabledBackground: map-get($primary, 100),
-        removeIconDisabledColor: rgba(map-get($blui-black, 200), 0.24),
+        removeIconDisabledColor: rgba(map-get(blui.$blui-black, 200), 0.24),
     );
     $chipOutlineAccent: (
         color: map-get($accent, 200),
@@ -100,7 +102,7 @@
         avatarBackground: map-get($primary, 100),
         avatarDisabledColor: map-get($primary, 500),
         avatarDisabledBackground: map-get($primary, 100),
-        removeIconDisabledColor: rgba(map-get($blui-black, 200), 0.24),
+        removeIconDisabledColor: rgba(map-get(blui.$blui-black, 200), 0.24),
     );
     $chipOutlineWarn: (
         color: map-get($warn, 200),
@@ -113,28 +115,28 @@
         avatarBackground: map-get($warn, 100),
         avatarDisabledColor: map-get($warn, 500),
         avatarDisabledBackground: map-get($warn, 100),
-        removeIconDisabledColor: rgba(map-get($blui-black, 200), 0.24),
+        removeIconDisabledColor: rgba(map-get(blui.$blui-black, 200), 0.24),
     );
     $chipOutlineDefault: (
         color: map-get($foreground, text),
         hoverColor: map-get($foreground, text),
-        background: map-get($blui-black, 900),
-        hoverBackground: map-get($blui-black, 800),
-        removeIconColor: map-get($blui-black, 200),
-        removeIconHoverColor: map-get($blui-black, 50),
-        avatarColor: map-get($blui-black, 50),
-        avatarBackground: map-get($blui-black, 600),
-        avatarDisabledColor: map-get($blui-black, 50),
-        avatarDisabledBackground: map-get($blui-black, 600),
-        removeIconDisabledColor: rgba(map-get($blui-black, 200), 0.24),
-        borderColor: rgba(map-get($blui-black, 200), 0.36),
+        background: map-get(blui.$blui-black, 900),
+        hoverBackground: map-get(blui.$blui-black, 800),
+        removeIconColor: map-get(blui.$blui-black, 200),
+        removeIconHoverColor: map-get(blui.$blui-black, 50),
+        avatarColor: map-get(blui.$blui-black, 50),
+        avatarBackground: map-get(blui.$blui-black, 600),
+        avatarDisabledColor: map-get(blui.$blui-black, 50),
+        avatarDisabledBackground: map-get(blui.$blui-black, 600),
+        removeIconDisabledColor: rgba(map-get(blui.$blui-black, 200), 0.24),
+        borderColor: rgba(map-get(blui.$blui-black, 200), 0.36),
     );
     $chipOutlineDisabled: (
-        color: rgba(map-get($blui-black, 300), 0.36),
-        borderColor: rgba(map-get($blui-black, 200), 0.36),
-        removeIconColor: rgba(map-get($blui-black, 300), 0.36),
+        color: rgba(map-get(blui.$blui-black, 300), 0.36),
+        borderColor: rgba(map-get(blui.$blui-black, 200), 0.36),
+        removeIconColor: rgba(map-get(blui.$blui-black, 300), 0.36),
     );
-    @include blui-mat-chip-outline(
+    @include chip.blui-mat-chip-outline(
         $chipOutlinePrimary,
         $chipOutlineAccent,
         $chipOutlineWarn,
@@ -150,7 +152,7 @@
         icon: map-get($foreground, secondary-text),
         placeholder: map-get($foreground, disabled),
         hint: map-get($foreground, secondary-text),
-        filledBackgroundColor: rgba(map-get($blui-black, 800), 0.5),
+        filledBackgroundColor: rgba(map-get(blui.$blui-black, 800), 0.5),
         label: (
             withoutValue: map-get($foreground, secondary-text),
             withValue: map-get($foreground, text),
@@ -181,9 +183,9 @@
     );
     $inputDisabled: (
         text: map-get($foreground, disabled),
-        filledBackgroundColor: rgba(map-get($blui-black, 800), 0.5),
+        filledBackgroundColor: rgba(map-get(blui.$blui-black, 800), 0.5),
     );
-    @include blui-mat-form-field($inputPrimary, $inputWarn, $inputDisabled);
+    @include input-field.blui-mat-form-field($inputPrimary, $inputWarn, $inputDisabled);
     .mat-form-field-appearance-outline.mat-form-field-disabled .mat-form-field-outline {
         color: map-get($foreground, disabled);
     }
@@ -200,12 +202,12 @@
             border: map-get($primary, 200),
         ),
         fill: (
-            text: map-get($blui-white, 50),
+            text: map-get(blui.$blui-white, 50),
             background: map-get($primary, 500),
             backgroundHover: map-get($primary, 300),
             disabled: (
-                text: map-get($blui-black, 400),
-                background: rgba(map-get($blui-black, 200), 0.24),
+                text: map-get(blui.$blui-black, 400),
+                background: rgba(map-get(blui.$blui-black, 200), 0.24),
             ),
         ),
     );
@@ -220,12 +222,12 @@
             border: map-get($accent, 200),
         ),
         fill: (
-            text: map-get($blui-white, 50),
+            text: map-get(blui.$blui-white, 50),
             background: map-get($accent, 500),
             backgroundHover: map-get($accent, 300),
             disabled: (
-                text: map-get($blui-black, 400),
-                background: rgba(map-get($blui-black, 200), 0.24),
+                text: map-get(blui.$blui-black, 400),
+                background: rgba(map-get(blui.$blui-black, 200), 0.24),
             ),
         ),
     );
@@ -234,46 +236,46 @@
             text: map-get($warn, 200),
         ),
         outline: (
-            text: map-get($blui-red, 200),
+            text: map-get(blui.$blui-red, 200),
             background: transparent,
-            backgroundHover: rgba(map-get($blui-red, 500), 0.2),
-            border: map-get($blui-red, 200),
+            backgroundHover: rgba(map-get(blui.$blui-red, 500), 0.2),
+            border: map-get(blui.$blui-red, 200),
         ),
         fill: (
-            text: map-get($blui-white, 50),
+            text: map-get(blui.$blui-white, 50),
             background: map-get($warn, 500),
-            backgroundHover: map-get($blui-red, 300),
+            backgroundHover: map-get(blui.$blui-red, 300),
             disabled: (
-                text: map-get($blui-black, 400),
-                background: rgba(map-get($blui-black, 200), 0.24),
+                text: map-get(blui.$blui-black, 400),
+                background: rgba(map-get(blui.$blui-black, 200), 0.24),
             ),
         ),
     );
     $buttonDefault: (
         icon: (
-            text: map-get($blui-black, 50),
+            text: map-get(blui.$blui-black, 50),
         ),
         outline: (
-            text: map-get($blui-black, 50),
+            text: map-get(blui.$blui-black, 50),
             background: transparent,
-            backgroundHover: rgba(map-get($blui-black, 50), 0.1),
-            border: map-get($blui-black, 200),
+            backgroundHover: rgba(map-get(blui.$blui-black, 50), 0.1),
+            border: map-get(blui.$blui-black, 200),
         ),
         fill: (
-            text: map-get($blui-white, 50),
-            background: map-get($blui-black, 500),
-            backgroundHover: map-get($blui-black, 300),
+            text: map-get(blui.$blui-white, 50),
+            background: map-get(blui.$blui-black, 500),
+            backgroundHover: map-get(blui.$blui-black, 300),
             disabled: (
-                text: map-get($blui-black, 400),
-                background: rgba(map-get($blui-black, 200), 0.24),
+                text: map-get(blui.$blui-black, 400),
+                background: rgba(map-get(blui.$blui-black, 200), 0.24),
             ),
         ),
         toggle: (
-            border: map-get($blui-black, 200),
+            border: map-get(blui.$blui-black, 200),
             default: (
-                text: map-get($blui-black, 200),
-                background: map-get($blui-black, 900),
-                backgroundHover: rgba(map-get($blui-black, 50), 0.1),
+                text: map-get(blui.$blui-black, 200),
+                background: map-get(blui.$blui-black, 900),
+                backgroundHover: rgba(map-get(blui.$blui-black, 50), 0.1),
             ),
             active: (
                 text: map-get($accent, 200),
@@ -282,68 +284,68 @@
             ),
         ),
     );
-    @include blui-mat-buttons($buttonPrimary, $buttonAccent, $buttonWarn, $buttonDefault);
+    @include button.blui-mat-buttons($buttonPrimary, $buttonAccent, $buttonWarn, $buttonDefault);
     .mat-icon-button.mat-button-disabled {
         color: map-get($foreground, disabled);
     }
     .mat-stroked-button,
     .mat-button {
         &.mat-button-disabled.mat-button-disabled {
-            color: rgba(map-get($blui-black, 300), 0.36);
-            border-color: rgba(map-get($blui-black, 300), 0.36);
+            color: rgba(map-get(blui.$blui-black, 300), 0.36);
+            border-color: rgba(map-get(blui.$blui-black, 300), 0.36);
         }
     }
 
     /* Button Toggle Group Default */
     $buttonToggleDefault: (
-        activeBackgroundColor: rgba(map-get($blui-blue, 500), 0.36),
-        activeTextColor: map-get($blui-blue, 200),
-        inactiveTextColor: map-get($blui-black, 200),
-        selectedBorderColor: rgba(map-get($blui-black, 200), 0.36),
-        unselectedBorderColor: rgba(map-get($blui-black, 200), 0.36),
+        activeBackgroundColor: rgba(map-get(blui.$blui-blue, 500), 0.36),
+        activeTextColor: map-get(blui.$blui-blue, 200),
+        inactiveTextColor: map-get(blui.$blui-black, 200),
+        selectedBorderColor: rgba(map-get(blui.$blui-black, 200), 0.36),
+        unselectedBorderColor: rgba(map-get(blui.$blui-black, 200), 0.36),
     );
 
     /* Button Toggle Group Outline */
     $buttonToggleOutline: (
-        activeBackgroundColor: rgba(map-get($blui-blue, 500), 0.36),
-        activeTextColor: map-get($blui-blue, 200),
-        inactiveTextColor: map-get($blui-black, 200),
-        selectedBorderColor: map-get($blui-blue, 200),
-        unselectedBorderColor: rgba(map-get($blui-black, 200), 0.36),
+        activeBackgroundColor: rgba(map-get(blui.$blui-blue, 500), 0.36),
+        activeTextColor: map-get(blui.$blui-blue, 200),
+        inactiveTextColor: map-get(blui.$blui-black, 200),
+        selectedBorderColor: map-get(blui.$blui-blue, 200),
+        unselectedBorderColor: rgba(map-get(blui.$blui-black, 200), 0.36),
     );
 
     /* Button Toggle Group Filled */
     $buttonToggleFilled: (
-        activeBackgroundColor: map-get($blui-blue, 500),
-        activeTextColor: map-get($blui-white, 50),
-        inactiveTextColor: map-get($blui-blue, 200),
-        selectedBorderColor: map-get($blui-blue, 500),
-        unselectedBorderColor: map-get($blui-blue, 500),
+        activeBackgroundColor: map-get(blui.$blui-blue, 500),
+        activeTextColor: map-get(blui.$blui-white, 50),
+        inactiveTextColor: map-get(blui.$blui-blue, 200),
+        selectedBorderColor: map-get(blui.$blui-blue, 500),
+        unselectedBorderColor: map-get(blui.$blui-blue, 500),
     );
 
-    @include blui-mat-button-toggle($buttonToggleDefault, $buttonToggleOutline, $buttonToggleFilled);
+    @include button-toggle.blui-mat-button-toggle($buttonToggleDefault, $buttonToggleOutline, $buttonToggleFilled);
 
     /* Tabs */
     $tabText: map-get($foreground, secondary-text);
-    $tabBackground: map-get($blui-black, 900);
+    $tabBackground: map-get(blui.$blui-black, 900);
     $tabActiveText: map-get($accent, 200);
-    $tabActiveBackground: map-get($blui-black, 900);
+    $tabActiveBackground: map-get(blui.$blui-black, 900);
     $tabUnderline: map-get($accent, 200);
-    @include blui-mat-tab($tabText, $tabBackground, $tabActiveText, $tabActiveBackground, $tabUnderline);
+    @include tab.blui-mat-tab($tabText, $tabBackground, $tabActiveText, $tabActiveBackground, $tabUnderline);
 
     /* Stepper */
     $stepperBackground: map-get($background, dialog);
     $stepperIcon: (
-        defaultColor: map-get($blui-black, 300),
-        defaultBg: rgba(map-get($blui-black, 300), 0.36),
-        activeColor: map-get($blui-white, 50),
+        defaultColor: map-get(blui.$blui-black, 300),
+        defaultBg: rgba(map-get(blui.$blui-black, 300), 0.36),
+        activeColor: map-get(blui.$blui-white, 50),
         activeBg: map-get($primary, 500),
     );
     $stepperLabel: (
-        defaultColor: map-get($blui-black, 200),
+        defaultColor: map-get(blui.$blui-black, 200),
         activeColor: map-get($accent, 200),
     );
-    @include blui-mat-stepper($stepperBackground, $stepperIcon, $stepperLabel);
+    @include stepper.blui-mat-stepper($stepperBackground, $stepperIcon, $stepperLabel);
 
     /* Side navigation*/
     .mat-drawer {
@@ -364,7 +366,12 @@
         bar: rgba(map-get($warn, 200), 0.5),
     );
     $inactiveThumb: map-get($foreground, text);
-    @include blui-mat-slide-toggle($slideTogglePrimary, $slideToggleAccent, $slideToggleWarn, $inactiveThumb);
+    @include slide-toggle.blui-mat-slide-toggle(
+        $slideTogglePrimary,
+        $slideToggleAccent,
+        $slideToggleWarn,
+        $inactiveThumb
+    );
 
     /* badge */
     .mat-badge-content {
@@ -382,11 +389,11 @@
 
     /* checkbox */
     .mat-checkbox-checked.mat-primary .mat-checkbox-background {
-        color: map-get($blui-black, 50);
+        color: map-get(blui.$blui-black, 50);
         background-color: map-get($primary, 200);
     }
     .mat-checkbox-checked.mat-accent .mat-checkbox-background {
-        color: map-get($blui-black, 50);
+        color: map-get(blui.$blui-black, 50);
         background-color: map-get($accent, 200);
     }
     .mat-checkbox-disabled:not(.mat-checkbox-checked) .mat-checkbox-frame {
@@ -422,26 +429,26 @@
 
     /* Tooltip  */
     .mat-tooltip {
-        background-color: map-get($blui-black, 500);
+        background-color: map-get(blui.$blui-black, 500);
     }
 
     /* toolbar*/
     .mat-toolbar {
         color: map-get($foreground, text);
-        background-color: map-get($blui-darkBlack, 100);
+        background-color: map-get(blui.$blui-darkBlack, 100);
         &.mat-primary {
-            background-color: map-get($blui-black, 800);
-            color: map-get($blui-black, 50);
+            background-color: map-get(blui.$blui-black, 800);
+            color: map-get(blui.$blui-black, 50);
         }
         &.mat-accent {
-            background-color: map-get($blui-black, 900);
+            background-color: map-get(blui.$blui-black, 900);
             color: map-get($foreground, text);
         }
         &.mat-warn {
-            background-color: map-get($blui-red, 500);
-            color: map-get($blui-white, 50);
+            background-color: map-get(blui.$blui-red, 500);
+            color: map-get(blui.$blui-white, 50);
             .mat-icon-button:not([color]) {
-                color: map-get($blui-white, 50);
+                color: map-get(blui.$blui-white, 50);
             }
         }
     }
@@ -453,13 +460,13 @@
 
     /*  Drawer Content */
     .mat-drawer-content {
-        background-color: map-get($blui-darkBlack, 800);
+        background-color: map-get(blui.$blui-darkBlack, 800);
         color: map-get($foreground, text);
     }
 
     /* snackbar theming */
     .mat-snack-bar-container {
-        background-color: map-get($blui-darkBlack, 500);
+        background-color: map-get(blui.$blui-darkBlack, 500);
     }
 
     /* date picker */
@@ -500,13 +507,13 @@
             }
 
             .mat-slider-track-fill {
-                background-color: map-get($blui-gray, 500);
+                background-color: map-get(blui.$blui-gray, 500);
             }
         }
     }
     .mat-slider-horizontal .mat-slider-track-background,
     .mat-slider:hover .mat-slider-track-background {
-        background-color: rgba(map-get($blui-black, 300), 0.36);
+        background-color: rgba(map-get(blui.$blui-black, 300), 0.36);
     }
 
     /* expansion panel */
@@ -517,7 +524,7 @@
 
     /* Nav list */
     .mat-nav-list .mat-list-item:hover {
-        background-color: rgba(map-get($blui-black, 50), 0.1);
+        background-color: rgba(map-get(blui.$blui-black, 50), 0.1);
     }
 
     /* table*/
@@ -533,8 +540,8 @@
 
     /* snackbar */
     .mat-snack-bar-container {
-        background-color: map-get($blui-black, 50);
-        color: map-get($blui-black, 500);
+        background-color: map-get(blui.$blui-black, 50);
+        color: map-get(blui.$blui-black, 500);
 
         .mat-simple-snackbar-action {
             color: map-get($primary, 500);
@@ -552,7 +559,7 @@
     }
 
     .blui-drawer {
-        background-color: map-get($blui-darkBlack, 300);
+        background-color: map-get(blui.$blui-darkBlack, 300);
 
         .blui-drawer-nav-item-active, /*NavRail item*/
         .blui-drawer-nav-item-active .blui-info-list-item .mat-list-item-content, /*Normal NavItem*/
@@ -575,7 +582,7 @@
         }
 
         .blui-drawer-nested-nav-item mat-expansion-panel {
-            background-color: map-get($blui-darkBlack, 500);
+            background-color: map-get(blui.$blui-darkBlack, 500);
         }
     }
 
@@ -601,8 +608,8 @@
 
     /* User Menu */
     .blui-user-menu-avatar {
-        background-color: rgba(map-get($blui-black, 50), 0.1);
-        color: map-get($blui-black, 50);
+        background-color: rgba(map-get(blui.$blui-black, 50), 0.1);
+        color: map-get(blui.$blui-black, 50);
     }
 
     /* Disabled */

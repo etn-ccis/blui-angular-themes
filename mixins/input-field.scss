@@ -1,4 +1,4 @@
-@import '../utility';
+@use '../utility' as util;
 
 @mixin blui-mat-form-field($primaryPalette, $warnPalette, $disablePalette) {
     input {
@@ -54,11 +54,11 @@
         &.mat-form-field-appearance-fill {
             .mat-form-field-underline,
             .mat-form-field-underline::before {
-                background-color: map-deep-get($palette, underline, default);
+                background-color: util.map-deep-get($palette, underline, default);
             }
 
             .mat-form-field-flex:hover + .mat-form-field-underline {
-                background-color: map-deep-get($palette, underline, onHover);
+                background-color: util.map-deep-get($palette, underline, onHover);
             }
 
             .mat-form-field-flex + .mat-form-field-underline .mat-form-field-ripple {
@@ -72,23 +72,24 @@
 
         /* Label */
         .mat-form-field-label {
-            color: map-deep-get($palette, label, withoutValue);
+            color: util.map-deep-get($palette, label, withoutValue);
         }
 
         /* Filled Label */
         &.mat-form-field-should-float .mat-form-field-label {
-            color: map-deep-get($palette, label, withValue);
+            color: util.map-deep-get($palette, label, withValue);
         }
 
         /* Label Focus */
         .mat-form-field-flex:focus-within {
             .mat-form-field-label {
-                color: map-deep-get($palette, label, onFocus);
+                color: util.map-deep-get($palette, label, onFocus);
             }
         }
 
         /* Icon */
-        .mat-form-field-suffix, .mat-form-field-prefix {
+        .mat-form-field-suffix,
+        .mat-form-field-prefix {
             color: map-get($palette, icon);
         }
 
@@ -117,15 +118,15 @@
         &.mat-form-field-appearance-standard,
         &.mat-form-field-appearance-fill {
             .mat-form-field-flex + .mat-form-field-underline .mat-form-field-ripple {
-                background-color: map-deep-get($palette, underline, default);
+                background-color: util.map-deep-get($palette, underline, default);
             }
 
             .mat-form-field-flex:hover + .mat-form-field-underline .mat-form-field-ripple {
-                background-color: map-deep-get($palette, underline, onHover);
+                background-color: util.map-deep-get($palette, underline, onHover);
             }
 
             .mat-form-field-flex:focus-within + .mat-form-field-underline .mat-form-field-ripple {
-                background-color: map-deep-get($palette, underline, onFocus);
+                background-color: util.map-deep-get($palette, underline, onFocus);
             }
         }
 
@@ -135,13 +136,13 @@
                 background-color: map-get($palette, filledBackgroundColor);
             }
             .mat-form-field-outline-thick {
-                color: map-deep-get($palette, underline, default);
+                color: util.map-deep-get($palette, underline, default);
             }
             .mat-form-field-flex:hover .mat-form-field-outline-thick {
-                color: map-deep-get($palette, underline, onHover);
+                color: util.map-deep-get($palette, underline, onHover);
             }
             .mat-form-field-flex:focus-within .mat-form-field-outline-thick {
-                color: map-deep-get($palette, underline, onFocus);
+                color: util.map-deep-get($palette, underline, onFocus);
             }
         }
 
@@ -153,13 +154,13 @@
                 .mat-form-field-outline-gap {
                     border-width: 1px;
                 }
-                color: map-deep-get($palette, underline, default);
+                color: util.map-deep-get($palette, underline, default);
             }
             .mat-form-field-flex:hover .mat-form-field-outline-thick {
-                color: map-deep-get($palette, underline, onHover);
+                color: util.map-deep-get($palette, underline, onHover);
             }
             .mat-form-field-flex:focus-within .mat-form-field-outline-thick {
-                color: map-deep-get($palette, underline, onFocus);
+                color: util.map-deep-get($palette, underline, onFocus);
                 .mat-form-field-outline-start,
                 .mat-form-field-outline-end,
                 .mat-form-field-outline-gap {
