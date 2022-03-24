@@ -20,7 +20,11 @@
         "generate:licenses": "npm-license-crawler -onlyDirectDependencies -json LICENSES.json"
     },
     "watch": {
-        "copy-to-showcase": "theme.scss"
+        "copy-to-showcase": {
+            "patterns": ["**"],
+            "extensions": "scss",
+            "ignore": "demos"
+        }
     },
     "repository": {
         "type": "git",
