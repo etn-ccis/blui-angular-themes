@@ -1,6 +1,6 @@
 # Changelog
 
-## v7.0.0 (not published)
+## v7.0.0 (March 14, 2022)
 
 ### Added
 
@@ -11,7 +11,7 @@
 
 -   Changed Angular Material default typography ruleset to match specifications on our [documentation site](https://brightlayer-ui.github.io/style/typography).
 
-## v6.4.1 (Not yet published)
+## v6.4.1 (March 1, 2022)
 
 ### Fixed
 

@@ -1,14 +1,134 @@
 {
+    "@angular/animations@13.2.3": {
+        "licenses": "MIT",
+        "repository": "https://github.com/angular/angular",
+        "licenseUrl": "https://github.com/angular/angular",
+        "parents": "angular-showcase-demo"
+    },
+    "@angular/cdk@13.2.3": {
+        "licenses": "MIT",
+        "repository": "https://github.com/angular/components",
+        "licenseUrl": "https://github.com/angular/components/raw/master/LICENSE",
+        "parents": "angular-showcase-demo"
+    },
+    "@angular/common@13.2.3": {
+        "licenses": "MIT",
+        "repository": "https://github.com/angular/angular",
+        "licenseUrl": "https://github.com/angular/angular",
+        "parents": "angular-showcase-demo"
+    },
+    "@angular/compiler@13.2.3": {
+        "licenses": "MIT",
+        "repository": "https://github.com/angular/angular",
+        "licenseUrl": "https://github.com/angular/angular",
+        "parents": "angular-showcase-demo"
+    },
+    "@angular/core@13.2.3": {
+        "licenses": "MIT",
+        "repository": "https://github.com/angular/angular",
+        "licenseUrl": "https://github.com/angular/angular",
+        "parents": "angular-showcase-demo"
+    },
+    "@angular/forms@13.2.3": {
+        "licenses": "MIT",
+        "repository": "https://github.com/angular/angular",
+        "licenseUrl": "https://github.com/angular/angular",
+        "parents": "angular-showcase-demo"
+    },
+    "@angular/material@13.2.3": {
+        "licenses": "MIT",
+        "repository": "https://github.com/angular/components",
+        "licenseUrl": "https://github.com/angular/components/raw/master/LICENSE",
+        "parents": "angular-showcase-demo"
+    },
+    "@angular/platform-browser-dynamic@13.2.3": {
+        "licenses": "MIT",
+        "repository": "https://github.com/angular/angular",
+        "licenseUrl": "https://github.com/angular/angular",
+        "parents": "angular-showcase-demo"
+    },
+    "@angular/platform-browser@13.2.3": {
+        "licenses": "MIT",
+        "repository": "https://github.com/angular/angular",
+        "licenseUrl": "https://github.com/angular/angular",
+        "parents": "angular-showcase-demo"
+    },
+    "@angular/router@13.2.3": {
+        "licenses": "MIT",
+        "repository": "https://github.com/angular/angular",
+        "licenseUrl": "https://github.com/angular/angular",
+        "parents": "angular-showcase-demo"
+    },
+    "@brightlayer-ui/angular-components@7.0.0-beta.2": {
+        "licenses": "BSD-3-Clause",
+        "repository": "https://github.com/brightlayer-ui/angular-component-library",
+        "licenseUrl": "https://github.com/brightlayer-ui/angular-component-library/raw/master/LICENSE",
+        "parents": "angular-showcase-demo"
+    },
+    "@brightlayer-ui/angular-themes@6.4.1": {
+        "licenses": "BSD-3-Clause",
+        "repository": "https://github.com/brightlayer-ui/angular-themes",
+        "licenseUrl": "https://github.com/brightlayer-ui/angular-themes",
+        "parents": "angular-showcase-demo"
+    },
     "@brightlayer-ui/colors@3.0.1": {
         "licenses": "BSD-3-Clause",
         "repository": "https://github.com/brightlayer-ui/colors",
         "licenseUrl": "https://github.com/brightlayer-ui/colors/raw/master/LICENSE",
         "parents": "@brightlayer-ui/angular-themes"
     },
+    "@brightlayer-ui/icons-svg@1.8.1": {
+        "licenses": "BSD-3-Clause",
+        "repository": "https://github.com/brightlayer-ui/icons",
+        "licenseUrl": "https://github.com/brightlayer-ui/icons",
+        "parents": "angular-showcase-demo"
+    },
+    "@brightlayer-ui/icons@1.8.1": {
+        "licenses": "BSD-3-Clause",
+        "repository": "https://github.com/brightlayer-ui/icons",
+        "licenseUrl": "https://github.com/brightlayer-ui/icons/raw/master/LICENSE",
+        "parents": "angular-showcase-demo"
+    },
+    "@brightlayer-ui/ng-progress-icons@1.2.1": {
+        "licenses": "BSD-3-Clause",
+        "repository": "https://github.com/brightlayer-ui/icons",
+        "licenseUrl": "https://github.com/brightlayer-ui/icons",
+        "parents": "angular-showcase-demo"
+    },
     "@fontsource/open-sans@4.5.3": {
         "licenses": "MIT",
         "repository": "https://github.com/fontsource/fontsource",
         "licenseUrl": "https://github.com/fontsource/fontsource",
         "parents": "@brightlayer-ui/angular-themes"
+    },
+    "color@3.2.1": {
+        "licenses": "MIT",
+        "repository": "https://github.com/Qix-/color",
+        "licenseUrl": "https://github.com/Qix-/color/raw/master/LICENSE",
+        "parents": "angular-showcase-demo"
+    },
+    "core-js@2.6.12": {
+        "licenses": "MIT",
+        "repository": "https://github.com/zloirock/core-js",
+        "licenseUrl": "https://github.com/zloirock/core-js/raw/master/LICENSE",
+        "parents": "angular-showcase-demo"
+    },
+    "node-sass@4.14.1": {
+        "licenses": "MIT",
+        "repository": "https://github.com/sass/node-sass",
+        "licenseUrl": "https://github.com/sass/node-sass/raw/master/LICENSE",
+        "parents": "angular-showcase-demo"
+    },
+    "rxjs@6.6.7": {
+        "licenses": "Apache-2.0",
+        "repository": "https://github.com/reactivex/rxjs",
+        "licenseUrl": "https://github.com/reactivex/rxjs/raw/master/LICENSE.txt",
+        "parents": "angular-showcase-demo"
+    },
+    "zone.js@0.11.4": {
+        "licenses": "MIT",
+        "repository": "https://github.com/angular/angular",
+        "licenseUrl": "https://github.com/angular/angular/raw/master/LICENSE",
+        "parents": "angular-showcase-demo"
     }
 }
