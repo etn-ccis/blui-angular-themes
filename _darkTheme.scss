@@ -189,6 +189,23 @@
     .mat-form-field-appearance-outline.mat-form-field-disabled .mat-form-field-outline {
         color: map-get($foreground, disabled);
     }
+    // Autocomplete overrides
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0 30px #1e2529 inset !important;
+        -webkit-text-fill-color: map-get($foreground, text);
+    }
+    .mat-form-field-appearance-fill {
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        input:-webkit-autofill:active {
+            //#1e2529
+            -webkit-box-shadow: 0 0 0 30px rgb(37 44 49) inset !important;
+        }
+    }
 
     /* Buttons*/
     $buttonPrimary: (
