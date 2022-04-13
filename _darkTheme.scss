@@ -653,7 +653,7 @@
     .mat-expansion-panel {
         .mat-expansion-panel-header {
             &.mat-expanded {
-                border-bottom: 1px solid rgba(map-get($foreground, divider), 0.36);
+                border-bottom: 1px solid map-get($foreground, divider);
             }
         }
     }
