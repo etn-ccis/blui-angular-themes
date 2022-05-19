@@ -657,4 +657,10 @@
             }
         }
     }
+
+    /* Mat Nav List */
+    .mat-list-base .blui-info-list-item .mat-list-item-disabled {
+        color: unset;
+        background-color: unset;
+    }
 }

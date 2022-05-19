@@ -7,6 +7,7 @@
 -   Fixed incorrect autocomplete colors for input fields in dark theme ([#76](https://github.com/brightlayer-ui/angular-themes/issues/76)).
 -   Fixed default `mat-button` height not being 36px. ([#103](https://github.com/brightlayer-ui/angular-themes/issues/103))
 -   Fixed `mat-expansion-panel-header` border color not similar to divider color ([#107](https://github.com/brightlayer-ui/angular-themes/issues/107))
+-   Fixed `<blui-info-list-item>` disabled state when within a `<mat-nav-list>` ([#114](https://github.com/brightlayer-ui/angular-themes/issues/114))
 
 ## v7.0.0 (March 14, 2022)
 
