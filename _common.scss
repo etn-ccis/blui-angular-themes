@@ -4,7 +4,8 @@
         line-height: 1.24;
     }
 
-    button.mat-button, a.mat-button {
+    button.mat-button,
+    a.mat-button {
         height: 36px;
         line-height: 36px;
     }
@@ -307,6 +308,18 @@
 
         .mat-form-field-subscript-wrapper {
             margin-top: 0.25rem;
+        }
+    }
+
+    .mat-stepper-horizontal,
+    .mat-stepper-vertical {
+        .mat-form-field:not([blui-input]) {
+            &.mat-form-field-appearance-standard,
+            &.mat-form-field-appearance-legacy {
+                .mat-form-field-infix {
+                    margin-top: -1rem;
+                }
+            }
         }
     }
 
