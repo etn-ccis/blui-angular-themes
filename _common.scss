@@ -311,16 +311,8 @@
         }
     }
 
-    .mat-stepper-horizontal,
-    .mat-stepper-vertical {
-        .mat-form-field:not([blui-input]) {
-            &.mat-form-field-appearance-standard,
-            &.mat-form-field-appearance-legacy {
-                .mat-form-field-infix {
-                    margin-top: -1rem;
-                }
-            }
-        }
+    .mat-horizontal-content-container, .mat-vertical-content {
+        padding: 8px 24px 24px 24px;
     }
 
     $ltrOutlinePadding: 0 12px 0 16px;
