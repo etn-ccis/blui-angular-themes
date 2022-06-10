@@ -5,7 +5,7 @@
 @use './mixins/input-field';
 @use './mixins/chip';
 @use './mixins/button';
-// @use './mixins/button-toggle-react.scss';
+@use './mixins/button-toggle-react.scss';
 @use './mixins/tab';
 @use './mixins/stepper';
 @use './mixins/slide-toggle';
@@ -357,7 +357,7 @@
         selectedBorderColor: map-get(blui.$blui-blue, 500),
         unselectedBorderColor: map-get(blui.$blui-blue, 500),
     );
-    // @include button-toggle.blui-mat-button-toggle($buttonToggleDefault, $buttonToggleOutline, $buttonToggleFilled);
+    @include button-toggle-react.blui-mat-button-toggle($buttonToggleDefault, $buttonToggleOutline, $buttonToggleFilled);
 
     /* Tabs */
     $tabText: map-get($primary, 500);
