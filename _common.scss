@@ -36,16 +36,16 @@
 
     .mat-button-toggle-standalone.mat-button-toggle-appearance-standard,
     .mat-button-toggle-group-appearance-standard {
-        border: 0!important;
+        border: 0 !important;
         .mat-button-toggle-appearance-standard {
             .mat-button-toggle-button {
                 background-color: transparent;
-                border-radius: 4px;           
+                border-radius: 4px;
             }
         }
         .mat-button-toggle-appearance-standard:first-of-type {
             margin-left: 0;
-            border-right: 1px solid transparent!important ;
+            border-right: 1px solid transparent !important ;
         }
         .mat-button-toggle-appearance-standard:not(:first-of-type) {
             margin-left: -1px;
@@ -75,9 +75,16 @@
     [dir='rtl'] {
         .mat-button-toggle-appearance-standard:last-of-type {
             margin-right: 0;
-            border-left: 1px solid transparent!important ;
+            border-left: 1px solid transparent !important ;
         }
-    
+
+        .mat-button-toggle-appearance-standard:first-of-type,
+        .mat-button-toggle-appearance-standard:last-of-type {
+            .mat-button-toggle-button {
+                border-radius: 4px;
+            }
+        }
+
         .mat-button-toggle-appearance-standard:not(:first-of-type) {
             .mat-button-toggle-button {
                 margin-right: -1px;
@@ -281,7 +288,8 @@
         }
     }
 
-    .mat-horizontal-content-container, .mat-vertical-content {
+    .mat-horizontal-content-container,
+    .mat-vertical-content {
         padding: 8px 1.5rem 24px 1.5rem;
     }
 
