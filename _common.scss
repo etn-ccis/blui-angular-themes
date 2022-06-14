@@ -70,42 +70,27 @@
         .mat-button-toggle-checked {
             background-color: transparent;
         }
-        .mat-button-toggle.mat-button-toggle-checked .mat-button-toggle-button:hover:not(.mat-button-disabled) {
-            background-color: #007bc10d;
-            border: 1px solid rgba(161, 167, 170, 0.36);
-        }
-        .mat-button-toggle.mat-button-toggle-checked .mat-button-toggle-button:not(.mat-button-disabled) {
-            background-color: #007bc10d;
-            border: 1px solid rgba(161, 167, 170, 0.36);
-        } 
     }
 
     [dir='rtl'] {
-        .mat-button-toggle-standalone.mat-button-toggle-appearance-standard,
-        .mat-button-toggle-group-appearance-standard {
-            .mat-button-toggle-appearance-standard:first-of-type {
-                margin-right: 0;
-                border-left: 1px solid transparent!important ;
-            }
-            .mat-button-toggle-appearance-standard:not(:first-of-type) {
+        .mat-button-toggle-appearance-standard:last-of-type {
+            margin-right: 0;
+            border-left: 1px solid transparent!important ;
+        }
+    
+        .mat-button-toggle-appearance-standard:not(:first-of-type) {
+            .mat-button-toggle-button {
                 margin-right: -1px;
+                border-right: 1px solid transparent;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
             }
-            .mat-button-toggle-appearance-standard:last-of-type {
-                margin-left: -1px;
-            }
-            .mat-button-toggle-appearance-standard:not(:first-of-type) {
-                .mat-button-toggle-button {
-                    margin-right: -1px;
-                    border-right: 1px solid transparent;
-                    border-top-right-radius: 0;
-                    border-bottom-right-radius: 0;
-                }
-            }
-            .mat-button-toggle-appearance-standard:not(:last-of-type) {
-                .mat-button-toggle-button {
-                    border-top-left-radius: 0;
-                    border-bottom-left-radius: 0;
-                }
+        }
+
+        .mat-button-toggle-appearance-standard:not(:last-of-type) {
+            .mat-button-toggle-button {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
             }
         }
     }

@@ -30,23 +30,6 @@
             }
         }
     }
-    .mat-button-toggle-appearance-standard:first-of-type {
-        border-right: 1px solid transparent!important ;
-    }
-    .mat-button-toggle-appearance-standard:not(:first-of-type) {
-        .mat-button-toggle-button {
-            margin-left: -1px;
-            border-left: 1px solid transparent;
-            border-top-left-radius: 0;
-            border-bottom-left-radius: 0;
-        }
-    }
-    .mat-button-toggle-appearance-standard:not(:last-of-type) {
-        .mat-button-toggle-button {
-            border-top-right-radius: 0;
-            border-bottom-right-radius: 0;
-        }
-    }
 }
 
 @mixin blui-mat-button-toggle-default($palette) {
