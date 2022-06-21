@@ -514,4 +514,19 @@
     th.mat-header-cell {
         color: map-get($foreground, text);
     }
+
+    /* Mat Expansion Panel Header */
+    .mat-expansion-panel {
+        .mat-expansion-panel-header {
+            &.mat-expanded {
+                border-bottom: 1px solid map-get($foreground, divider);
+            }
+        }
+    }
+
+    /* Mat Nav List */
+    .mat-list-base .blui-info-list-item .mat-list-item-disabled {
+        color: unset;
+        background-color: unset;
+    }
 }

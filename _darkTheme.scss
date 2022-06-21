@@ -189,6 +189,23 @@
     .mat-form-field-appearance-outline.mat-form-field-disabled .mat-form-field-outline {
         color: map-get($foreground, disabled);
     }
+    // Autocomplete overrides
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0 30px #333d43 inset !important;
+        -webkit-text-fill-color: map-get($foreground, text);
+    }
+    .mat-form-field-appearance-fill {
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        input:-webkit-autofill:active {
+            //#1e2529
+            -webkit-box-shadow: 0 0 0 30px #424e54 inset !important;
+        }
+    }
 
     /* Buttons*/
     $buttonPrimary: (
@@ -630,5 +647,20 @@
     /* Mat Table */
     th.mat-header-cell {
         color: map-get($foreground, text);
+    }
+
+    /* Mat Expansion Panel Header */
+    .mat-expansion-panel {
+        .mat-expansion-panel-header {
+            &.mat-expanded {
+                border-bottom: 1px solid map-get($foreground, divider);
+            }
+        }
+    }
+
+    /* Mat Nav List */
+    .mat-list-base .blui-info-list-item .mat-list-item-disabled {
+        color: unset;
+        background-color: unset;
     }
 }
