@@ -10,7 +10,7 @@ on:
       - master
 
 jobs:
-  tag-login-workflow-package:
+  tag-themes-package:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
