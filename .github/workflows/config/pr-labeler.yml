@@ -1,3 +1,3 @@
-master: ['hotfix/*', 'release/*', 'dev/*', 'dev*']
+master: "master"
 external-dependency: ['combined/*', 'combined-dependabots/*']
 brightlayer-ui: ['*']
