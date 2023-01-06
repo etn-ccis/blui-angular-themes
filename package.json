@@ -28,12 +28,12 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/brightlayer-ui/angular-themes.git"
+        "url": "git+https://github.com/etn-ccis/blui-angular-themes.git"
     },
     "bugs": {
-        "url": "https://github.com/brightlayer-ui/angular-themes/issues"
+        "url": "https://github.com/etn-ccis/blui-angular-themes/issues"
     },
-    "homepage": "https://github.com/brightlayer-ui/angular-themes/tree/master",
+    "homepage": "https://github.com/etn-ccis/blui-angular-themes/tree/master",
     "keywords": [
         "Brightlayer UI",
         "themes",
