@@ -10,19 +10,19 @@
 
 ### Fixed
 
--   Fixed incorrect autocomplete colors for input fields in dark theme ([#76](https://github.com/brightlayer-ui/angular-themes/issues/76)).
--   Fixed default `mat-button` height not being 36px. ([#103](https://github.com/brightlayer-ui/angular-themes/issues/103))
--   Fixed `mat-expansion-panel-header` border color not similar to divider color ([#107](https://github.com/brightlayer-ui/angular-themes/issues/107))
--   Fixed `<blui-info-list-item>` disabled state when within a `<mat-nav-list>` ([#114](https://github.com/brightlayer-ui/angular-themes/issues/114))
--   Fixed stepper input styles ([#90](https://github.com/brightlayer-ui/angular-themes/issues/90))
--   Fixed `mat-button-toggle` border styles ([#109](https://github.com/brightlayer-ui/angular-themes/issues/109))
+-   Fixed incorrect autocomplete colors for input fields in dark theme ([#76](https://github.com/etn-ccis/blui-angular-themes/issues/76)).
+-   Fixed default `mat-button` height not being 36px. ([#103](https://github.com/etn-ccis/blui-angular-themes/issues/103))
+-   Fixed `mat-expansion-panel-header` border color not similar to divider color ([#107](https://github.com/etn-ccis/blui-angular-themes/issues/107))
+-   Fixed `<blui-info-list-item>` disabled state when within a `<mat-nav-list>` ([#114](https://github.com/etn-ccis/blui-angular-themes/issues/114))
+-   Fixed stepper input styles ([#90](https://github.com/etn-ccis/blui-angular-themes/issues/90))
+-   Fixed `mat-button-toggle` border styles ([#109](https://github.com/etn-ccis/blui-angular-themes/issues/109))
 
 ## v7.0.0 (March 14, 2022)
 
 ### Added
 
 -   Added support for Angular v13.
--   Added `blui` typography rules. ([#49](https://github.com/brightlayer-ui/angular-themes/issues/49))
+-   Added `blui` typography rules. ([#49](https://github.com/etn-ccis/blui-angular-themes/issues/49))
 
 ### Changed
 
@@ -32,28 +32,28 @@
 
 ### Fixed
 
--   Fixed bug where `blui-inline` didn't align buttons with prefix and postfix icons. ([#94](https://github.com/brightlayer-ui/angular-themes/issues/94))
+-   Fixed bug where `blui-inline` didn't align buttons with prefix and postfix icons. ([#94](https://github.com/etn-ccis/blui-angular-themes/issues/94))
 
 ## v6.4.0 (February 11, 2022)
 
 ### Added
 
--   Added `blui-inline` attribute styles to `mat-button`. ([#31](https://github.com/brightlayer-ui/angular-themes/issues/31))
+-   Added `blui-inline` attribute styles to `mat-button`. ([#31](https://github.com/etn-ccis/blui-angular-themes/issues/31))
 -   Added `blui-input` attribute styles to `mat-form-field`.
--   Added new `outline` and `filled` variant for `<mat-toggle-button>`.([#19](https://github.com/brightlayer-ui/angular-themes/issues/19))
+-   Added new `outline` and `filled` variant for `<mat-toggle-button>`.([#19](https://github.com/etn-ccis/blui-angular-themes/issues/19))
 
 ### Fixed
 
--   Fixed non-center aligned chevron in `<mat-expansion-panel-header>`. ([#50](https://github.com/brightlayer-ui/angular-themes/issues/50))
--   Fixed disabled slider color in `<mat-slider>`. ([#27](https://github.com/brightlayer-ui/angular-themes/issues/27))
--   Fixed text color of active option in `<mat-select>` for light and dark mode. ([#18](https://github.com/brightlayer-ui/angular-themes/issues/18))
--   Fixed dark-mode text and icon color in `<mat-toolbar>`. ([#18](https://github.com/brightlayer-ui/angular-themes/issues/59))
+-   Fixed non-center aligned chevron in `<mat-expansion-panel-header>`. ([#50](https://github.com/etn-ccis/blui-angular-themes/issues/50))
+-   Fixed disabled slider color in `<mat-slider>`. ([#27](https://github.com/etn-ccis/blui-angular-themes/issues/27))
+-   Fixed text color of active option in `<mat-select>` for light and dark mode. ([#18](https://github.com/etn-ccis/blui-angular-themes/issues/18))
+-   Fixed dark-mode text and icon color in `<mat-toolbar>`. ([#18](https://github.com/etn-ccis/blui-angular-themes/issues/59))
 
 ### Changed
 
--   Updated `mat-form-field` styles ([#48](https://github.com/brightlayer-ui/angular-themes/issues/48)).
--   Updated table styles to match design specifications ([#36](https://github.com/brightlayer-ui/angular-themes/issues/36), ([#37](https://github.com/brightlayer-ui/angular-themes/issues/37)), [#38](https://github.com/brightlayer-ui/angular-themes/issues/38)).
--   Changed default font-size of `.mat-tooltip` text to `12px`.([#10](https://github.com/brightlayer-ui/angular-themes/issues/10))
+-   Updated `mat-form-field` styles ([#48](https://github.com/etn-ccis/blui-angular-themes/issues/48)).
+-   Updated table styles to match design specifications ([#36](https://github.com/etn-ccis/blui-angular-themes/issues/36), ([#37](https://github.com/etn-ccis/blui-angular-themes/issues/37)), [#38](https://github.com/etn-ccis/blui-angular-themes/issues/38)).
+-   Changed default font-size of `.mat-tooltip` text to `12px`.([#10](https://github.com/etn-ccis/blui-angular-themes/issues/10))
 
 ## v6.3.0 (November 3, 2021)
 
