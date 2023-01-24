@@ -4,7 +4,6 @@ about: Suggest an idea for this resource
 title: ''
 labels: 'enhancement, needs-review, brightlayer-ui'
 assignees: ''
-
 ---
 
 #### Describe the desired feature/functionality

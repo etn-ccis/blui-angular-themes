@@ -4,7 +4,7 @@
 
 ### Changed
 
-- Updated to Angular 14 for building the library.
+-   Updated to Angular 14 for building the library.
 
 ## v7.0.1 (June 20, 2022)
 
