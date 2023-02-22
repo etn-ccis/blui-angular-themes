@@ -13,7 +13,7 @@
 @mixin bluetheme($theme) {
     $primary: map-get($theme, primary);
     $accent: map-get($theme, accent);
-    $warn: blui.$blui-red;
+    $warn: map-get($theme, warn);
     $foreground: map-get($theme, foreground);
     $background: map-get($theme, background);
 
@@ -47,7 +47,7 @@
         ),
         underline: (
             default: map-get($warn, 500),
-            onHover: map-get($warn, 900),
+            onHover: map-get($warn, 700),
             onFocus: map-get($warn, 500),
         ),
     );
@@ -55,6 +55,7 @@
         text: map-get($foreground, disabled),
         filledBackgroundColor: map-get(blui.$blui-white, 100),
     );
+
     @include input-field.blui-mat-form-field($inputPrimary, $inputWarn, $inputDisabled);
     /* Mat Disabled Select Underline Color */
     .mat-form-field.mat-form-field-disabled.mat-form-field-appearance-legacy,
@@ -138,7 +139,7 @@
     $chipOutlinePrimary: (
         color: map-get($primary, 500),
         hoverColor: map-get($primary, 500),
-        background: rgba(map-get($primary, 500), 0.05),
+        background: map-get($primary, 50),
         hoverBackground: rgba(map-get($primary, 500), 0.1),
         removeIconColor: map-get($primary, 200),
         removeIconHoverColor: map-get($primary, 500),
@@ -150,19 +151,19 @@
     $chipOutlineAccent: (
         color: map-get($accent, 500),
         hoverColor: map-get($accent, 500),
-        background: rgba(map-get($primary, 500), 0.05),
+        background: map-get($accent, 50),
         hoverBackground: rgba(map-get($primary, 500), 0.1),
         removeIconColor: map-get($accent, 200),
         removeIconHoverColor: map-get($accent, 500),
-        avatarColor: map-get($primary, 500),
-        avatarBackground: map-get($primary, 100),
-        avatarDisabledColor: map-get($primary, 500),
-        avatarDisabledBackground: map-get($primary, 100),
+        avatarColor: map-get($accent, 500),
+        avatarBackground: map-get($accent, 100),
+        avatarDisabledColor: map-get($accent, 500),
+        avatarDisabledBackground: map-get($accent, 100),
     );
     $chipOutlineWarn: (
         color: map-get($warn, 500),
         hoverColor: map-get($warn, 500),
-        background: rgba(map-get($warn, 500), 0.05),
+        background: map-get($warn, 50),
         hoverBackground: rgba(map-get($warn, 500), 0.1),
         removeIconColor: map-get($warn, 200),
         removeIconHoverColor: map-get($warn, 500),
@@ -207,13 +208,13 @@
         &.mat-primary {
             background-color: map-get($primary, 500);
             .mat-icon-button:not([color]) {
-                color: map-get(blui.$blui-white, 50);
+                color: map-get($foreground, onPrimary);
             }
         }
         &.mat-accent {
             background-color: map-get($primary, 700);
             .mat-icon-button:not([color]) {
-                color: map-get(blui.$blui-white, 50);
+                color: map-get($foreground, onAccent);
             }
         }
         &.mat-warn .mat-icon-button:not([color]) {
@@ -233,7 +234,7 @@
             border: map-get($primary, 500),
         ),
         fill: (
-            text: map-get(blui.$blui-white, 50),
+            text: map-get($foreground, onPrimary),
             background: map-get($primary, 500),
             backgroundHover: map-get($primary, 300),
             disabled: (
@@ -253,7 +254,7 @@
             border: map-get($accent, 500),
         ),
         fill: (
-            text: map-get(blui.$blui-white, 50),
+            text: map-get($foreground, onAccent),
             background: map-get($accent, 500),
             backgroundHover: map-get($accent, 300),
             disabled: (
@@ -273,7 +274,7 @@
             border: map-get($warn, 500),
         ),
         fill: (
-            text: map-get(blui.$blui-white, 50),
+            text: map-get($foreground, onWarn),
             background: map-get($warn, 500),
             backgroundHover: map-get($warn, 300),
             disabled: (
@@ -331,10 +332,14 @@
         }
     }
 
+    .mat-icon-button.mat-button-disabled {
+        color: map-get($foreground, disabled);
+    }
+
     /* Button Toggle Group Default */
     $buttonToggleDefault: (
-        activeBackgroundColor: rgba(map-get(blui.$blui-blue, 500), 0.05),
-        activeTextColor: map-get(blui.$blui-blue, 500),
+        activeBackgroundColor: map-get($primary, 50),
+        activeTextColor: map-get($primary, 500),
         inactiveTextColor: map-get(blui.$blui-black, 500),
         selectedBorderColor: rgba(map-get(blui.$blui-black, 200), 0.36),
         unselectedBorderColor: rgba(map-get(blui.$blui-black, 500), 0.12),
@@ -342,28 +347,28 @@
 
     /* Button Toggle Group Outline */
     $buttonToggleOutline: (
-        activeBackgroundColor: rgba(map-get(blui.$blui-blue, 500), 0.05),
-        activeTextColor: map-get(blui.$blui-blue, 500),
+        activeBackgroundColor: map-get($primary, 50),
+        activeTextColor: map-get($primary, 500),
         inactiveTextColor: map-get(blui.$blui-gray, 500),
-        selectedBorderColor: map-get(blui.$blui-blue, 500),
+        selectedBorderColor: map-get($primary, 500),
         unselectedBorderColor: rgba(map-get(blui.$blui-black, 500), 0.12),
     );
 
     /* Button Toggle Group Filled */
     $buttonToggleFilled: (
-        activeBackgroundColor: map-get(blui.$blui-blue, 500),
-        activeTextColor: map-get(blui.$blui-white, 50),
-        inactiveTextColor: map-get(blui.$blui-blue, 500),
-        selectedBorderColor: map-get(blui.$blui-blue, 500),
-        unselectedBorderColor: map-get(blui.$blui-blue, 500),
+        activeBackgroundColor: map-get($primary, 500),
+        activeTextColor: map-get($foreground, onPrimary),
+        inactiveTextColor: map-get($primary, 500),
+        selectedBorderColor: map-get($primary, 500),
+        unselectedBorderColor: map-get($primary, 500),
     );
     @include button-toggle.blui-mat-button-toggle($buttonToggleDefault, $buttonToggleOutline, $buttonToggleFilled);
 
     /* Tabs */
     $tabText: map-get($primary, 500);
-    $tabBackground: map-get(blui.$blui-white, 50);
+    $tabBackground: map-get($foreground, onPrimary);
     $tabActiveText: map-get($primary, 500);
-    $tabActiveBackground: map-get(blui.$blui-white, 50);
+    $tabActiveBackground: map-get($foreground, onPrimary);
     $tabUnderline: map-get($primary, 500);
     @include tab.blui-mat-tab($tabText, $tabBackground, $tabActiveText, $tabActiveBackground, $tabUnderline);
 
@@ -384,15 +389,15 @@
     /* Slide Toggle */
     $slideTogglePrimary: (
         thumb: map-get($primary, 500),
-        bar: rgba(map-get($primary, 500), 0.38),
+        bar: map-get($primary, 50),
     );
     $slideToggleAccent: (
         thumb: map-get($accent, 500),
-        bar: rgba(map-get($accent, 500), 0.5),
+        bar: map-get($accent, 50),
     );
     $slideToggleWarn: (
         thumb: map-get($warn, 500),
-        bar: rgba(map-get($warn, 500), 0.38),
+        bar: map-get($warn, 50),
     );
     $inactiveThumb: map-get(blui.$blui-white, 50);
     @include slide-toggle.blui-mat-slide-toggle(
@@ -415,13 +420,19 @@
         color: map-get($foreground, text);
     }
 
+    .mat-calendar-body-cell:not(.mat-calendar-body-active):hover {
+        .mat-calendar-body-cell-content {
+            background-color: map-get($primary, 50);
+        }
+    }
+
     /* Snackbar button */
     .mat-snack-bar-container {
         color: map-get(blui.$blui-black, 50);
         .mat-simple-snackbar-action .mat-button {
             color: map-get($primary, 200);
             &:hover {
-                background-color: rgba(map-get($accent, 500), 0.2);
+                background-color: rgba(map-get(blui.$blui-white, 50), 0.1);
             }
         }
     }
