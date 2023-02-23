@@ -51,7 +51,7 @@ $blui-blue-warn: mat.define-palette(blui.$blui-red);
     $theme: blui-light-theme($primary, $accent, $warn);
     @include sharedConfig();
 
-    @include mat.all-component-themes($theme);
+    @include mat.all-legacy-component-themes($theme);
     @include blui-component-theme.blui-components-theme($theme);
     @include blueTheme.bluetheme($theme);
 }
@@ -93,7 +93,7 @@ $blui-blue-dark-warn: mat.define-palette(blui.$blui-red, 200);
     $theme: blui-dark-theme($primary, $accent, $warn);
     @include sharedConfig();
 
-    @include mat.all-component-themes($theme);
+    @include mat.all-legacy-component-themes($theme);
     @include blui-component-theme.blui-components-theme($theme);
     @include darkTheme.darktheme($theme);
 }
@@ -104,7 +104,7 @@ $blui-blue-dark-warn: mat.define-palette(blui.$blui-red, 200);
 
 @mixin coreTypography() {
     // Custom Typography Sizes & Weights
-    $custom-typography: mat.define-typography-config(
+    $custom-typography: mat.define-legacy-typography-config(
         $font-family: '"Open Sans", Arial, Helvetica, sans-serif;',
         $display-4: mat.define-typography-level(6rem, 1.167, 300),
         $display-2: mat.define-typography-level(3rem, 1.167, 400),
@@ -126,5 +126,6 @@ $blui-blue-dark-warn: mat.define-palette(blui.$blui-red, 200);
     ** NOTE: material theme will use our Brightlayer UI custom typography
     ** There is currently not a way to specify different custom fonts for different themes
     */
-    @include mat.core($custom-typography);
+    @include mat.all-legacy-component-typographies($custom-typography);
+    @include mat.core();
 }
