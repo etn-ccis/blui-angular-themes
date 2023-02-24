@@ -56,6 +56,28 @@ You can then apply the theme to your application by adding the proper class to y
 
 > If you do not specify a theme class, your application will use the default Material theme.
 
+## Customization
+
+If you need to customize the styles (for OEM purposes for example). You can import the styles and define the customization in your top level scss file.
+
+```scss
+// in styles.scss or your top-level scss file
+use '@brightlayer-ui/angular-themes/theme_bases';
+use '@brightlayer-ui/angular-themes/open-sans.scss';
+
+@include theme-bases.coreTypography();
+
+body {
+    $blui-blue-primary: mat.define-palette($primary);
+    $blui-blue-accent: mat.define-palette($accent);
+    $blui-blue-warn: mat.define-palette($warn);
+
+    @include theme-bases.light-theme($blui-blue-primary, $blui-blue-accent, $blui-blue-warn);
+}
+```
+
+Where the variables `$primary`, `$accent` and `$warn` must be a [palette](https://v15.material.angular.io/guide/theming#palettes). The values in the palette can be CSS custom properties or css colors.
+
 # Custom Classes and Attributes
 
 Brightlayer UI provides some custom classes and attributes that can be used to further align it with Material Design specifications.

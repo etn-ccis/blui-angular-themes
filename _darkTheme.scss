@@ -81,7 +81,7 @@
     $chipOutlinePrimary: (
         color: map-get($primary, 200),
         hoverColor: map-get($primary, 200),
-        background: rgba(map-get($primary, 500), 0.2),
+        background: map-get($primary, 50),
         hoverBackground: rgba(map-get($primary, 500), 0.3),
         removeIconColor: map-get($primary, 400),
         removeIconHoverColor: map-get($primary, 200),
@@ -94,7 +94,7 @@
     $chipOutlineAccent: (
         color: map-get($accent, 200),
         hoverColor: map-get($accent, 200),
-        background: rgba(map-get($primary, 500), 0.2),
+        background: map-get($accent, 50),
         hoverBackground: rgba(map-get($primary, 500), 0.3),
         removeIconColor: map-get($accent, 400),
         removeIconHoverColor: map-get($accent, 200),
