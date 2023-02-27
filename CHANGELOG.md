@@ -1,5 +1,11 @@
 # Changelog
 
+## v8.1.0 (unreleased)
+
+### Added
+
+-   Support for CSS Custom properties customization.
+
 ## v8.0.0 (November 21, 2022)
 
 ### Changed
