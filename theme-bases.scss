@@ -21,8 +21,18 @@ $blui-blue-accent: mat.define-palette(blui.$blui-lightBlue);
 $blui-blue-warn: mat.define-palette(blui.$blui-red);
 
 @function blui-light-theme($primary, $accent, $warn) {
+    $theme: (
+        color: (
+            primary: $primary,
+            accent: $accent,
+            warn: $warn,
+        ),
+        typography: mat.define-typography-config(),
+        density: 0,
+    );
+
     @return map-merge(
-        mat.define-light-theme($primary, $accent, $warn),
+        mat.define-light-theme($theme),
         (
             foreground: (
                 onPrimary: map-get(blui.$blui-white, 50),
@@ -65,8 +75,18 @@ $blui-blue-dark-accent: mat.define-palette(blui.$blui-lightBlue, 200);
 $blui-blue-dark-warn: mat.define-palette(blui.$blui-red, 200);
 
 @function blui-dark-theme($primary, $accent, $warn) {
+    $theme: (
+        color: (
+            primary: $primary,
+            accent: $accent,
+            warn: $warn,
+        ),
+        typography: mat.define-typography-config(),
+        density: 0,
+    );
+
     @return map-merge(
-        mat.define-dark-theme($primary, $accent, $warn),
+        mat.define-light-theme($theme),
         (
             foreground: (
                 text: map-get(blui.$blui-black, 50),
