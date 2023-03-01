@@ -21,8 +21,18 @@ $blui-blue-accent: mat.define-palette(blui.$blui-lightBlue);
 $blui-blue-warn: mat.define-palette(blui.$blui-red);
 
 @function blui-light-theme($primary, $accent, $warn) {
+    $theme: (
+        color: (
+            primary: $primary,
+            accent: $accent,
+            warn: $warn,
+        ),
+        typography: typographyConfig(),
+        density: 0,
+    );
+
     @return map-merge(
-        mat.define-light-theme($primary, $accent, $warn),
+        mat.define-light-theme($theme),
         (
             foreground: (
                 onPrimary: map-get(blui.$blui-white, 50),
@@ -54,6 +64,9 @@ $blui-blue-warn: mat.define-palette(blui.$blui-red);
     @include mat.all-legacy-component-themes($theme);
     @include blui-component-theme.blui-components-theme($theme);
     @include blueTheme.bluetheme($theme);
+
+    @include mat.legacy-typography-hierarchy($theme);
+    @include mat.legacy-core();
 }
 
 @mixin blue() {
@@ -65,8 +78,18 @@ $blui-blue-dark-accent: mat.define-palette(blui.$blui-lightBlue, 200);
 $blui-blue-dark-warn: mat.define-palette(blui.$blui-red, 200);
 
 @function blui-dark-theme($primary, $accent, $warn) {
+    $theme: (
+        color: (
+            primary: $primary,
+            accent: $accent,
+            warn: $warn,
+        ),
+        typography: mat.define-typography-config(),
+        density: 0,
+    );
+
     @return map-merge(
-        mat.define-dark-theme($primary, $accent, $warn),
+        mat.define-light-theme($theme),
         (
             foreground: (
                 text: map-get(blui.$blui-black, 50),
@@ -96,15 +119,18 @@ $blui-blue-dark-warn: mat.define-palette(blui.$blui-red, 200);
     @include mat.all-legacy-component-themes($theme);
     @include blui-component-theme.blui-components-theme($theme);
     @include darkTheme.darktheme($theme);
+
+    @include mat.legacy-typography-hierarchy($theme);
+    @include mat.legacy-core();
 }
 
 @mixin blueDark() {
     @include dark-theme($blui-blue-dark-primary, $blui-blue-dark-accent, $blui-blue-dark-warn);
 }
 
-@mixin coreTypography() {
+@function typographyConfig() {
     // Custom Typography Sizes & Weights
-    $custom-typography: mat.define-legacy-typography-config(
+    @return mat.define-legacy-typography-config(
         $font-family: '"Open Sans", Arial, Helvetica, sans-serif;',
         $display-4: mat.define-typography-level(6rem, 1.167, 300),
         $display-2: mat.define-typography-level(3rem, 1.167, 400),
@@ -117,15 +143,6 @@ $blui-blue-dark-warn: mat.define-palette(blui.$blui-red, 200);
         $body-1: mat.define-typography-level(1rem, 1.5, 400),
         $caption: mat.define-typography-level(0.75rem, 1.66, 400),
         $button: mat.define-typography-level(0.875rem, 1, 600),
-        $input: mat.define-typography-level(inherit, 1.125, 400),
+        $input: mat.define-typography-level(inherit, 1.125, 400)
     );
-
-    /*
-    ** Include the Material base styles
-    **
-    ** NOTE: material theme will use our Brightlayer UI custom typography
-    ** There is currently not a way to specify different custom fonts for different themes
-    */
-    @include mat.all-legacy-component-typographies($custom-typography);
-    @include mat.core();
 }
