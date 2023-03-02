@@ -2,6 +2,10 @@
 
 ## v8.1.0 (unreleased)
 
+### Fixed
+
+-   Fixed `<blui-drawer-header>` `color` prop issue ([#152](https://github.com/etn-ccis/blui-angular-themes/issues/152)).
+
 ### Added
 
 -   Support for CSS Custom properties customization.
