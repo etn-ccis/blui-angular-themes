@@ -5,6 +5,7 @@
 ### Fixed
 
 -   Fixed `<blui-drawer-header>` `color` prop issue ([#152](https://github.com/etn-ccis/blui-angular-themes/issues/152)).
+-   Fixed dropdown arrow not vertically aligned issue in `<mat-select>` ([#78](https://github.com/etn-ccis/blui-angular-themes/issues/78)).
 
 ### Added
 
