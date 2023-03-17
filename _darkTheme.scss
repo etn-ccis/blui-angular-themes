@@ -156,12 +156,28 @@
         label: (
             withoutValue: map-get($foreground, secondary-text),
             withValue: map-get($foreground, text),
-            onFocus: map-get($accent, 200),
+            onFocus: map-get($primary, 200),
         ),
         underline: (
             default: map-get($foreground, disabled),
             onHover: map-get($foreground, secondary-text),
             onFocus: map-get($primary, 500),
+        ),
+    );
+    $inputAccent: (
+        icon: map-get($foreground, secondary-text),
+        placeholder: map-get($foreground, disabled),
+        hint: map-get($foreground, secondary-text),
+        filledBackgroundColor: rgba(map-get(blui.$blui-black, 800), 0.5),
+        label: (
+            withoutValue: map-get($foreground, secondary-text),
+            withValue: map-get($foreground, text),
+            onFocus: map-get($accent, 200),
+        ),
+        underline: (
+            default: map-get($foreground, disabled),
+            onHover: map-get($foreground, secondary-text),
+            onFocus: map-get($accent, 500),
         ),
     );
     $inputWarn: (
@@ -177,7 +193,7 @@
         ),
         underline: (
             default: map-get($warn, 500),
-            onHover: map-get($warn, 200),
+            onHover: map-get($warn, 500),
             onFocus: map-get($warn, 500),
         ),
     );
@@ -185,7 +201,7 @@
         text: map-get($foreground, disabled),
         filledBackgroundColor: rgba(map-get(blui.$blui-black, 800), 0.5),
     );
-    @include input-field.blui-mat-form-field($inputPrimary, $inputWarn, $inputDisabled);
+    @include input-field.blui-mat-form-field($inputPrimary, $inputAccent, $inputWarn, $inputDisabled);
     .mat-form-field-appearance-outline.mat-form-field-disabled .mat-form-field-outline {
         color: map-get($foreground, disabled);
     }

@@ -1,6 +1,6 @@
 @use '../utility' as util;
 
-@mixin blui-mat-form-field($primaryPalette, $warnPalette, $disablePalette) {
+@mixin blui-mat-form-field($primaryPalette, $accentPalette, $warnPalette, $disablePalette) {
     input {
         font-family: 'Open Sans';
     }
@@ -8,6 +8,14 @@
     .mat-form-field {
         &.mat-primary {
             @include colored-input-styles($primaryPalette);
+        }
+
+        &.mat-accent {
+            @include colored-input-styles($accentPalette);
+        }
+
+        &.mat-warn {
+            @include colored-input-styles($warnPalette);
         }
 
         &.mat-form-field-invalid {

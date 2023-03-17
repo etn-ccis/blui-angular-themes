@@ -5,6 +5,7 @@
 ### Fixed
 
 -   Fixed `<blui-drawer-header>` `color` prop issue ([#152](https://github.com/etn-ccis/blui-angular-themes/issues/152)).
+-   Fixed `<mat-select>` wrong label and underline color ([#67](https://github.com/etn-ccis/blui-angular-themes/issues/67P)).
 
 ### Added
 

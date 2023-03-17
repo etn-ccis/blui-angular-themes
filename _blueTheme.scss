@@ -34,6 +34,22 @@
             onFocus: map-get($primary, 500),
         ),
     );
+    $inputAccent: (
+        icon: map-get($foreground, secondary-text),
+        placeholder: map-get(blui.$blui-black, 100),
+        hint: map-get($foreground, hint-text),
+        filledBackgroundColor: map-get(blui.$blui-white, 200),
+        label: (
+            withoutValue: map-get($foreground, hint-text),
+            withValue: map-get($foreground, text),
+            onFocus: map-get($accent, 500),
+        ),
+        underline: (
+            default: map-get($foreground, divider),
+            onHover: map-get($foreground, text),
+            onFocus: map-get($accent, 500),
+        ),
+    );
     $inputWarn: (
         icon: map-get($foreground, secondary-text),
         placeholder: map-get(blui.$blui-black, 100),
@@ -47,7 +63,7 @@
         ),
         underline: (
             default: map-get($warn, 500),
-            onHover: map-get($warn, 700),
+            onHover: map-get($warn, 500),
             onFocus: map-get($warn, 500),
         ),
     );
@@ -56,7 +72,7 @@
         filledBackgroundColor: map-get(blui.$blui-white, 100),
     );
 
-    @include input-field.blui-mat-form-field($inputPrimary, $inputWarn, $inputDisabled);
+    @include input-field.blui-mat-form-field($inputPrimary, $inputAccent, $inputWarn, $inputDisabled);
     /* Mat Disabled Select Underline Color */
     .mat-form-field.mat-form-field-disabled.mat-form-field-appearance-legacy,
     .mat-form-field.mat-form-field-disabled,
