@@ -5,6 +5,7 @@
 ### Fixed
 
 -   Fixed `<blui-drawer-header>` `color` prop issue ([#152](https://github.com/etn-ccis/blui-angular-themes/issues/152)).
+-   Fixed chip mixin to use correct accent color issue ([#72](https://github.com/etn-ccis/blui-angular-themes/issues/72)).
 
 ### Added
 
