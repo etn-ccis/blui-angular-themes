@@ -453,6 +453,12 @@
     .mat-toolbar {
         color: map-get($foreground, text);
         background-color: map-get(blui.$blui-darkBlack, 100);
+        .blui-drawer-header-title {
+            color: map-get(blui.$blui-white, 50);
+        }
+        .mat-icon-button {
+            color: map-get(blui.$blui-white, 50);
+        }
         &.mat-primary {
             background-color: map-get(blui.$blui-black, 800);
             color: map-get(blui.$blui-black, 50);
