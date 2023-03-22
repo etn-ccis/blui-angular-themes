@@ -5,6 +5,7 @@
 ### Fixed
 
 -   Fixed `<blui-drawer-header>` `color` prop issue ([#152](https://github.com/etn-ccis/blui-angular-themes/issues/152)).
+-   Fixed `<blui-inline>` does not work with inline svg icons issue ([#133](https://github.com/etn-ccis/blui-angular-themes/issues/133)).
 -   Fixed Dark theme `<blui-drawer-header>` text and icon color issue ([#79](https://github.com/etn-ccis/blui-angular-themes/issues/79)).
 
 ### Added
