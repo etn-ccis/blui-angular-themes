@@ -5,6 +5,7 @@
 ### Fixed
 
 -   Fixed `<blui-drawer-header>` `color` prop issue ([#152](https://github.com/etn-ccis/blui-angular-themes/issues/152)).
+-   Fixed Dark theme `<blui-drawer-header>` text and icon color issue ([#79](https://github.com/etn-ccis/blui-angular-themes/issues/79)).
 
 ### Added
 
