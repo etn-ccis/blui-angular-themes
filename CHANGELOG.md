@@ -5,6 +5,7 @@
 ### Fixed
 
 -   Fixed `<blui-drawer-header>` `color` prop issue ([#152](https://github.com/etn-ccis/blui-angular-themes/issues/152)).
+-   Fixed dropdown arrow not vertically aligned issue in `<mat-select>` ([#78](https://github.com/etn-ccis/blui-angular-themes/issues/78)).
 -   Fixed chip mixin to use correct accent color issue ([#72](https://github.com/etn-ccis/blui-angular-themes/issues/72)).
 -   Fixed `<blui-inline>` does not work with inline svg icons issue ([#133](https://github.com/etn-ccis/blui-angular-themes/issues/133)).
 -   Fixed Dark theme `<blui-drawer-header>` text and icon color issue ([#79](https://github.com/etn-ccis/blui-angular-themes/issues/79)).
