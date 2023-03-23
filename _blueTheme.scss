@@ -98,8 +98,8 @@
         disabledColor: map-get($accent, 200),
         disabledBackground: map-get($accent, 50),
         removeIconDisabledColor: map-get($accent, 100),
-        avatarColor: map-get($primary, 500),
-        avatarBackground: map-get($primary, 50),
+        avatarColor: map-get($accent, 500),
+        avatarBackground: map-get($accent, 50),
         avatarDisabledColor: map-get($accent, 200),
     );
     $chipWarn: (
@@ -139,7 +139,7 @@
     $chipOutlinePrimary: (
         color: map-get($primary, 500),
         hoverColor: map-get($primary, 500),
-        background: map-get($primary, 50),
+        background: rgba(map-get($primary, 500), 0.05),
         hoverBackground: rgba(map-get($primary, 500), 0.1),
         removeIconColor: map-get($primary, 200),
         removeIconHoverColor: map-get($primary, 500),
@@ -151,8 +151,8 @@
     $chipOutlineAccent: (
         color: map-get($accent, 500),
         hoverColor: map-get($accent, 500),
-        background: map-get($accent, 50),
-        hoverBackground: rgba(map-get($primary, 500), 0.1),
+        background: rgba(map-get($accent, 500), 0.05),
+        hoverBackground: rgba(map-get($accent, 500), 0.1),
         removeIconColor: map-get($accent, 200),
         removeIconHoverColor: map-get($accent, 500),
         avatarColor: map-get($accent, 500),
@@ -163,7 +163,7 @@
     $chipOutlineWarn: (
         color: map-get($warn, 500),
         hoverColor: map-get($warn, 500),
-        background: map-get($warn, 50),
+        background: rgba(map-get($warn, 500), 0.05),
         hoverBackground: rgba(map-get($warn, 500), 0.1),
         removeIconColor: map-get($warn, 200),
         removeIconHoverColor: map-get($warn, 500),
