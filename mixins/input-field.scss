@@ -156,6 +156,9 @@
 
         /* Outline Variant */
         &.mat-form-field-appearance-outline {
+            .mat-form-field-outline {
+                color: util.map-deep-get($palette, underline, default);
+            }
             .mat-form-field-outline-thick {
                 .mat-form-field-outline-start,
                 .mat-form-field-outline-end,
