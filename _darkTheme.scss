@@ -152,7 +152,7 @@
         icon: map-get($foreground, secondary-text),
         placeholder: map-get($foreground, disabled),
         hint: map-get($foreground, secondary-text),
-        filledBackgroundColor: rgba(map-get(blui.$blui-black, 800), 0.5),
+        filledBackgroundColor: map-get(blui.$blui-black, 800),
         label: (
             withoutValue: map-get($foreground, secondary-text),
             withValue: map-get($foreground, text),
@@ -168,7 +168,7 @@
         icon: map-get($foreground, secondary-text),
         placeholder: map-get($foreground, disabled),
         hint: map-get($foreground, secondary-text),
-        filledBackgroundColor: rgba(map-get(blui.$blui-black, 800), 0.5),
+        filledBackgroundColor: map-get(blui.$blui-black, 800),
         label: (
             withoutValue: map-get($foreground, secondary-text),
             withValue: map-get($foreground, text),
@@ -184,7 +184,7 @@
         icon: map-get($foreground, secondary-text),
         placeholder: map-get($foreground, disabled),
         hint: map-get($warn, 200),
-        filledBackgroundColor: rgba(map-get(blui.$blui-black, 800), 0.5),
+        filledBackgroundColor: map-get(blui.$blui-black, 800),
         highlightColor: rgba(map-get($warn, 500), 0.5),
         label: (
             withoutValue: map-get($warn, 200),
