@@ -4,7 +4,9 @@
     input {
         font-family: 'Open Sans';
     }
-
+    input::-ms-reveal {
+        display: none;
+    }
     .mat-form-field {
         &.mat-primary {
             @include colored-input-styles($primaryPalette);
