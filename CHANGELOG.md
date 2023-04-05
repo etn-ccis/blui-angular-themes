@@ -10,7 +10,7 @@
 -   Fixed chip mixin to use correct accent color issue ([#72](https://github.com/etn-ccis/blui-angular-themes/issues/72)).
 -   Fixed `<blui-inline>` does not work with inline svg icons issue ([#133](https://github.com/etn-ccis/blui-angular-themes/issues/133)).
 -   Fixed Dark theme `<blui-drawer-header>` text and icon color issue ([#79](https://github.com/etn-ccis/blui-angular-themes/issues/79)).
--   Fixed Remove Edge show password icon for Blui-angular-workflow repo issue ([#137](https://github.com/etn-ccis/blui-angular-workflows/issues/137)).
+-   Fixed Remove show password icon in the Edge browser issue ([#137](https://github.com/etn-ccis/blui-angular-workflows/issues/137)).
 
 ### Added
 
