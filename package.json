@@ -2,7 +2,7 @@
     "name": "@brightlayer-ui/angular-themes",
     "author": "Brightlayer UI <brightlayer-ui@eaton.com>",
     "license": "BSD-3-Clause",
-    "version": "8.0.0",
+    "version": "8.1.0",
     "description": "Angular themes for Brightlayer UI applications",
     "scripts": {
         "initialize": "bash scripts/initializeSubmodule.sh",
@@ -21,19 +21,21 @@
     },
     "watch": {
         "copy-to-showcase": {
-            "patterns": ["**"],
+            "patterns": [
+                "**"
+            ],
             "extensions": "scss",
             "ignore": "demos"
         }
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/brightlayer-ui/angular-themes.git"
+        "url": "git+https://github.com/etn-ccis/blui-angular-themes.git"
     },
     "bugs": {
-        "url": "https://github.com/brightlayer-ui/angular-themes/issues"
+        "url": "https://github.com/etn-ccis/blui-angular-themes/issues"
     },
-    "homepage": "https://github.com/brightlayer-ui/angular-themes/tree/master",
+    "homepage": "https://github.com/etn-ccis/blui-angular-themes/tree/master",
     "keywords": [
         "Brightlayer UI",
         "themes",
@@ -55,7 +57,7 @@
         "@fontsource/open-sans": "^4.1.0"
     },
     "devDependencies": {
-        "@angular/material": "^14.2.7",
+        "@angular/material": "^15.1.1",
         "@brightlayer-ui/prettier-config": "^1.0.3",
         "npm-license-crawler": "^0.2.1",
         "npm-watch": "^0.11.0",

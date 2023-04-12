@@ -26,19 +26,7 @@ jobs:
                     name: Publish @brightlayer-ui/angular-themes
                     command:  |
                         yarn publish:package -b $CIRCLE_BRANCH
-
-    tag:
-        docker:
-            -   image: cimg/node:14.19.0-browsers
-        steps:
-            - checkout
-            - gh/setup
-            -   attach_workspace:
-                    at: .
-            -   run:
-                    name: Tag @brightlayer-ui/angular-themes
-                    command: |
-                        yarn tag:package -b $CIRCLE_BRANCH
+                        
 workflows:
     version: 2
     themes:
@@ -52,10 +40,3 @@ workflows:
                           only:
                               - master
                               - dev
-            -   tag:
-                    requires:
-                        - publish
-                    filters:
-                        branches:
-                            only:
-                                - master

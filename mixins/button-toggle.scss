@@ -21,7 +21,7 @@
         .mat-button-toggle-button {
             border: 1px solid map-get($palette, unselectedBorderColor);
             color: map-get($palette, inactiveTextColor);
-            background-color: transparent;      
+            background-color: transparent;
         }
         &.checked {
             .mat-button-toggle-button {
@@ -65,5 +65,3 @@
         color: map-get($palette, activeTextColor);
     }
 }
-
-

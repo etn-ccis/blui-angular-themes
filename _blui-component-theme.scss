@@ -21,7 +21,7 @@
     .blui-score-card {
         .blui-score-card-header {
             background-color: map-get($primary, 500);
-            color: map-get(blui.$blui-white, 50);
+            color: map-get($foreground, onPrimary);
             .mat-card-subtitle {
                 color: inherit;
             }
@@ -82,7 +82,7 @@
     $foreground: map-get($theme, foreground);
     .blui-list-item-tag {
         background-color: map-get($primary, 500);
-        color: map-get(blui.$blui-white, 50);
+        color: map-get($foreground, onPrimary);
     }
 }
 
@@ -106,9 +106,6 @@
     .blui-drawer {
         .blui-drawer-nav-group .mat-list-base {
             color: map-get($foreground, text);
-        }
-        .blui-drawer-header-content.mat-toolbar {
-            background-color: map-get($primary, 500);
         }
         .blui-drawer-nav-item-active-highlight {
             background-color: map-get($primary, 500);

@@ -1,6 +1,6 @@
 # Brightlayer UI themes for Angular applications
 
-[![](https://img.shields.io/circleci/project/github/brightlayer-ui/angular-themes/master.svg?style=flat)](https://circleci.com/gh/brightlayer-ui/angular-themes/tree/master)
+[![](https://img.shields.io/circleci/project/github/etn-ccis/blui-angular-themes/master.svg?style=flat)](https://circleci.com/gh/etn-ccis/blui-angular-themes/tree/master)
 [![](https://img.shields.io/npm/v/@brightlayer-ui/angular-themes.svg?label=@brightlayer-ui/angular-themes&style=flat)](https://www.npmjs.com/package/@brightlayer-ui/angular-themes)
 
 This package provides theming support for Eaton applications using the Brightlayer UI design system. It includes resources for developers using Angular w/ [Angular Material](https://www.npmjs.com/package/@angular/material). This package comes with two theme options: a Blue theme (standard) and a Dark theme.
@@ -56,6 +56,28 @@ You can then apply the theme to your application by adding the proper class to y
 
 > If you do not specify a theme class, your application will use the default Material theme.
 
+## Customization
+
+If you need to customize the styles (for OEM purposes for example). You can import the styles and define the customization in your top level scss file.
+
+```scss
+// in styles.scss or your top-level scss file
+use '@brightlayer-ui/angular-themes/theme_bases';
+use '@brightlayer-ui/angular-themes/open-sans.scss';
+
+@include theme-bases.coreTypography();
+
+body {
+    $blui-blue-primary: mat.define-palette($primary);
+    $blui-blue-accent: mat.define-palette($accent);
+    $blui-blue-warn: mat.define-palette($warn);
+
+    @include theme-bases.light-theme($blui-blue-primary, $blui-blue-accent, $blui-blue-warn);
+}
+```
+
+Where the variables `$primary`, `$accent` and `$warn` must be a [palette](https://v15.material.angular.io/guide/theming#palettes). The values in the palette can be CSS custom properties or css colors.
+
 # Custom Classes and Attributes
 
 Brightlayer UI provides some custom classes and attributes that can be used to further align it with Material Design specifications.
@@ -106,8 +128,8 @@ We have included a custom set of `blui-[name]` classes to match our documentatio
 
 #### Migration
 
-If you are using an older version of the themes package and wish to update, check out our [migration guide](https://github.com/brightlayer-ui/angular-themes/blob/master/MIGRATION.md);
+If you are using an older version of the themes package and wish to update, check out our [migration guide](https://github.com/etn-ccis/blui-angular-themes/blob/master/MIGRATION.md);
 
 ## Demo
 
-[View on Stackblitz](https://stackblitz.com/github/brightlayer-ui/angular-showcase-demo/tree/master)
+[View on Stackblitz](https://stackblitz.com/github/etn-ccis/blui-angular-showcase-demo/tree/master)
