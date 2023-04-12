@@ -1,6 +1,6 @@
 # Changelog
 
-## v8.1.0 (unreleased)
+## v8.1.0 (April 13, 2023)
 
 ### Fixed
 
