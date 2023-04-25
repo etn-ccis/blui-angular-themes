@@ -544,9 +544,21 @@
         background-color: rgba(map-get(blui.$blui-black, 50), 0.1);
     }
 
+    /* Mat expansion panel */
+    .mat-expansion-panel {
+        background: map-get(blui.$blui-black, 900);
+        color: map-get(blui.$blui-black, 50);
+    }
+
+    /* Mat card */
+    .mat-card {
+        background: map-get(blui.$blui-black, 900);
+        color: map-get(blui.$blui-black, 50);
+    }
+
     /* table*/
     .mat-table {
-        background-color: map-get($background, app-bar);
+        background: map-get(blui.$blui-black, 900);
     }
 
     /* paginator*/
@@ -554,7 +566,25 @@
         background-color: map-get($background, app-bar);
         color: map-get($foreground, text);
     }
+    
+    /* mat datepicker */
+    .mat-datepicker-content {
+        background: map-get(blui.$blui-black, 900);
+        color: map-get(blui.$blui-black, 50);
+    }
 
+    /* mat dialog */
+    .mat-dialog-container {
+        background: map-get(blui.$blui-black, 900);
+        color: map-get(blui.$blui-black, 50);
+    }
+    
+    /* mat bottom sheet */
+    .mat-bottom-sheet-container {
+        background: map-get(blui.$blui-black, 900);
+        color: map-get(blui.$blui-black, 50);
+    }
+    
     /* snackbar */
     .mat-snack-bar-container {
         background-color: map-get(blui.$blui-black, 50);

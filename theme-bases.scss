@@ -89,7 +89,7 @@ $blui-blue-dark-warn: mat.define-palette(blui.$blui-red, 200);
     );
 
     @return map-merge(
-        mat.define-light-theme($theme),
+        mat.define-dark-theme($theme),
         (
             foreground: (
                 text: map-get(blui.$blui-black, 50),
