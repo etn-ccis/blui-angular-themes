@@ -65,7 +65,6 @@ $blui-blue-warn: mat.define-palette(blui.$blui-red);
     @include blui-component-theme.blui-components-theme($theme);
     @include blueTheme.bluetheme($theme);
 
-    @include mat.legacy-typography-hierarchy($theme);
     @include mat.legacy-core();
 }
 
@@ -84,7 +83,7 @@ $blui-blue-dark-warn: mat.define-palette(blui.$blui-red, 200);
             accent: $accent,
             warn: $warn,
         ),
-        typography: mat.define-typography-config(),
+        typography: typographyConfig(),
         density: 0,
     );
 
@@ -120,7 +119,6 @@ $blui-blue-dark-warn: mat.define-palette(blui.$blui-red, 200);
     @include blui-component-theme.blui-components-theme($theme);
     @include darkTheme.darktheme($theme);
 
-    @include mat.legacy-typography-hierarchy($theme);
     @include mat.legacy-core();
 }
 
