@@ -556,6 +556,24 @@
         color: map-get(blui.$blui-black, 50);
     }
 
+    /* Mat menu */
+    .mat-menu-panel, .mat-menu-item:hover:not([disabled]) {
+        background: map-get(blui.$blui-black, 900);
+        color: map-get(blui.$blui-black, 50);
+    }
+
+    /* Mat button */
+    .mat-button-toggle-appearance-standard {
+        background: map-get(blui.$blui-black, 900);
+        color: map-get(blui.$blui-black, 50);
+    }
+
+    /* Mat select */
+    .mat-select-panel {
+        background: map-get(blui.$blui-black, 900);
+        color: map-get(blui.$blui-black, 50);
+    }
+
     /* table*/
     .mat-table {
         background: map-get(blui.$blui-black, 900);
