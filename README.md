@@ -132,4 +132,4 @@ If you are using an older version of the themes package and wish to update, chec
 
 ## Demo
 
-[View on Stackblitz](https://stackblitz.com/github/etn-ccis/blui-angular-showcase-demo/tree/master)
+[Interactive Demo](https://blui-angular-showcase.web.app/)
