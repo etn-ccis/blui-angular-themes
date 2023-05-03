@@ -1,13 +1,23 @@
 @use '../utility' as util;
 
-@mixin blui-mat-form-field($primaryPalette, $warnPalette, $disablePalette) {
+@mixin blui-mat-form-field($primaryPalette, $accentPalette, $warnPalette, $disablePalette) {
     input {
         font-family: 'Open Sans';
     }
-
+    input::-ms-reveal {
+        display: none;
+    }
     .mat-form-field {
         &.mat-primary {
             @include colored-input-styles($primaryPalette);
+        }
+
+        &.mat-accent {
+            @include colored-input-styles($accentPalette);
+        }
+
+        &.mat-warn {
+            @include colored-input-styles($warnPalette);
         }
 
         &.mat-form-field-invalid {
@@ -148,6 +158,9 @@
 
         /* Outline Variant */
         &.mat-form-field-appearance-outline {
+            .mat-form-field-outline {
+                color: util.map-deep-get($palette, underline, default);
+            }
             .mat-form-field-outline-thick {
                 .mat-form-field-outline-start,
                 .mat-form-field-outline-end,

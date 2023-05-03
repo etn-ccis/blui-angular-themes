@@ -2,7 +2,7 @@
     "name": "@brightlayer-ui/angular-themes",
     "author": "Brightlayer UI <brightlayer-ui@eaton.com>",
     "license": "BSD-3-Clause",
-    "version": "9.0.0-alpha.2",
+    "version": "9.0.0-alpha.3",
     "description": "Angular themes for Brightlayer UI applications",
     "scripts": {
         "initialize": "bash scripts/initializeSubmodule.sh",

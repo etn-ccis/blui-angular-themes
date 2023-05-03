@@ -41,8 +41,8 @@
         disabledColor: map-get(blui.$blui-black, 400),
         disabledBackground: rgba(map-get(blui.$blui-black, 200), 0.24),
         removeIconDisabledColor: map-get(blui.$blui-black, 400),
-        avatarColor: map-get($primary, 500),
-        avatarBackground: map-get(blui.$blui-blue, 50),
+        avatarColor: map-get($accent, 500),
+        avatarBackground: map-get($accent, 50),
         avatarDisabledColor: map-get($primary, 500),
     );
     $chipWarn: (
@@ -81,7 +81,7 @@
     $chipOutlinePrimary: (
         color: map-get($primary, 200),
         hoverColor: map-get($primary, 200),
-        background: map-get($primary, 50),
+        background: rgba(map-get($primary, 500), 0.2),
         hoverBackground: rgba(map-get($primary, 500), 0.3),
         removeIconColor: map-get($primary, 400),
         removeIconHoverColor: map-get($primary, 200),
@@ -94,14 +94,14 @@
     $chipOutlineAccent: (
         color: map-get($accent, 200),
         hoverColor: map-get($accent, 200),
-        background: map-get($accent, 50),
+        background: rgba(map-get($accent, 500), 0.2),
         hoverBackground: rgba(map-get($primary, 500), 0.3),
         removeIconColor: map-get($accent, 400),
         removeIconHoverColor: map-get($accent, 200),
-        avatarColor: map-get($primary, 500),
-        avatarBackground: map-get($primary, 100),
-        avatarDisabledColor: map-get($primary, 500),
-        avatarDisabledBackground: map-get($primary, 100),
+        avatarColor: map-get($accent, 500),
+        avatarBackground: map-get($accent, 100),
+        avatarDisabledColor: map-get($accent, 500),
+        avatarDisabledBackground: map-get($accent, 100),
         removeIconDisabledColor: rgba(map-get(blui.$blui-black, 200), 0.24),
     );
     $chipOutlineWarn: (
@@ -152,7 +152,23 @@
         icon: map-get($foreground, secondary-text),
         placeholder: map-get($foreground, disabled),
         hint: map-get($foreground, secondary-text),
-        filledBackgroundColor: rgba(map-get(blui.$blui-black, 800), 0.5),
+        filledBackgroundColor: map-get(blui.$blui-black, 800),
+        label: (
+            withoutValue: map-get($foreground, secondary-text),
+            withValue: map-get($foreground, text),
+            onFocus: map-get($primary, 200),
+        ),
+        underline: (
+            default: map-get($foreground, disabled),
+            onHover: map-get($foreground, secondary-text),
+            onFocus: map-get($primary, 500),
+        ),
+    );
+    $inputAccent: (
+        icon: map-get($foreground, secondary-text),
+        placeholder: map-get($foreground, disabled),
+        hint: map-get($foreground, secondary-text),
+        filledBackgroundColor: map-get(blui.$blui-black, 800),
         label: (
             withoutValue: map-get($foreground, secondary-text),
             withValue: map-get($foreground, text),
@@ -161,14 +177,14 @@
         underline: (
             default: map-get($foreground, disabled),
             onHover: map-get($foreground, secondary-text),
-            onFocus: map-get($primary, 500),
+            onFocus: map-get($accent, 500),
         ),
     );
     $inputWarn: (
         icon: map-get($foreground, secondary-text),
         placeholder: map-get($foreground, disabled),
         hint: map-get($warn, 200),
-        filledBackgroundColor: rgba(255, 255, 255, 0.1),
+        filledBackgroundColor: map-get(blui.$blui-black, 800),
         highlightColor: rgba(map-get($warn, 500), 0.5),
         label: (
             withoutValue: map-get($warn, 200),
@@ -177,7 +193,7 @@
         ),
         underline: (
             default: map-get($warn, 500),
-            onHover: map-get($warn, 200),
+            onHover: map-get($warn, 500),
             onFocus: map-get($warn, 500),
         ),
     );
@@ -185,7 +201,7 @@
         text: map-get($foreground, disabled),
         filledBackgroundColor: rgba(map-get(blui.$blui-black, 800), 0.5),
     );
-    @include input-field.blui-mat-form-field($inputPrimary, $inputWarn, $inputDisabled);
+    @include input-field.blui-mat-form-field($inputPrimary, $inputAccent, $inputWarn, $inputDisabled);
     .mat-form-field-appearance-outline.mat-form-field-disabled .mat-form-field-outline {
         color: map-get($foreground, disabled);
     }
@@ -453,6 +469,12 @@
     .mat-toolbar {
         color: map-get($foreground, text);
         background-color: map-get(blui.$blui-darkBlack, 100);
+        .blui-drawer-header-title {
+            color: map-get(blui.$blui-white, 50);
+        }
+        .mat-icon-button {
+            color: map-get(blui.$blui-white, 50);
+        }
         &.mat-primary {
             background-color: map-get(blui.$blui-black, 800);
             color: map-get(blui.$blui-black, 50);

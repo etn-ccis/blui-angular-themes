@@ -156,6 +156,7 @@
             align-items: center;
             justify-content: center;
             .mat-icon {
+                display: flex;
                 height: 1.125rem;
                 width: 1.125rem;
                 font-size: 1.125rem;
@@ -258,10 +259,6 @@
             .mat-form-field-subscript-wrapper {
                 padding: $ltrOutlinePadding;
             }
-            &.mat-form-field-should-float .mat-form-field-infix {
-                margin-top: -0.125rem;
-                margin-bottom: 0.125rem;
-            }
             .mat-form-field-suffix,
             .mat-form-field-prefix {
                 margin-bottom: 0.25rem;
@@ -277,9 +274,6 @@
             .mat-form-field-suffix,
             .mat-form-field-prefix {
                 margin-bottom: 0.75rem;
-            }
-            .mat-form-field-infix {
-                padding-top: 0.125rem;
             }
         }
 
