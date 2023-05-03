@@ -107,9 +107,6 @@
         .blui-drawer-nav-group .mat-list-base {
             color: map-get($foreground, text);
         }
-        .blui-drawer-header-content.mat-toolbar {
-            background-color: map-get($primary, 500);
-        }
         .blui-drawer-nav-item-active-highlight {
             background-color: map-get($primary, 500);
         }

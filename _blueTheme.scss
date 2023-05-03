@@ -34,6 +34,22 @@
             onFocus: map-get($primary, 500),
         ),
     );
+    $inputAccent: (
+        icon: map-get($foreground, secondary-text),
+        placeholder: map-get(blui.$blui-black, 100),
+        hint: map-get($foreground, hint-text),
+        filledBackgroundColor: map-get(blui.$blui-white, 200),
+        label: (
+            withoutValue: map-get($foreground, hint-text),
+            withValue: map-get($foreground, text),
+            onFocus: map-get($accent, 500),
+        ),
+        underline: (
+            default: map-get($foreground, divider),
+            onHover: map-get($foreground, text),
+            onFocus: map-get($accent, 500),
+        ),
+    );
     $inputWarn: (
         icon: map-get($foreground, secondary-text),
         placeholder: map-get(blui.$blui-black, 100),
@@ -47,7 +63,7 @@
         ),
         underline: (
             default: map-get($warn, 500),
-            onHover: map-get($warn, 700),
+            onHover: map-get($warn, 500),
             onFocus: map-get($warn, 500),
         ),
     );
@@ -56,7 +72,7 @@
         filledBackgroundColor: map-get(blui.$blui-white, 100),
     );
 
-    @include input-field.blui-mat-form-field($inputPrimary, $inputWarn, $inputDisabled);
+    @include input-field.blui-mat-form-field($inputPrimary, $inputAccent, $inputWarn, $inputDisabled);
     /* Mat Disabled Select Underline Color */
     .mat-form-field.mat-form-field-disabled.mat-form-field-appearance-legacy,
     .mat-form-field.mat-form-field-disabled,
@@ -98,8 +114,8 @@
         disabledColor: map-get($accent, 200),
         disabledBackground: map-get($accent, 50),
         removeIconDisabledColor: map-get($accent, 100),
-        avatarColor: map-get($primary, 500),
-        avatarBackground: map-get($primary, 50),
+        avatarColor: map-get($accent, 500),
+        avatarBackground: map-get($accent, 50),
         avatarDisabledColor: map-get($accent, 200),
     );
     $chipWarn: (
@@ -139,7 +155,7 @@
     $chipOutlinePrimary: (
         color: map-get($primary, 500),
         hoverColor: map-get($primary, 500),
-        background: map-get($primary, 50),
+        background: rgba(map-get($primary, 500), 0.05),
         hoverBackground: rgba(map-get($primary, 500), 0.1),
         removeIconColor: map-get($primary, 200),
         removeIconHoverColor: map-get($primary, 500),
@@ -151,8 +167,8 @@
     $chipOutlineAccent: (
         color: map-get($accent, 500),
         hoverColor: map-get($accent, 500),
-        background: map-get($accent, 50),
-        hoverBackground: rgba(map-get($primary, 500), 0.1),
+        background: rgba(map-get($accent, 500), 0.05),
+        hoverBackground: rgba(map-get($accent, 500), 0.1),
         removeIconColor: map-get($accent, 200),
         removeIconHoverColor: map-get($accent, 500),
         avatarColor: map-get($accent, 500),
@@ -163,7 +179,7 @@
     $chipOutlineWarn: (
         color: map-get($warn, 500),
         hoverColor: map-get($warn, 500),
-        background: map-get($warn, 50),
+        background: rgba(map-get($warn, 500), 0.05),
         hoverBackground: rgba(map-get($warn, 500), 0.1),
         removeIconColor: map-get($warn, 200),
         removeIconHoverColor: map-get($warn, 500),
