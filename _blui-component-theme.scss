@@ -67,6 +67,16 @@
     $foreground: map-get($theme, foreground);
     .blui-info-list-item {
         color: map-get($foreground, text);
+
+        .mat-list-item {
+            .mat-list-text {
+                .mat-line:nth-child(n + 2) {
+                    $typography: map-get($theme, typography);
+                    font-size: mat.font-size($typography, body-2);
+                }
+            }
+        }
+
         &.mat-list-item,
         .mat-list-item-content {
             color: inherit;
