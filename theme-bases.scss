@@ -118,6 +118,7 @@ $blui-blue-dark-warn: mat.define-palette(blui.$blui-red, 200);
                 foreground: (
                     text: map-get(blui.$blui-black, 50),
                     disabled: rgba(map-get(blui.$blui-black, 300), 0.3),
+                    divider: rgba(map-get(blui.$blui-black, 200), 0.36),
                 ),
             ),
             foreground: (
