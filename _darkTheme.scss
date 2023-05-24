@@ -579,7 +579,8 @@
     }
 
     /* Mat menu */
-    .mat-menu-panel, .mat-menu-item:hover:not([disabled]) {
+    .mat-menu-panel,
+    .mat-menu-item:hover:not([disabled]) {
         background: map-get(blui.$blui-black, 900);
         color: map-get(blui.$blui-black, 50);
     }
@@ -606,7 +607,7 @@
         background-color: map-get($background, app-bar);
         color: map-get($foreground, text);
     }
-    
+
     /* mat datepicker */
     .mat-datepicker-content {
         background: map-get(blui.$blui-black, 900);
@@ -618,13 +619,13 @@
         background: map-get(blui.$blui-black, 900);
         color: map-get(blui.$blui-black, 50);
     }
-    
+
     /* mat bottom sheet */
     .mat-bottom-sheet-container {
         background: map-get(blui.$blui-black, 900);
         color: map-get(blui.$blui-black, 50);
     }
-    
+
     /* snackbar */
     .mat-snack-bar-container {
         background-color: map-get(blui.$blui-black, 50);
