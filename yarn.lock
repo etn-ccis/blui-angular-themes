@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@angular/material@^15.1.1":
-  version "15.2.5"
-  resolved "https://registry.yarnpkg.com/@angular/material/-/material-15.2.5.tgz#a0531b629334dfd2997dd01e549bd0c40680f4e9"
-  integrity sha512-Lk6l1VsBA2ActVN9YsX2W5lVFYHJEVwswbbUdBPjWaXJzp7TdgghTFczac7vsNA6y3DM3Rd+CvRsJPD2kK4g4A==
+"@angular/material@^15.0.0":
+  version "15.2.8"
+  resolved "https://registry.npmjs.org/@angular/material/-/material-15.2.8.tgz"
+  integrity sha512-bk0dv8PSJGFDgAv3CU3+jfvnOO0ah/L9JUyvw73kjiKezgjW/O8Lgq/dwkDTQ1dF3zCF+JWNqhEJmgi0GVW/cQ==
   dependencies:
     "@material/animation" "15.0.0-canary.684e33d25.0"
     "@material/auto-init" "15.0.0-canary.684e33d25.0"
@@ -75,7 +75,7 @@
 
 "@fontsource/open-sans@^4.1.0":
   version "4.5.14"
-  resolved "https://registry.yarnpkg.com/@fontsource/open-sans/-/open-sans-4.5.14.tgz#b3e1665c0b3fdfc1f030ded2843749e3cf3a5900"
+  resolved "https://registry.npmjs.org/@fontsource/open-sans/-/open-sans-4.5.14.tgz"
   integrity sha512-mBXIIETBlW8q/ocuUN0hyGow2iuf75hQEHQt8R/RJ/HcphVbLg8KB7pHYGbFGDqs75W+SWvTC7JkVeAjT65BuQ==
 
 "@material/animation@15.0.0-canary.684e33d25.0":
@@ -932,7 +932,7 @@ fill-range@^7.0.1:
 
 fsevents@~2.3.2:
   version "2.3.2"
-  resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.2.tgz#8a526f78b8fdf4623b709e0b975c52c24c02fd1a"
+  resolved "https://registry.npmjs.org/fsevents/-/fsevents-2.3.2.tgz"
   integrity sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==
 
 github-url-from-git@^1.3.0:
@@ -1046,9 +1046,10 @@ json-parse-helpfulerror@^1.0.2:
   dependencies:
     jju "^1.1.0"
 
-"license-checker@git+https://github.com/mwittig/license-checker#d546e3f738e14c62e732346fa355162d46700893":
+"license-checker@git+https://github.com/mwittig/license-checker.git#d546e3f738e14c62e732346fa355162d46700893":
   version "1.0.0"
-  resolved "git+https://github.com/mwittig/license-checker#d546e3f738e14c62e732346fa355162d46700893"
+  resolved "git+ssh://git@github.com/mwittig/license-checker.git#d546e3f738e14c62e732346fa355162d46700893"
+  integrity sha512-31msGNoOvPqtKa7Qo54iYkgLE9dalqSuIvQdWV5if2+oNyqh56WFT6fSsUZRWoGhZjXDhl+SV7Beb8PpfSUh8A==
   dependencies:
     chalk "~0.5.1"
     mkdirp "^0.3.5"
@@ -1197,9 +1198,9 @@ picomatch@^2.0.4, picomatch@^2.2.1:
   integrity sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==
 
 prettier@^2.7.1:
-  version "2.8.4"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.8.4.tgz#34dd2595629bfbb79d344ac4a91ff948694463c3"
-  integrity sha512-vIS4Rlc2FNh0BySk3Wkd6xmwxB0FpOndW5fisM5H8hsZSxU2VWVB5CWIkIjWvrHjIhxk2g3bfMKM87zNTrZddw==
+  version "2.8.8"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.8.8.tgz#e8c5d7e98a4305ffe3de2e1fc4aca1a71c28b1da"
+  integrity sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==
 
 pstree.remy@^1.1.8:
   version "1.1.8"

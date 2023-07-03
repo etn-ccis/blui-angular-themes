@@ -206,7 +206,8 @@
     .mat-form-field-appearance-legacy {
         .mat-form-field-prefix,
         .mat-form-field-suffix {
-            .mat-icon-button {
+            .mat-icon-button,
+            .mat-datepicker-toggle .mat-mdc-icon-button {
                 font-size: 1.5rem;
             }
         }
@@ -223,7 +224,8 @@
                 height: 1.5rem;
                 width: 1.5rem;
             }
-            .mat-button-base {
+            .mat-button-base,
+            .mat-datepicker-toggle .mat-mdc-button-base {
                 margin: 0.25rem -0.5rem 0 -0.5rem;
                 .mat-icon {
                     line-height: 1.5rem;

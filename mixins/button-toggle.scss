@@ -1,5 +1,7 @@
 @mixin blui-mat-button-toggle($default, $outline, $filled) {
-    .mat-button-toggle-standalone.mat-button-toggle-appearance-standard:not([variant='outline']):not([variant='filled']),
+    .mat-button-toggle-standalone.mat-button-toggle-appearance-standard:not([variant='outline']):not(
+            [variant='filled']
+        ),
     .mat-button-toggle-group-appearance-standard:not([variant='outline']):not([variant='filled']) {
         @include blui-mat-button-toggle-shared($default);
         @include blui-mat-button-toggle-default($default);

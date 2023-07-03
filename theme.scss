@@ -15,8 +15,6 @@ $blui-blue-primary: theme-bases.$blui-blue-primary;
 $blui-blue-accent: theme-bases.$blui-blue-accent;
 $blui-blue-warn: theme-bases.$blui-blue-warn;
 
-@include theme-bases.coreTypography();
-
 .blui-blue {
     @include theme-bases.blue();
 }
