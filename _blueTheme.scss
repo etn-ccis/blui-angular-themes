@@ -556,4 +556,9 @@
         color: unset;
         background-color: unset;
     }
+
+    /* cdk overlay container */
+    .cdk-overlay-backdrop .cdk-overlay-backdrop-showing {
+        opacity: 0.5;
+    }
 }

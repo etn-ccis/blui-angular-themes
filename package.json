@@ -64,6 +64,6 @@
         "prettier": "^2.7.1"
     },
     "peerDependencies": {
-        "@angular/material": "^15.0.0"
+        "@angular/material": "^15.0.0 || ^16.0.0"
     }
 }
