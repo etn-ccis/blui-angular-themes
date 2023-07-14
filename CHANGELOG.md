@@ -1,5 +1,11 @@
 # Changelog
 
+## v9.0.1 (Unreleased)
+
+### Fixed
+
+-   Fixed Angular 15 themes should match the legacy themes issue ([#156](https://github.com/etn-ccis/blui-angular-themes/issues/156)).
+
 ## v9.0.0 (July 3, 2023)
 
 ### Changed
