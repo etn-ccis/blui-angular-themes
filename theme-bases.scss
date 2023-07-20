@@ -87,6 +87,8 @@ $typography-config: mat.define-legacy-typography-config(
     @include sharedConfig();
 
     @include mat.all-legacy-component-themes($theme);
+    @include mat.legacy-core();
+
     @include blui-component-theme.blui-components-theme($theme);
     @include blueTheme.bluetheme($theme);
 }
@@ -147,6 +149,7 @@ $blui-blue-dark-warn: mat.define-palette(blui.$blui-red, 200);
     @include sharedConfig();
 
     @include mat.all-legacy-component-themes($theme);
+    @include mat.legacy-core();
 
     @include blui-component-theme.blui-components-theme($theme);
     @include darkTheme.darktheme($theme);
