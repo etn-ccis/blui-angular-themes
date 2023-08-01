@@ -54,7 +54,7 @@
     ],
     "dependencies": {
         "@brightlayer-ui/colors": "^3.0.0",
-        "@fontsource/open-sans": "^4.1.0"
+        "@fontsource/open-sans": "^5.0.5"
     },
     "devDependencies": {
         "@angular/material": "^15.0.0",
