@@ -57,7 +57,7 @@
         "@fontsource/open-sans": "^5.0.5"
     },
     "devDependencies": {
-        "@angular/material": "^15.0.0",
+        "@angular/material": "^16.2.2",
         "@brightlayer-ui/prettier-config": "^1.0.3",
         "npm-license-crawler": "^0.2.1",
         "npm-watch": "^0.11.0",
