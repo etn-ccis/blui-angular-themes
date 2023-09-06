@@ -92,8 +92,8 @@ $typography-config: mat.define-legacy-typography-config(
 }
 
 @mixin blue() {
-    @include light-theme($blui-blue-primary, $blui-blue-accent, $blui-blue-warn);
     @include shared();
+    @include light-theme($blui-blue-primary, $blui-blue-accent, $blui-blue-warn);
 }
 
 $blui-blue-dark-primary: mat.define-palette(blui.$blui-blue);
@@ -153,8 +153,8 @@ $blui-blue-dark-warn: mat.define-palette(blui.$blui-red, 200);
 }
 
 @mixin blueDark() {
-    @include dark-theme($blui-blue-dark-primary, $blui-blue-dark-accent, $blui-blue-dark-warn);
     @include shared();
+    @include dark-theme($blui-blue-dark-primary, $blui-blue-dark-accent, $blui-blue-dark-warn);
 }
 
 @mixin shared() {

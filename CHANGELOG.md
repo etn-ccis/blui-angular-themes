@@ -2,11 +2,10 @@
 
 ## v9.0.1 (Unreleased)
 
--   Fix slide-toggle bar color
-
 ### Fixed
 
 -   Fixed Angular 15 themes should match the legacy themes issue ([#156](https://github.com/etn-ccis/blui-angular-themes/issues/156)).
+-   Fix slide-toggle bar color
 
 ## v9.0.0 (July 3, 2023)
 
