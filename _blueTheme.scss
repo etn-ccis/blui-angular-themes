@@ -381,7 +381,7 @@
     @include button-toggle.blui-mat-button-toggle($buttonToggleDefault, $buttonToggleOutline, $buttonToggleFilled);
 
     /* Tabs */
-    $tabText: map-get(blui.$blui-black, 500);
+    $tabText: map-get($foreground, 500);
     $tabBackground: map-get($foreground, onPrimary);
     $tabActiveText: map-get($primary, 500);
     $tabActiveBackground: map-get($foreground, onPrimary);
