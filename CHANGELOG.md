@@ -5,6 +5,7 @@
 ### Fixed
 
 -   Fixed Angular 15 themes should match the legacy themes issue ([#156](https://github.com/etn-ccis/blui-angular-themes/issues/156)).
+-   Fixed inactive tabs should use foreground color instead of primary color issue ([#200](https://github.com/etn-ccis/blui-angular-themes/issues/200)).
 -   Fix slide-toggle bar color
 
 ## v9.0.0 (July 3, 2023)
