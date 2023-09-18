@@ -55,7 +55,7 @@
         placeholder: map-get(blui.$blui-black, 100),
         hint: map-get($warn, 500),
         filledBackgroundColor: map-get(blui.$blui-white, 200),
-        highlightColor: rgba(map-get($warn, 500), 0.2),
+        highlightColor: map-get($warn, 50),
         label: (
             withoutValue: map-get($warn, 500),
             withValue: map-get($warn, 500),
@@ -381,7 +381,7 @@
     @include button-toggle.blui-mat-button-toggle($buttonToggleDefault, $buttonToggleOutline, $buttonToggleFilled);
 
     /* Tabs */
-    $tabText: map-get($primary, 500);
+    $tabText: map-get($foreground, 500);
     $tabBackground: map-get($foreground, onPrimary);
     $tabActiveText: map-get($primary, 500);
     $tabActiveBackground: map-get($foreground, onPrimary);
@@ -405,15 +405,15 @@
     /* Slide Toggle */
     $slideTogglePrimary: (
         thumb: map-get($primary, 500),
-        bar: map-get($primary, 50),
+        bar: map-get($primary, 200),
     );
     $slideToggleAccent: (
         thumb: map-get($accent, 500),
-        bar: map-get($accent, 50),
+        bar: map-get($accent, 200),
     );
     $slideToggleWarn: (
         thumb: map-get($warn, 500),
-        bar: map-get($warn, 50),
+        bar: map-get($warn, 200),
     );
     $inactiveThumb: map-get(blui.$blui-white, 50);
     @include slide-toggle.blui-mat-slide-toggle(
@@ -555,5 +555,10 @@
     .mat-list-base .blui-info-list-item .mat-list-item-disabled {
         color: unset;
         background-color: unset;
+    }
+
+    /* cdk overlay container */
+    .cdk-overlay-backdrop .cdk-overlay-backdrop-showing {
+        opacity: 0.5;
     }
 }

@@ -185,7 +185,7 @@
         placeholder: map-get($foreground, disabled),
         hint: map-get($warn, 200),
         filledBackgroundColor: map-get(blui.$blui-black, 800),
-        highlightColor: rgba(map-get($warn, 500), 0.5),
+        highlightColor: map-get($warn, 700),
         label: (
             withoutValue: map-get($warn, 200),
             withValue: map-get($warn, 200),
@@ -733,5 +733,10 @@
     .mat-list-base .blui-info-list-item .mat-list-item-disabled {
         color: unset;
         background-color: unset;
+    }
+
+    /* cdk overlay container */
+    .cdk-overlay-backdrop .cdk-overlay-backdrop-showing {
+        opacity: 0.5;
     }
 }

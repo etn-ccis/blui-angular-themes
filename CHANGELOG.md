@@ -1,5 +1,13 @@
 # Changelog
 
+## v9.0.1 (September 18, 2023)
+
+### Fixed
+
+-   Fixed styles where Angular 15 themes not matching Angular 14 ([#156](https://github.com/etn-ccis/blui-angular-themes/issues/156)).
+-   Fixed slide-toggle bar color ([#199](https://github.com/etn-ccis/blui-angular-themes/pull/199)).
+-   Fixed inactive tabs color to use foreground color instead of primary color ([#200](https://github.com/etn-ccis/blui-angular-themes/issues/200)).
+
 ## v9.0.0 (July 3, 2023)
 
 ### Changed
