@@ -24,7 +24,7 @@ $blui-blue-accent: mat.define-palette(blui.$blui-lightBlue);
 $blui-blue-warn: mat.define-palette(blui.$blui-red);
 
 $typography-config: mat.define-legacy-typography-config(
-    $font-family: '"Open Sans", Arial, Helvetica, sans-serif;',
+    $font-family: '"Open Sans", Arial, Helvetica, sans-serif',
     $display-4: mat.define-typography-level(6rem, 1.167, 300),
     $display-2: mat.define-typography-level(3rem, 1.167, 400),
     $display-1: mat.define-typography-level(2.125rem, 1.235, 400),
