@@ -1,5 +1,11 @@
 # Changelog
 
+## v9.0.2 (February 9, 2024)
+
+### Fixed
+
+-   Fixed syntax issue in font family style rule.
+
 ## v9.0.1 (September 18, 2023)
 
 ### Fixed
