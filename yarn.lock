@@ -74,9 +74,9 @@
   integrity sha512-DTCVwND6YC9qrkQl7pkFlN6QxDReJHtjuAiFU9HkXJN368vlw+fzHQ5/j4sB1sZl2eNwOgccv5ecl2XrlolOCw==
 
 "@fontsource/open-sans@^5.0.5":
-  version "5.0.22"
-  resolved "https://registry.yarnpkg.com/@fontsource/open-sans/-/open-sans-5.0.22.tgz#ff5d4de6301e58a1da79acfc838eca71a631f663"
-  integrity sha512-lN3A4prlcVPgLjlgwY+oMPalpyXPM/6DwaLr6LjqkjytjGIZTLBbInL+zTfcemSyMtTQklreETepGjjmtzlRHA==
+  version "5.0.24"
+  resolved "https://registry.yarnpkg.com/@fontsource/open-sans/-/open-sans-5.0.24.tgz#02f85e51d0ee75c3c2f42f683cd486364f99e2d9"
+  integrity sha512-bIF+87vxfOPTyvnBKS+rCPmz/m66um3zCk1UdPv8RGBgwu6MMxwED0jpcbvyFSkfy0ApcdjfkDSAhlFTm/pgiw==
 
 "@material/animation@15.0.0-canary.684e33d25.0":
   version "15.0.0-canary.684e33d25.0"
