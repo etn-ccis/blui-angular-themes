@@ -3,9 +3,9 @@
 
 
 "@angular/material@^19.0.4":
-  version "19.1.2"
-  resolved "https://registry.yarnpkg.com/@angular/material/-/material-19.1.2.tgz#db8018d5e79d8c050760a7e6f068e821ec8ab2c7"
-  integrity sha512-MdczdTmvsXLtEFV9nTgFs9mPM1FSAz4L1kByJCdIgHtOu62e9t2XcSUqOPJTlDrA5wWafZvPWh2woJfJr4iwjw==
+  version "19.2.1"
+  resolved "https://registry.yarnpkg.com/@angular/material/-/material-19.2.1.tgz#a3e7f7da73677cc9c661b23a13829b5eb50a8a56"
+  integrity sha512-hA+HVIJn/y72vXv/X1JRbrL/tynW95wYMQF2fV3lIeeAmmFKkkzextBaE9rTaiW6pVN6LXoRvLJl2Vyi9jIHzw==
   dependencies:
     tslib "^2.3.0"
 
