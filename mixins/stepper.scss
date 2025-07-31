@@ -1,3 +1,5 @@
+@use "sass:map";
+
 @mixin blui-mat-stepper($stepperBackground, $stepperIcon, $stepperLabel) {
     /*stepper*/
     .mat-stepper-horizontal,
@@ -5,12 +7,12 @@
         background-color: $stepperBackground;
 
         .mat-step-icon:not(.mat-step-icon-selected):not(.mat-step-icon-state-edit) {
-            background-color: map-get($stepperIcon, defaultBg);
-            color: map-get($stepperIcon, defaultColor);
+            background-color: map.get($stepperIcon, defaultBg);
+            color: map.get($stepperIcon, defaultColor);
         }
         .mat-step-header[aria-selected='true'] .mat-step-icon {
-            background-color: map-get($stepperIcon, activeBg);
-            color: map-get($stepperIcon, activeColor);
+            background-color: map.get($stepperIcon, activeBg);
+            color: map.get($stepperIcon, activeColor);
         }
 
         .mat-step-header {
@@ -28,10 +30,10 @@
             }
 
             .mat-step-label {
-                color: map-get($stepperLabel, defaultColor);
+                color: map.get($stepperLabel, defaultColor);
             }
             .mat-step-label-selected {
-                color: map-get($stepperLabel, activeColor);
+                color: map.get($stepperLabel, activeColor);
             }
             .mat-step-icon-content {
                 font-size: 14px;

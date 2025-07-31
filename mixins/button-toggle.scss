@@ -1,3 +1,5 @@
+@use "sass:map";
+
 @mixin blui-mat-button-toggle($default, $outline, $filled) {
     .mat-button-toggle-standalone.mat-button-toggle-appearance-standard:not([variant='outline']):not(
             [variant='filled']
@@ -21,14 +23,14 @@
 @mixin blui-mat-button-toggle-shared($palette) {
     .mat-button-toggle-appearance-standard {
         .mat-button-toggle-button {
-            border: 1px solid map-get($palette, unselectedBorderColor);
-            color: map-get($palette, inactiveTextColor);
+            border: 1px solid map.get($palette, unselectedBorderColor);
+            color: map.get($palette, inactiveTextColor);
             background-color: transparent;
         }
         &.checked {
             .mat-button-toggle-button {
-                background-color: map-get($palette, activeBackgroundColor);
-                color: map-get($palette, activeTextColor);
+                background-color: map.get($palette, activeBackgroundColor);
+                color: map.get($palette, activeTextColor);
             }
         }
     }
@@ -36,34 +38,34 @@
 
 @mixin blui-mat-button-toggle-default($palette) {
     .mat-button-toggle.mat-button-toggle-checked .mat-button-toggle-button:hover:not(.mat-button-disabled) {
-        background-color: map-get($palette, activeBackgroundColor);
-        color: map-get($palette, activeTextColor);
+        background-color: map.get($palette, activeBackgroundColor);
+        color: map.get($palette, activeTextColor);
     }
     .mat-button-toggle.mat-button-toggle-checked .mat-button-toggle-button:not(.mat-button-disabled) {
-        background-color: map-get($palette, activeBackgroundColor);
-        color: map-get($palette, activeTextColor);
+        background-color: map.get($palette, activeBackgroundColor);
+        color: map.get($palette, activeTextColor);
     }
 }
 
 @mixin blui-mat-button-toggle-outline($palette) {
     .mat-button-toggle.mat-button-toggle-checked .mat-button-toggle-button:hover:not(.mat-button-disabled) {
-        background-color: map-get($palette, activeBackgroundColor);
-        color: map-get($palette, activeTextColor);
+        background-color: map.get($palette, activeBackgroundColor);
+        color: map.get($palette, activeTextColor);
     }
     .mat-button-toggle.mat-button-toggle-checked .mat-button-toggle-button:not(.mat-button-disabled) {
-        background-color: map-get($palette, activeBackgroundColor);
-        color: map-get($palette, activeTextColor);
-        border-color: map-get($palette, selectedBorderColor);
+        background-color: map.get($palette, activeBackgroundColor);
+        color: map.get($palette, activeTextColor);
+        border-color: map.get($palette, selectedBorderColor);
     }
 }
 
 @mixin blui-mat-button-toggle-filled($palette) {
     .mat-button-toggle.mat-button-toggle-checked .mat-button-toggle-button:hover:not(.mat-button-disabled) {
-        background-color: map-get($palette, activeBackgroundColor);
-        color: map-get($palette, activeTextColor);
+        background-color: map.get($palette, activeBackgroundColor);
+        color: map.get($palette, activeTextColor);
     }
     .mat-button-toggle.mat-button-toggle-checked .mat-button-toggle-button:not(.mat-button-disabled) {
-        background-color: map-get($palette, activeBackgroundColor);
-        color: map-get($palette, activeTextColor);
+        background-color: map.get($palette, activeBackgroundColor);
+        color: map.get($palette, activeTextColor);
     }
 }

@@ -1,3 +1,5 @@
+@use "sass:map";
+
 @mixin blui-mat-slide-toggle($primaryPalette, $accentPalette, $warnPalette, $inactiveThumb) {
     .mat-slide-toggle {
         .mat-slide-toggle-thumb {
@@ -23,11 +25,11 @@
 @mixin active-slide-toggle-helper($palette) {
     &.mat-checked {
         .mat-slide-toggle-bar {
-            background-color: map-get($palette, bar);
+            background-color: map.get($palette, bar);
         }
 
         .mat-slide-toggle-thumb {
-            background-color: map-get($palette, thumb);
+            background-color: map.get($palette, thumb);
         }
     }
 }

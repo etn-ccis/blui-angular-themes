@@ -1,3 +1,5 @@
+@use "sass:map";
+
 @mixin blui-mat-chip-default($primary, $accent, $warn, $unselected) {
     .mat-chip:not([variant='outline']):not([variant='stroked']) {
         &.mat-chip-selected {
@@ -40,7 +42,7 @@
         &:not(.mat-chip-selected).mat-warn {
             @include chips-outline($unselected);
             &:not(.mat-chip-disabled) {
-                border-color: map-get($unselected, borderColor);
+                border-color: map.get($unselected, borderColor);
             }
         }
 
@@ -49,43 +51,43 @@
         &.mat-chip-disabled.mat-primary,
         &.mat-chip-disabled.mat-accent,
         &.mat-chip-disabled.mat-warn {
-            color: map-get($disabled, color);
-            border-color: map-get($disabled, borderColor);
+            color: map.get($disabled, color);
+            border-color: map.get($disabled, borderColor);
             .mat-chip-remove {
-                color: map-get($disabled, removeIconColor);
+                color: map.get($disabled, removeIconColor);
             }
         }
     }
 }
 
 @mixin chips-filled($palette) {
-    color: map-get($palette, color);
-    background-color: map-get($palette, background);
+    color: map.get($palette, color);
+    background-color: map.get($palette, background);
     &:hover:not(.mat-chip-disabled) {
-        color: map-get($palette, hoverColor);
-        background-color: map-get($palette, hoverBackground);
+        color: map.get($palette, hoverColor);
+        background-color: map.get($palette, hoverBackground);
     }
     .mat-chip-remove {
         opacity: 1;
-        color: map-get($palette, removeIconColor);
+        color: map.get($palette, removeIconColor);
     }
     &:not(.mat-chip-disabled) .mat-chip-remove:hover {
-        color: map-get($palette, removeIconHoverColor);
+        color: map.get($palette, removeIconHoverColor);
         opacity: 1;
     }
     .mat-chip-avatar:not(.mat-icon) {
-        color: map-get($palette, avatarColor);
-        background-color: map-get($palette, avatarBackground);
+        color: map.get($palette, avatarColor);
+        background-color: map.get($palette, avatarBackground);
     }
     &.mat-chip-disabled {
         opacity: 1;
-        color: map-get($palette, disabledColor);
-        background: map-get($palette, disabledBackground);
+        color: map.get($palette, disabledColor);
+        background: map.get($palette, disabledBackground);
         .mat-chip-avatar:not(.mat-icon) {
-            color: map-get($palette, avatarDisabledColor);
+            color: map.get($palette, avatarDisabledColor);
         }
         .mat-chip-remove {
-            color: map-get($palette, removeIconDisabledColor);
+            color: map.get($palette, removeIconDisabledColor);
         }
     }
 }
@@ -93,24 +95,24 @@
 @mixin chips-outline($palette) {
     border: solid 1px;
     &:not(.mat-chip-disabled) {
-        color: map-get($palette, color);
-        border-color: map-get($palette, color);
-        background-color: map-get($palette, background);
+        color: map.get($palette, color);
+        border-color: map.get($palette, color);
+        background-color: map.get($palette, background);
         .mat-chip-remove {
             opacity: 1;
-            color: map-get($palette, removeIconColor);
+            color: map.get($palette, removeIconColor);
             &:hover {
-                color: map-get($palette, removeIconHoverColor);
+                color: map.get($palette, removeIconHoverColor);
                 opacity: 1;
             }
         }
         &:hover {
-            color: map-get($palette, hoverColor);
-            background-color: map-get($palette, hoverBackground);
+            color: map.get($palette, hoverColor);
+            background-color: map.get($palette, hoverBackground);
         }
         .mat-chip-avatar:not(.mat-icon) {
-            color: map-get($palette, avatarColor);
-            background-color: map-get($palette, avatarBackground);
+            color: map.get($palette, avatarColor);
+            background-color: map.get($palette, avatarBackground);
         }
     }
 
@@ -118,11 +120,11 @@
         opacity: 1;
         background: transparent;
         .mat-chip-avatar:not(.mat-icon) {
-            color: map-get($palette, avatarDisabledColor);
-            background-color: map-get($palette, avatarDisabledBackground);
+            color: map.get($palette, avatarDisabledColor);
+            background-color: map.get($palette, avatarDisabledBackground);
         }
         .mat-chip-remove {
-            color: map-get($palette, removeIconDisabledColor);
+            color: map.get($palette, removeIconDisabledColor);
         }
     }
 }
