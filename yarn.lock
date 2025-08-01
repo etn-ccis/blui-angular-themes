@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@angular/material@^19.0.4":
-  version "19.2.11"
-  resolved "https://registry.yarnpkg.com/@angular/material/-/material-19.2.11.tgz#3df6c22aa9ac738f2ca2bdba33d4f4c6fb25547d"
-  integrity sha512-0OWwv55Il25mit7oGTloMeKVi0v/q1tr13wUJj0KJOcvICA6JCEW6VEc9zqYmkMPstDCx96cSJgPKxkHjKYyqg==
+"@angular/material@^20.1.4":
+  version "20.1.4"
+  resolved "https://registry.yarnpkg.com/@angular/material/-/material-20.1.4.tgz#dce24db83231d48ba770c1c7df8d881a8935bbb1"
+  integrity sha512-V+EyzKwgqzUIAwXpr8chSMN0nKw+FEs5A/WgC2+CuW7T/FCFp6BW7Am2H51gR8onlqjLpduxyx8HLTifQ0hS6A==
   dependencies:
     tslib "^2.3.0"
 
