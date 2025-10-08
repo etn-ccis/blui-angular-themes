@@ -27,9 +27,9 @@
   integrity sha512-DTCVwND6YC9qrkQl7pkFlN6QxDReJHtjuAiFU9HkXJN368vlw+fzHQ5/j4sB1sZl2eNwOgccv5ecl2XrlolOCw==
 
 "@fontsource/open-sans@^5.0.5":
-  version "5.2.5"
-  resolved "https://registry.yarnpkg.com/@fontsource/open-sans/-/open-sans-5.2.5.tgz#7d83383a0ca00e1ae192541273befcbcaf98fbdd"
-  integrity sha512-f0Ww6H+LB6GXA8UCgqs90h4djVttu3quH/1+wkfUY8b09mG1ESn4ACRBHYY78bsoeDXpaCyZh7eoGROBWplvAQ==
+  version "5.2.7"
+  resolved "https://registry.yarnpkg.com/@fontsource/open-sans/-/open-sans-5.2.7.tgz#dc82cec21f3995163bfb15affea937083b4701fb"
+  integrity sha512-8yfgDYjE5O0vmTPdrcjV35y4yMnctsokmi9gN49Gcsr0sjzkMkR97AnKDe6OqZh2SFkYlR28fxOvi21bYEgMSw==
 
 abbrev@1:
   version "1.1.1"
