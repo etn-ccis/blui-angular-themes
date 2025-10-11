@@ -1,3 +1,4 @@
+@use "sass:map";
 @use '@brightlayer-ui/colors/palette.scss' as blui;
 
 @use './mixins/input-field';
@@ -9,69 +10,69 @@
 @use './mixins/slide-toggle';
 
 @mixin darktheme($theme) {
-    $primary: map-get($theme, primary);
-    $accent: map-get($theme, accent);
+    $primary: map.get($theme, primary);
+    $accent: map.get($theme, accent);
     $warn: blui.$blui-red;
-    $foreground: map-get($theme, foreground);
-    $background: map-get($theme, background);
+    $foreground: map.get($theme, foreground);
+    $background: map.get($theme, background);
 
     /* Chips */
-    $coloredChipText: map-get(blui.$blui-white, 50);
+    $coloredChipText: map.get(blui.$blui-white, 50);
     $chipPrimary: (
-        color: map-get(blui.$blui-white, 50),
-        hoverColor: map-get(blui.$blui-white, 50),
-        background: map-get($primary, 500),
-        hoverBackground: map-get($primary, 300),
-        removeIconColor: map-get($primary, 100),
-        removeIconHoverColor: map-get(blui.$blui-white, 50),
-        disabledColor: map-get(blui.$blui-black, 400),
-        disabledBackground: rgba(map-get(blui.$blui-black, 200), 0.24),
-        removeIconDisabledColor: map-get(blui.$blui-black, 400),
-        avatarColor: map-get($primary, 500),
-        avatarBackground: map-get(blui.$blui-blue, 50),
-        avatarDisabledColor: map-get($primary, 500),
+        color: map.get(blui.$blui-white, 50),
+        hoverColor: map.get(blui.$blui-white, 50),
+        background: map.get($primary, 500),
+        hoverBackground: map.get($primary, 300),
+        removeIconColor: map.get($primary, 100),
+        removeIconHoverColor: map.get(blui.$blui-white, 50),
+        disabledColor: map.get(blui.$blui-black, 400),
+        disabledBackground: rgba(map.get(blui.$blui-black, 200), 0.24),
+        removeIconDisabledColor: map.get(blui.$blui-black, 400),
+        avatarColor: map.get($primary, 500),
+        avatarBackground: map.get(blui.$blui-blue, 50),
+        avatarDisabledColor: map.get($primary, 500),
     );
     $chipAccent: (
-        color: map-get(blui.$blui-white, 50),
-        hoverColor: map-get(blui.$blui-white, 50),
-        background: map-get($accent, 500),
-        hoverBackground: map-get($accent, 300),
-        removeIconColor: map-get($accent, 100),
-        removeIconHoverColor: map-get(blui.$blui-white, 50),
-        disabledColor: map-get(blui.$blui-black, 400),
-        disabledBackground: rgba(map-get(blui.$blui-black, 200), 0.24),
-        removeIconDisabledColor: map-get(blui.$blui-black, 400),
-        avatarColor: map-get($accent, 500),
-        avatarBackground: map-get($accent, 50),
-        avatarDisabledColor: map-get($primary, 500),
+        color: map.get(blui.$blui-white, 50),
+        hoverColor: map.get(blui.$blui-white, 50),
+        background: map.get($accent, 500),
+        hoverBackground: map.get($accent, 300),
+        removeIconColor: map.get($accent, 100),
+        removeIconHoverColor: map.get(blui.$blui-white, 50),
+        disabledColor: map.get(blui.$blui-black, 400),
+        disabledBackground: rgba(map.get(blui.$blui-black, 200), 0.24),
+        removeIconDisabledColor: map.get(blui.$blui-black, 400),
+        avatarColor: map.get($accent, 500),
+        avatarBackground: map.get($accent, 50),
+        avatarDisabledColor: map.get($primary, 500),
     );
     $chipWarn: (
-        color: map-get(blui.$blui-white, 50),
-        hoverColor: map-get(blui.$blui-white, 50),
-        background: map-get($warn, 500),
-        hoverBackground: map-get($warn, 300),
-        removeIconColor: map-get($warn, 100),
-        removeIconHoverColor: map-get(blui.$blui-white, 50),
-        disabledColor: map-get(blui.$blui-black, 400),
-        disabledBackground: rgba(map-get(blui.$blui-black, 200), 0.24),
-        removeIconDisabledColor: map-get(blui.$blui-black, 400),
-        avatarColor: map-get($warn, 500),
-        avatarBackground: map-get($warn, 50),
-        avatarDisabledColor: map-get($warn, 500),
+        color: map.get(blui.$blui-white, 50),
+        hoverColor: map.get(blui.$blui-white, 50),
+        background: map.get($warn, 500),
+        hoverBackground: map.get($warn, 300),
+        removeIconColor: map.get($warn, 100),
+        removeIconHoverColor: map.get(blui.$blui-white, 50),
+        disabledColor: map.get(blui.$blui-black, 400),
+        disabledBackground: rgba(map.get(blui.$blui-black, 200), 0.24),
+        removeIconDisabledColor: map.get(blui.$blui-black, 400),
+        avatarColor: map.get($warn, 500),
+        avatarBackground: map.get($warn, 50),
+        avatarDisabledColor: map.get($warn, 500),
     );
     $chipDefault: (
-        color: map-get(blui.$blui-black, 50),
-        hoverColor: map-get(blui.$blui-black, 50),
-        background: map-get(blui.$blui-black, 500),
-        hoverBackground: map-get(blui.$blui-black, 400),
-        removeIconColor: map-get(blui.$blui-gray, 200),
-        removeIconHoverColor: map-get(blui.$blui-gray, 50),
-        disabledColor: map-get(blui.$blui-black, 400),
-        disabledBackground: rgba(map-get(blui.$blui-black, 200), 0.24),
-        removeIconDisabledColor: map-get(blui.$blui-black, 400),
-        avatarColor: map-get(blui.$blui-white, 50),
-        avatarBackground: map-get(blui.$blui-black, 700),
-        avatarDisabledColor: map-get(blui.$blui-black, 400),
+        color: map.get(blui.$blui-black, 50),
+        hoverColor: map.get(blui.$blui-black, 50),
+        background: map.get(blui.$blui-black, 500),
+        hoverBackground: map.get(blui.$blui-black, 400),
+        removeIconColor: map.get(blui.$blui-gray, 200),
+        removeIconHoverColor: map.get(blui.$blui-gray, 50),
+        disabledColor: map.get(blui.$blui-black, 400),
+        disabledBackground: rgba(map.get(blui.$blui-black, 200), 0.24),
+        removeIconDisabledColor: map.get(blui.$blui-black, 400),
+        avatarColor: map.get(blui.$blui-white, 50),
+        avatarBackground: map.get(blui.$blui-black, 700),
+        avatarDisabledColor: map.get(blui.$blui-black, 400),
     );
     @include chip.blui-mat-chip-default($chipPrimary, $chipAccent, $chipWarn, $chipDefault);
     .mat-chip.mat-chip-disabled .mat-chip-avatar {
@@ -79,62 +80,62 @@
     }
     /* Chips-Outline */
     $chipOutlinePrimary: (
-        color: map-get($primary, 200),
-        hoverColor: map-get($primary, 200),
-        background: rgba(map-get($primary, 500), 0.2),
-        hoverBackground: rgba(map-get($primary, 500), 0.3),
-        removeIconColor: map-get($primary, 400),
-        removeIconHoverColor: map-get($primary, 200),
-        avatarColor: map-get($primary, 500),
-        avatarBackground: map-get($primary, 100),
-        avatarDisabledColor: map-get($primary, 500),
-        avatarDisabledBackground: map-get($primary, 100),
-        removeIconDisabledColor: rgba(map-get(blui.$blui-black, 200), 0.24),
+        color: map.get($primary, 200),
+        hoverColor: map.get($primary, 200),
+        background: rgba(map.get($primary, 500), 0.2),
+        hoverBackground: rgba(map.get($primary, 500), 0.3),
+        removeIconColor: map.get($primary, 400),
+        removeIconHoverColor: map.get($primary, 200),
+        avatarColor: map.get($primary, 500),
+        avatarBackground: map.get($primary, 100),
+        avatarDisabledColor: map.get($primary, 500),
+        avatarDisabledBackground: map.get($primary, 100),
+        removeIconDisabledColor: rgba(map.get(blui.$blui-black, 200), 0.24),
     );
     $chipOutlineAccent: (
-        color: map-get($accent, 200),
-        hoverColor: map-get($accent, 200),
-        background: rgba(map-get($accent, 500), 0.2),
-        hoverBackground: rgba(map-get($primary, 500), 0.3),
-        removeIconColor: map-get($accent, 400),
-        removeIconHoverColor: map-get($accent, 200),
-        avatarColor: map-get($accent, 500),
-        avatarBackground: map-get($accent, 100),
-        avatarDisabledColor: map-get($accent, 500),
-        avatarDisabledBackground: map-get($accent, 100),
-        removeIconDisabledColor: rgba(map-get(blui.$blui-black, 200), 0.24),
+        color: map.get($accent, 200),
+        hoverColor: map.get($accent, 200),
+        background: rgba(map.get($accent, 500), 0.2),
+        hoverBackground: rgba(map.get($primary, 500), 0.3),
+        removeIconColor: map.get($accent, 400),
+        removeIconHoverColor: map.get($accent, 200),
+        avatarColor: map.get($accent, 500),
+        avatarBackground: map.get($accent, 100),
+        avatarDisabledColor: map.get($accent, 500),
+        avatarDisabledBackground: map.get($accent, 100),
+        removeIconDisabledColor: rgba(map.get(blui.$blui-black, 200), 0.24),
     );
     $chipOutlineWarn: (
-        color: map-get($warn, 200),
-        hoverColor: map-get($warn, 200),
-        background: rgba(map-get($warn, 500), 0.2),
-        hoverBackground: rgba(map-get($warn, 500), 0.3),
-        removeIconColor: map-get($warn, 400),
-        removeIconHoverColor: map-get($warn, 200),
-        avatarColor: map-get($warn, 500),
-        avatarBackground: map-get($warn, 100),
-        avatarDisabledColor: map-get($warn, 500),
-        avatarDisabledBackground: map-get($warn, 100),
-        removeIconDisabledColor: rgba(map-get(blui.$blui-black, 200), 0.24),
+        color: map.get($warn, 200),
+        hoverColor: map.get($warn, 200),
+        background: rgba(map.get($warn, 500), 0.2),
+        hoverBackground: rgba(map.get($warn, 500), 0.3),
+        removeIconColor: map.get($warn, 400),
+        removeIconHoverColor: map.get($warn, 200),
+        avatarColor: map.get($warn, 500),
+        avatarBackground: map.get($warn, 100),
+        avatarDisabledColor: map.get($warn, 500),
+        avatarDisabledBackground: map.get($warn, 100),
+        removeIconDisabledColor: rgba(map.get(blui.$blui-black, 200), 0.24),
     );
     $chipOutlineDefault: (
-        color: map-get($foreground, text),
-        hoverColor: map-get($foreground, text),
-        background: map-get(blui.$blui-black, 900),
-        hoverBackground: map-get(blui.$blui-black, 800),
-        removeIconColor: map-get(blui.$blui-black, 200),
-        removeIconHoverColor: map-get(blui.$blui-black, 50),
-        avatarColor: map-get(blui.$blui-black, 50),
-        avatarBackground: map-get(blui.$blui-black, 600),
-        avatarDisabledColor: map-get(blui.$blui-black, 50),
-        avatarDisabledBackground: map-get(blui.$blui-black, 600),
-        removeIconDisabledColor: rgba(map-get(blui.$blui-black, 200), 0.24),
-        borderColor: rgba(map-get(blui.$blui-black, 200), 0.36),
+        color: map.get($foreground, text),
+        hoverColor: map.get($foreground, text),
+        background: map.get(blui.$blui-black, 900),
+        hoverBackground: map.get(blui.$blui-black, 800),
+        removeIconColor: map.get(blui.$blui-black, 200),
+        removeIconHoverColor: map.get(blui.$blui-black, 50),
+        avatarColor: map.get(blui.$blui-black, 50),
+        avatarBackground: map.get(blui.$blui-black, 600),
+        avatarDisabledColor: map.get(blui.$blui-black, 50),
+        avatarDisabledBackground: map.get(blui.$blui-black, 600),
+        removeIconDisabledColor: rgba(map.get(blui.$blui-black, 200), 0.24),
+        borderColor: rgba(map.get(blui.$blui-black, 200), 0.36),
     );
     $chipOutlineDisabled: (
-        color: rgba(map-get(blui.$blui-black, 300), 0.36),
-        borderColor: rgba(map-get(blui.$blui-black, 200), 0.36),
-        removeIconColor: rgba(map-get(blui.$blui-black, 300), 0.36),
+        color: rgba(map.get(blui.$blui-black, 300), 0.36),
+        borderColor: rgba(map.get(blui.$blui-black, 200), 0.36),
+        removeIconColor: rgba(map.get(blui.$blui-black, 300), 0.36),
     );
     @include chip.blui-mat-chip-outline(
         $chipOutlinePrimary,
@@ -149,61 +150,61 @@
 
     /* input fields */
     $inputPrimary: (
-        icon: map-get($foreground, secondary-text),
-        placeholder: map-get($foreground, disabled),
-        hint: map-get($foreground, secondary-text),
-        filledBackgroundColor: map-get(blui.$blui-black, 800),
+        icon: map.get($foreground, secondary-text),
+        placeholder: map.get($foreground, disabled),
+        hint: map.get($foreground, secondary-text),
+        filledBackgroundColor: map.get(blui.$blui-black, 800),
         label: (
-            withoutValue: map-get($foreground, secondary-text),
-            withValue: map-get($foreground, text),
-            onFocus: map-get($primary, 200),
+            withoutValue: map.get($foreground, secondary-text),
+            withValue: map.get($foreground, text),
+            onFocus: map.get($primary, 200),
         ),
         underline: (
-            default: map-get($foreground, disabled),
-            onHover: map-get($foreground, secondary-text),
-            onFocus: map-get($primary, 500),
+            default: map.get($foreground, disabled),
+            onHover: map.get($foreground, secondary-text),
+            onFocus: map.get($primary, 500),
         ),
     );
     $inputAccent: (
-        icon: map-get($foreground, secondary-text),
-        placeholder: map-get($foreground, disabled),
-        hint: map-get($foreground, secondary-text),
-        filledBackgroundColor: map-get(blui.$blui-black, 800),
+        icon: map.get($foreground, secondary-text),
+        placeholder: map.get($foreground, disabled),
+        hint: map.get($foreground, secondary-text),
+        filledBackgroundColor: map.get(blui.$blui-black, 800),
         label: (
-            withoutValue: map-get($foreground, secondary-text),
-            withValue: map-get($foreground, text),
-            onFocus: map-get($accent, 200),
+            withoutValue: map.get($foreground, secondary-text),
+            withValue: map.get($foreground, text),
+            onFocus: map.get($accent, 200),
         ),
         underline: (
-            default: map-get($foreground, disabled),
-            onHover: map-get($foreground, secondary-text),
-            onFocus: map-get($accent, 500),
+            default: map.get($foreground, disabled),
+            onHover: map.get($foreground, secondary-text),
+            onFocus: map.get($accent, 500),
         ),
     );
     $inputWarn: (
-        icon: map-get($foreground, secondary-text),
-        placeholder: map-get($foreground, disabled),
-        hint: map-get($warn, 200),
-        filledBackgroundColor: map-get(blui.$blui-black, 800),
-        highlightColor: map-get($warn, 700),
+        icon: map.get($foreground, secondary-text),
+        placeholder: map.get($foreground, disabled),
+        hint: map.get($warn, 200),
+        filledBackgroundColor: map.get(blui.$blui-black, 800),
+        highlightColor: map.get($warn, 700),
         label: (
-            withoutValue: map-get($warn, 200),
-            withValue: map-get($warn, 200),
-            onFocus: map-get($warn, 200),
+            withoutValue: map.get($warn, 200),
+            withValue: map.get($warn, 200),
+            onFocus: map.get($warn, 200),
         ),
         underline: (
-            default: map-get($warn, 500),
-            onHover: map-get($warn, 500),
-            onFocus: map-get($warn, 500),
+            default: map.get($warn, 500),
+            onHover: map.get($warn, 500),
+            onFocus: map.get($warn, 500),
         ),
     );
     $inputDisabled: (
-        text: map-get($foreground, disabled),
-        filledBackgroundColor: rgba(map-get(blui.$blui-black, 800), 0.5),
+        text: map.get($foreground, disabled),
+        filledBackgroundColor: rgba(map.get(blui.$blui-black, 800), 0.5),
     );
     @include input-field.blui-mat-form-field($inputPrimary, $inputAccent, $inputWarn, $inputDisabled);
     .mat-form-field-appearance-outline.mat-form-field-disabled .mat-form-field-outline {
-        color: map-get($foreground, disabled);
+        color: map.get($foreground, disabled);
     }
     // Autocomplete overrides
     input:-webkit-autofill,
@@ -211,7 +212,7 @@
     input:-webkit-autofill:focus,
     input:-webkit-autofill:active {
         -webkit-box-shadow: 0 0 0 30px #333d43 inset !important;
-        -webkit-text-fill-color: map-get($foreground, text);
+        -webkit-text-fill-color: map.get($foreground, text);
     }
     .mat-form-field-appearance-fill {
         input:-webkit-autofill,
@@ -226,179 +227,179 @@
     /* Buttons*/
     $buttonPrimary: (
         icon: (
-            text: map-get($primary, 200),
+            text: map.get($primary, 200),
         ),
         outline: (
-            text: map-get($primary, 200),
+            text: map.get($primary, 200),
             background: transparent,
-            backgroundHover: rgba(map-get($primary, 500), 0.2),
-            border: map-get($primary, 200),
+            backgroundHover: rgba(map.get($primary, 500), 0.2),
+            border: map.get($primary, 200),
         ),
         fill: (
-            text: map-get(blui.$blui-white, 50),
-            background: map-get($primary, 500),
-            backgroundHover: map-get($primary, 300),
+            text: map.get(blui.$blui-white, 50),
+            background: map.get($primary, 500),
+            backgroundHover: map.get($primary, 300),
             disabled: (
-                text: map-get(blui.$blui-black, 400),
-                background: rgba(map-get(blui.$blui-black, 200), 0.24),
+                text: map.get(blui.$blui-black, 400),
+                background: rgba(map.get(blui.$blui-black, 200), 0.24),
             ),
         ),
     );
     $buttonAccent: (
         icon: (
-            text: map-get($accent, 200),
+            text: map.get($accent, 200),
         ),
         outline: (
-            text: map-get($accent, 200),
+            text: map.get($accent, 200),
             background: transparent,
-            backgroundHover: rgba(map-get($accent, 500), 0.2),
-            border: map-get($accent, 200),
+            backgroundHover: rgba(map.get($accent, 500), 0.2),
+            border: map.get($accent, 200),
         ),
         fill: (
-            text: map-get(blui.$blui-white, 50),
-            background: map-get($accent, 500),
-            backgroundHover: map-get($accent, 300),
+            text: map.get(blui.$blui-white, 50),
+            background: map.get($accent, 500),
+            backgroundHover: map.get($accent, 300),
             disabled: (
-                text: map-get(blui.$blui-black, 400),
-                background: rgba(map-get(blui.$blui-black, 200), 0.24),
+                text: map.get(blui.$blui-black, 400),
+                background: rgba(map.get(blui.$blui-black, 200), 0.24),
             ),
         ),
     );
     $buttonWarn: (
         icon: (
-            text: map-get($warn, 200),
+            text: map.get($warn, 200),
         ),
         outline: (
-            text: map-get(blui.$blui-red, 200),
+            text: map.get(blui.$blui-red, 200),
             background: transparent,
-            backgroundHover: rgba(map-get(blui.$blui-red, 500), 0.2),
-            border: map-get(blui.$blui-red, 200),
+            backgroundHover: rgba(map.get(blui.$blui-red, 500), 0.2),
+            border: map.get(blui.$blui-red, 200),
         ),
         fill: (
-            text: map-get(blui.$blui-white, 50),
-            background: map-get($warn, 500),
-            backgroundHover: map-get(blui.$blui-red, 300),
+            text: map.get(blui.$blui-white, 50),
+            background: map.get($warn, 500),
+            backgroundHover: map.get(blui.$blui-red, 300),
             disabled: (
-                text: map-get(blui.$blui-black, 400),
-                background: rgba(map-get(blui.$blui-black, 200), 0.24),
+                text: map.get(blui.$blui-black, 400),
+                background: rgba(map.get(blui.$blui-black, 200), 0.24),
             ),
         ),
     );
     $buttonDefault: (
         icon: (
-            text: map-get(blui.$blui-black, 50),
+            text: map.get(blui.$blui-black, 50),
         ),
         outline: (
-            text: map-get(blui.$blui-black, 50),
+            text: map.get(blui.$blui-black, 50),
             background: transparent,
-            backgroundHover: rgba(map-get(blui.$blui-black, 50), 0.1),
-            border: map-get(blui.$blui-black, 200),
+            backgroundHover: rgba(map.get(blui.$blui-black, 50), 0.1),
+            border: map.get(blui.$blui-black, 200),
         ),
         fill: (
-            text: map-get(blui.$blui-white, 50),
-            background: map-get(blui.$blui-black, 500),
-            backgroundHover: map-get(blui.$blui-black, 300),
+            text: map.get(blui.$blui-white, 50),
+            background: map.get(blui.$blui-black, 500),
+            backgroundHover: map.get(blui.$blui-black, 300),
             disabled: (
-                text: map-get(blui.$blui-black, 400),
-                background: rgba(map-get(blui.$blui-black, 200), 0.24),
+                text: map.get(blui.$blui-black, 400),
+                background: rgba(map.get(blui.$blui-black, 200), 0.24),
             ),
         ),
         toggle: (
-            border: map-get(blui.$blui-black, 200),
+            border: map.get(blui.$blui-black, 200),
             default: (
-                text: map-get(blui.$blui-black, 200),
-                background: map-get(blui.$blui-black, 900),
-                backgroundHover: rgba(map-get(blui.$blui-black, 50), 0.1),
+                text: map.get(blui.$blui-black, 200),
+                background: map.get(blui.$blui-black, 900),
+                backgroundHover: rgba(map.get(blui.$blui-black, 50), 0.1),
             ),
             active: (
-                text: map-get($accent, 200),
+                text: map.get($accent, 200),
                 background: rgba(0, 123, 193, 0.36),
-                backgroundHover: rgba(map-get($primary, 200), 0.36),
+                backgroundHover: rgba(map.get($primary, 200), 0.36),
             ),
         ),
     );
     @include button.blui-mat-buttons($buttonPrimary, $buttonAccent, $buttonWarn, $buttonDefault);
     .mat-icon-button.mat-button-disabled {
-        color: map-get($foreground, disabled);
+        color: map.get($foreground, disabled);
     }
     .mat-stroked-button,
     .mat-button {
         &.mat-button-disabled.mat-button-disabled {
-            color: rgba(map-get(blui.$blui-black, 300), 0.36);
-            border-color: rgba(map-get(blui.$blui-black, 300), 0.36);
+            color: rgba(map.get(blui.$blui-black, 300), 0.36);
+            border-color: rgba(map.get(blui.$blui-black, 300), 0.36);
         }
     }
 
     /* Button Toggle Group Default */
     $buttonToggleDefault: (
-        activeBackgroundColor: rgba(map-get(blui.$blui-blue, 500), 0.36),
-        activeTextColor: map-get(blui.$blui-blue, 200),
-        inactiveTextColor: map-get(blui.$blui-black, 200),
-        selectedBorderColor: rgba(map-get(blui.$blui-black, 200), 0.36),
-        unselectedBorderColor: rgba(map-get(blui.$blui-black, 200), 0.36),
+        activeBackgroundColor: rgba(map.get(blui.$blui-blue, 500), 0.36),
+        activeTextColor: map.get(blui.$blui-blue, 200),
+        inactiveTextColor: map.get(blui.$blui-black, 200),
+        selectedBorderColor: rgba(map.get(blui.$blui-black, 200), 0.36),
+        unselectedBorderColor: rgba(map.get(blui.$blui-black, 200), 0.36),
     );
 
     /* Button Toggle Group Outline */
     $buttonToggleOutline: (
-        activeBackgroundColor: rgba(map-get(blui.$blui-blue, 500), 0.36),
-        activeTextColor: map-get(blui.$blui-blue, 200),
-        inactiveTextColor: map-get(blui.$blui-black, 200),
-        selectedBorderColor: map-get(blui.$blui-blue, 200),
-        unselectedBorderColor: rgba(map-get(blui.$blui-black, 200), 0.36),
+        activeBackgroundColor: rgba(map.get(blui.$blui-blue, 500), 0.36),
+        activeTextColor: map.get(blui.$blui-blue, 200),
+        inactiveTextColor: map.get(blui.$blui-black, 200),
+        selectedBorderColor: map.get(blui.$blui-blue, 200),
+        unselectedBorderColor: rgba(map.get(blui.$blui-black, 200), 0.36),
     );
 
     /* Button Toggle Group Filled */
     $buttonToggleFilled: (
-        activeBackgroundColor: map-get(blui.$blui-blue, 500),
-        activeTextColor: map-get(blui.$blui-white, 50),
-        inactiveTextColor: map-get(blui.$blui-blue, 200),
-        selectedBorderColor: map-get(blui.$blui-blue, 500),
-        unselectedBorderColor: map-get(blui.$blui-blue, 500),
+        activeBackgroundColor: map.get(blui.$blui-blue, 500),
+        activeTextColor: map.get(blui.$blui-white, 50),
+        inactiveTextColor: map.get(blui.$blui-blue, 200),
+        selectedBorderColor: map.get(blui.$blui-blue, 500),
+        unselectedBorderColor: map.get(blui.$blui-blue, 500),
     );
 
     @include button-toggle.blui-mat-button-toggle($buttonToggleDefault, $buttonToggleOutline, $buttonToggleFilled);
 
     /* Tabs */
-    $tabText: map-get($foreground, secondary-text);
-    $tabBackground: map-get(blui.$blui-black, 900);
-    $tabActiveText: map-get($accent, 200);
-    $tabActiveBackground: map-get(blui.$blui-black, 900);
-    $tabUnderline: map-get($accent, 200);
+    $tabText: map.get($foreground, secondary-text);
+    $tabBackground: map.get(blui.$blui-black, 900);
+    $tabActiveText: map.get($accent, 200);
+    $tabActiveBackground: map.get(blui.$blui-black, 900);
+    $tabUnderline: map.get($accent, 200);
     @include tab.blui-mat-tab($tabText, $tabBackground, $tabActiveText, $tabActiveBackground, $tabUnderline);
 
     /* Stepper */
-    $stepperBackground: map-get($background, dialog);
+    $stepperBackground: map.get($background, dialog);
     $stepperIcon: (
-        defaultColor: map-get(blui.$blui-black, 300),
-        defaultBg: rgba(map-get(blui.$blui-black, 300), 0.36),
-        activeColor: map-get(blui.$blui-white, 50),
-        activeBg: map-get($primary, 500),
+        defaultColor: map.get(blui.$blui-black, 300),
+        defaultBg: rgba(map.get(blui.$blui-black, 300), 0.36),
+        activeColor: map.get(blui.$blui-white, 50),
+        activeBg: map.get($primary, 500),
     );
     $stepperLabel: (
-        defaultColor: map-get(blui.$blui-black, 200),
-        activeColor: map-get($accent, 200),
+        defaultColor: map.get(blui.$blui-black, 200),
+        activeColor: map.get($accent, 200),
     );
     @include stepper.blui-mat-stepper($stepperBackground, $stepperIcon, $stepperLabel);
 
     /* Side navigation*/
     .mat-drawer {
-        background-color: map-get($background, base);
+        background-color: map.get($background, base);
     }
 
     /* Slide Toggle */
     $slideTogglePrimary: (
-        thumb: map-get($accent, 200),
-        bar: rgba(map-get($accent, 200), 0.5),
+        thumb: map.get($accent, 200),
+        bar: rgba(map.get($accent, 200), 0.5),
     );
     $slideToggleAccent: (
-        thumb: map-get($accent, 200),
-        bar: rgba(map-get($accent, 200), 0.5),
+        thumb: map.get($accent, 200),
+        bar: rgba(map.get($accent, 200), 0.5),
     );
     $slideToggleWarn: (
-        thumb: map-get($warn, 200),
-        bar: rgba(map-get($warn, 200), 0.5),
+        thumb: map.get($warn, 200),
+        bar: rgba(map.get($warn, 200), 0.5),
     );
-    $inactiveThumb: map-get($foreground, text);
+    $inactiveThumb: map.get($foreground, text);
     @include slide-toggle.blui-mat-slide-toggle(
         $slideTogglePrimary,
         $slideToggleAccent,
@@ -409,31 +410,31 @@
     /* badge */
     .mat-badge-content {
         color: #fff;
-        background-color: map-get($primary, 500);
+        background-color: map.get($primary, 500);
     }
     .mat-badge-accent .mat-badge-content {
         color: #fff;
-        background-color: map-get($accent, 500);
+        background-color: map.get($accent, 500);
     }
     .mat-badge-warn .mat-badge-content {
         color: #fff;
-        background-color: map-get($warn, 500);
+        background-color: map.get($warn, 500);
     }
 
     /* checkbox */
     .mat-checkbox-checked.mat-primary .mat-checkbox-background {
-        color: map-get(blui.$blui-black, 50);
-        background-color: map-get($primary, 200);
+        color: map.get(blui.$blui-black, 50);
+        background-color: map.get($primary, 200);
     }
     .mat-checkbox-checked.mat-accent .mat-checkbox-background {
-        color: map-get(blui.$blui-black, 50);
-        background-color: map-get($accent, 200);
+        color: map.get(blui.$blui-black, 50);
+        background-color: map.get($accent, 200);
     }
     .mat-checkbox-disabled:not(.mat-checkbox-checked) .mat-checkbox-frame {
-        border-color: map-get($foreground, disabled);
+        border-color: map.get($foreground, disabled);
     }
     .mat-checkbox-disabled .mat-checkbox-label {
-        color: map-get($foreground, disabled);
+        color: map.get($foreground, disabled);
     }
 
     /* radio button */
@@ -441,100 +442,100 @@
         .mat-radio-inner-circle,
         .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple),
         &.mat-radio-checked .mat-radio-persistent-ripple {
-            background-color: map-get($primary, 200);
+            background-color: map.get($primary, 200);
         }
 
         &.mat-radio-checked .mat-radio-outer-circle {
-            border-color: map-get($primary, 200);
+            border-color: map.get($primary, 200);
         }
     }
     .mat-radio-button.mat-accent {
         .mat-radio-inner-circle,
         .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple),
         &.mat-radio-checked .mat-radio-persistent-ripple {
-            background-color: map-get($accent, 200);
+            background-color: map.get($accent, 200);
         }
 
         &.mat-radio-checked .mat-radio-outer-circle {
-            border-color: map-get($accent, 200);
+            border-color: map.get($accent, 200);
         }
     }
 
     /* Tooltip  */
     .mat-tooltip {
-        background-color: map-get(blui.$blui-black, 500);
+        background-color: map.get(blui.$blui-black, 500);
     }
 
     /* toolbar*/
     .mat-toolbar {
-        color: map-get($foreground, text);
-        background-color: map-get(blui.$blui-darkBlack, 100);
+        color: map.get($foreground, text);
+        background-color: map.get(blui.$blui-darkBlack, 100);
         .blui-drawer-header-title {
-            color: map-get(blui.$blui-white, 50);
+            color: map.get(blui.$blui-white, 50);
         }
         .mat-icon-button {
-            color: map-get(blui.$blui-white, 50);
+            color: map.get(blui.$blui-white, 50);
         }
         &.mat-primary {
-            background-color: map-get(blui.$blui-black, 800);
-            color: map-get(blui.$blui-black, 50);
+            background-color: map.get(blui.$blui-black, 800);
+            color: map.get(blui.$blui-black, 50);
         }
         &.mat-accent {
-            background-color: map-get(blui.$blui-black, 900);
-            color: map-get($foreground, text);
+            background-color: map.get(blui.$blui-black, 900);
+            color: map.get($foreground, text);
         }
         &.mat-warn {
-            background-color: map-get(blui.$blui-red, 500);
-            color: map-get(blui.$blui-white, 50);
+            background-color: map.get(blui.$blui-red, 500);
+            color: map.get(blui.$blui-white, 50);
             .mat-icon-button:not([color]) {
-                color: map-get(blui.$blui-white, 50);
+                color: map.get(blui.$blui-white, 50);
             }
         }
     }
 
     /* Snackbar button */
     .mat-snack-bar-container .mat-simple-snackbar-action .mat-button {
-        color: map-get($primary, 500);
+        color: map.get($primary, 500);
     }
 
     /*  Drawer Content */
     .mat-drawer-content {
-        background-color: map-get(blui.$blui-darkBlack, 800);
-        color: map-get($foreground, text);
+        background-color: map.get(blui.$blui-darkBlack, 800);
+        color: map.get($foreground, text);
     }
 
     /* snackbar theming */
     .mat-snack-bar-container {
-        background-color: map-get(blui.$blui-darkBlack, 500);
+        background-color: map.get(blui.$blui-darkBlack, 500);
     }
 
     /* date picker */
     .mat-calendar-body-today:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
-        border-color: map-get($accent, 200);
+        border-color: map.get($accent, 200);
     }
     .mat-form-field-appearance-legacy .mat-form-field-prefix .mat-datepicker-toggle-default-icon,
     .mat-form-field-appearance-legacy .mat-form-field-suffix .mat-datepicker-toggle-default-icon {
-        color: map-get($foreground, secondary-text);
+        color: map.get($foreground, secondary-text);
     }
     .mat-input-element.mat-form-field-autofill-control.mat-datepicker-input {
-        color: map-get($foreground, text);
+        color: map.get($foreground, text);
     }
 
     /* slider */
     .mat-slider {
         .mat-slider-thumb {
-            background-color: map-get($accent, 200);
+            background-color: map.get($accent, 200);
         }
 
         .mat-slider-track-fill {
-            background-color: map-get($primary, 300);
+            background-color: map.get($primary, 300);
         }
 
         .mat-slider-ticks {
             background-image: repeating-linear-gradient(
                 to right,
-                map-get($primary, 500),
-                map-get($primary, 500),
+                map.get($primary, 500),
+                map.get($primary, 500),
                 2px,
                 transparent 0,
                 transparent
@@ -542,97 +543,97 @@
         }
         &.mat-slider-disabled {
             .mat-slider-thumb {
-                background-color: map-get($foreground, disabled);
+                background-color: map.get($foreground, disabled);
             }
 
             .mat-slider-track-fill {
-                background-color: map-get(blui.$blui-gray, 500);
+                background-color: map.get(blui.$blui-gray, 500);
             }
         }
     }
     .mat-slider-horizontal .mat-slider-track-background,
     .mat-slider:hover .mat-slider-track-background {
-        background-color: rgba(map-get(blui.$blui-black, 300), 0.36);
+        background-color: rgba(map.get(blui.$blui-black, 300), 0.36);
     }
 
     /* expansion panel */
     .mat-expansion-panel-header-title,
     .mat-expansion-indicator::after {
-        color: map-get($accent, 200);
+        color: map.get($accent, 200);
     }
 
     /* Nav list */
     .mat-nav-list .mat-list-item:hover {
-        background-color: rgba(map-get(blui.$blui-black, 50), 0.1);
+        background-color: rgba(map.get(blui.$blui-black, 50), 0.1);
     }
 
     /* Mat expansion panel */
     .mat-expansion-panel {
-        background: map-get(blui.$blui-black, 900);
-        color: map-get(blui.$blui-black, 50);
+        background: map.get(blui.$blui-black, 900);
+        color: map.get(blui.$blui-black, 50);
     }
 
     /* Mat card */
     .mat-card {
-        background: map-get(blui.$blui-black, 900);
-        color: map-get(blui.$blui-black, 50);
+        background: map.get(blui.$blui-black, 900);
+        color: map.get(blui.$blui-black, 50);
     }
 
     /* Mat menu */
     .mat-menu-panel,
     .mat-menu-item:hover:not([disabled]) {
-        background: map-get(blui.$blui-black, 900);
-        color: map-get(blui.$blui-black, 50);
+        background: map.get(blui.$blui-black, 900);
+        color: map.get(blui.$blui-black, 50);
     }
 
     /* Mat button */
     .mat-button-toggle-appearance-standard {
-        background: map-get(blui.$blui-black, 900);
-        color: map-get(blui.$blui-black, 50);
+        background: map.get(blui.$blui-black, 900);
+        color: map.get(blui.$blui-black, 50);
     }
 
     /* Mat select */
     .mat-select-panel {
-        background: map-get(blui.$blui-black, 900);
-        color: map-get(blui.$blui-black, 50);
+        background: map.get(blui.$blui-black, 900);
+        color: map.get(blui.$blui-black, 50);
     }
 
     /* table*/
     .mat-table {
-        background: map-get(blui.$blui-black, 900);
+        background: map.get(blui.$blui-black, 900);
     }
 
     /* paginator*/
     .mat-paginator {
-        background-color: map-get($background, app-bar);
-        color: map-get($foreground, text);
+        background-color: map.get($background, app-bar);
+        color: map.get($foreground, text);
     }
 
     /* mat datepicker */
     .mat-datepicker-content {
-        background: map-get(blui.$blui-black, 900);
-        color: map-get(blui.$blui-black, 50);
+        background: map.get(blui.$blui-black, 900);
+        color: map.get(blui.$blui-black, 50);
     }
 
     /* mat dialog */
     .mat-dialog-container {
-        background: map-get(blui.$blui-black, 900);
-        color: map-get(blui.$blui-black, 50);
+        background: map.get(blui.$blui-black, 900);
+        color: map.get(blui.$blui-black, 50);
     }
 
     /* mat bottom sheet */
     .mat-bottom-sheet-container {
-        background: map-get(blui.$blui-black, 900);
-        color: map-get(blui.$blui-black, 50);
+        background: map.get(blui.$blui-black, 900);
+        color: map.get(blui.$blui-black, 50);
     }
 
     /* snackbar */
     .mat-snack-bar-container {
-        background-color: map-get(blui.$blui-black, 50);
-        color: map-get(blui.$blui-black, 500);
+        background-color: map.get(blui.$blui-black, 50);
+        color: map.get(blui.$blui-black, 500);
 
         .mat-simple-snackbar-action {
-            color: map-get($primary, 500);
+            color: map.get($primary, 500);
         }
     }
 
@@ -647,15 +648,15 @@
     }
 
     .blui-drawer {
-        background-color: map-get(blui.$blui-darkBlack, 300);
+        background-color: map.get(blui.$blui-darkBlack, 300);
 
         .blui-drawer-nav-item-active, /*NavRail item*/
         .blui-drawer-nav-item-active .blui-info-list-item .mat-list-item-content, /*Normal NavItem*/
         .blui-drawer-nav-item-active .blui-info-list-item .blui-info-list-item-icon-wrapper {
-            color: map-get($primary, 200);
+            color: map.get($primary, 200);
 
             .blui-info-list-item-subtitle-wrapper {
-                color: map-get($primary, 200);
+                color: map.get($primary, 200);
             }
         }
 
@@ -666,18 +667,18 @@
         .mat-list-base .mat-list-item,
         .blui-drawer-nav-item-rail,
         .blui-drawer-nav-group-title {
-            color: map-get($foreground, 50);
+            color: map.get($foreground, 50);
         }
 
         .blui-drawer-nested-nav-item mat-expansion-panel {
-            background-color: map-get(blui.$blui-darkBlack, 500);
+            background-color: map.get(blui.$blui-darkBlack, 500);
         }
     }
 
     /* BLUI Empty State */
     .blui-empty-state {
         .blui-empty-state-description {
-            color: map-get($foreground, secondary-text);
+            color: map.get($foreground, secondary-text);
         }
     }
 
@@ -685,24 +686,24 @@
     .blui-info-list-item .blui-info-list-item-content {
         .blui-info-list-item-subtitle-wrapper,
         .blui-info-list-item-info-wrapper {
-            color: map-get($foreground, secondary-text);
+            color: map.get($foreground, secondary-text);
         }
     }
 
     /* BLUI Mobile Stepper */
     .blui-mobile-stepper .blui-mobile-stepper-dot:not(.blui-mobile-stepper-dot-active) {
-        background-color: map-get($foreground, disabled);
+        background-color: map.get($foreground, disabled);
     }
 
     /* User Menu */
     .blui-user-menu-avatar {
-        background-color: rgba(map-get(blui.$blui-black, 50), 0.1);
-        color: map-get(blui.$blui-black, 50);
+        background-color: rgba(map.get(blui.$blui-black, 50), 0.1);
+        color: map.get(blui.$blui-black, 50);
     }
 
     /* Disabled */
     .mat-menu-item[disabled] .mat-icon-no-color {
-        color: map-get($foreground, disabled);
+        color: map.get($foreground, disabled);
     }
     .mat-list-item-disabled {
         background-color: unset;
@@ -711,20 +712,20 @@
     /* mat-select panel  */
     .mat-select-panel {
         .mat-option.mat-selected:not(.mat-option-disabled) {
-            color: map-get($foreground, text);
+            color: map.get($foreground, text);
         }
     }
 
     /* Mat Table */
     th.mat-header-cell {
-        color: map-get($foreground, text);
+        color: map.get($foreground, text);
     }
 
     /* Mat Expansion Panel Header */
     .mat-expansion-panel {
         .mat-expansion-panel-header {
             &.mat-expanded {
-                border-bottom: 1px solid map-get($foreground, divider);
+                border-bottom: 1px solid map.get($foreground, divider);
             }
         }
     }

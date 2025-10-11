@@ -1,3 +1,4 @@
+@use "sass:map";
 @use '../utility' as util;
 
 @mixin blui-mat-form-field($primaryPalette, $accentPalette, $warnPalette, $disablePalette) {
@@ -33,23 +34,23 @@
             .mat-form-field-suffix,
             .mat-form-field-prefix,
             input::-webkit-input-placeholder {
-                color: map-get($disablePalette, text);
+                color: map.get($disablePalette, text);
             }
 
             &.mat-form-field-appearance-legacy,
             &.mat-form-field-appearance-standard {
                 .mat-form-field-underline {
                     background-image: none;
-                    background-color: map-get($disablePalette, text);
+                    background-color: map.get($disablePalette, text);
                 }
             }
 
             &.mat-form-field-appearance-fill {
                 .mat-form-field-underline::before {
-                    background-color: map-get($disablePalette, text);
+                    background-color: map.get($disablePalette, text);
                 }
                 .mat-form-field-flex {
-                    background-color: map-get($disablePalette, filledBackgroundColor);
+                    background-color: map.get($disablePalette, filledBackgroundColor);
                 }
             }
         }
@@ -100,26 +101,26 @@
         /* Icon */
         .mat-form-field-suffix,
         .mat-form-field-prefix {
-            color: map-get($palette, icon);
+            color: map.get($palette, icon);
         }
 
         /* Input Placeholders */
         input::-webkit-input-placeholder {
-            color: map-get($palette, placeholder);
+            color: map.get($palette, placeholder);
         }
 
         /* Hint */
         .mat-hint {
-            color: map-get($palette, hint);
+            color: map.get($palette, hint);
         }
 
         /* User Input Text */
         &.mat-form-field-invalid {
             .mat-input-element::selection {
-                background-color: map-get($palette, highlightColor);
+                background-color: map.get($palette, highlightColor);
             }
             .mat-input-element::-moz-selection {
-                background-color: map-get($palette, highlightColor);
+                background-color: map.get($palette, highlightColor);
             }
         }
 
@@ -143,7 +144,7 @@
         /* Fill Variant */
         &.mat-form-field-appearance-fill {
             .mat-form-field-flex {
-                background-color: map-get($palette, filledBackgroundColor);
+                background-color: map.get($palette, filledBackgroundColor);
             }
             .mat-form-field-outline-thick {
                 color: util.map-deep-get($palette, underline, default);

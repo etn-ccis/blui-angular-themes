@@ -1,4 +1,5 @@
 // Import library functions for theme creation.
+@use "sass:map";
 @use '@angular/material' as mat;
 @use '@brightlayer-ui/colors/palette.scss' as blui;
 
@@ -15,13 +16,13 @@
 }
 
 @mixin blui-score-card-theme($theme) {
-    $primary: map-get($theme, primary);
-    $foreground: map-get($theme, foreground);
-    $background: map-get($theme, background);
+    $primary: map.get($theme, primary);
+    $foreground: map.get($theme, foreground);
+    $background: map.get($theme, background);
     .blui-score-card {
         .blui-score-card-header {
-            background-color: map-get($primary, 500);
-            color: map-get($foreground, onPrimary);
+            background-color: map.get($primary, 500);
+            color: map.get($foreground, onPrimary);
             .mat-card-subtitle {
                 color: inherit;
             }
@@ -33,45 +34,45 @@
 }
 
 @mixin blui-empty-state-theme($theme) {
-    $primary: map-get($theme, primary);
-    $foreground: map-get($theme, foreground);
+    $primary: map.get($theme, primary);
+    $foreground: map.get($theme, foreground);
     .blui-empty-state {
-        color: map-get($foreground, text);
+        color: map.get($foreground, text);
         .blui-empty-state-empty-icon-wrapper {
-            color: map-get($foreground, secondary-text);
+            color: map.get($foreground, secondary-text);
         }
         .blui-empty-state-description {
-            color: map-get($foreground, text);
+            color: map.get($foreground, text);
         }
     }
 }
 
 @mixin blui-channel-value-theme($theme) {
-    $foreground: map-get($theme, foreground);
+    $foreground: map.get($theme, foreground);
     .blui-channel-value {
-        color: map-get($foreground, text);
+        color: map.get($foreground, text);
     }
 }
 
 @mixin blui-hero-theme($theme) {
-    $foreground: map-get($theme, foreground);
+    $foreground: map.get($theme, foreground);
     .blui-hero {
-        color: map-get($foreground, text);
+        color: map.get($foreground, text);
         .blui-hero-primary-wrapper {
-            color: map-get($foreground, secondary-text);
+            color: map.get($foreground, secondary-text);
         }
     }
 }
 
 @mixin blui-info-list-item-theme($theme) {
-    $foreground: map-get($theme, foreground);
+    $foreground: map.get($theme, foreground);
     .blui-info-list-item {
-        color: map-get($foreground, text);
+        color: map.get($foreground, text);
 
         .mat-list-item {
             .mat-list-text {
                 .mat-line:nth-child(n + 2) {
-                    $typography: map-get($theme, typography);
+                    $typography: map.get($theme, typography);
                     font-size: mat.font-size($typography, body-2);
                 }
             }
@@ -81,44 +82,44 @@
         .mat-list-item-content {
             color: inherit;
             & .mat-list-icon {
-                color: map-get($foreground, secondary-text);
+                color: map.get($foreground, secondary-text);
             }
         }
     }
 }
 
 @mixin blui-list-item-tag($theme) {
-    $primary: map-get($theme, primary);
-    $foreground: map-get($theme, foreground);
+    $primary: map.get($theme, primary);
+    $foreground: map.get($theme, foreground);
     .blui-list-item-tag {
-        background-color: map-get($primary, 500);
-        color: map-get($foreground, onPrimary);
+        background-color: map.get($primary, 500);
+        color: map.get($foreground, onPrimary);
     }
 }
 
 @mixin blui-mobile-stepper($theme) {
-    $primary: map-get($theme, primary);
-    $background: map-get($theme, background);
+    $primary: map.get($theme, primary);
+    $background: map.get($theme, background);
     .blui-mobile-stepper {
         .blui-mobile-stepper-dot {
-            background-color: map-get($background, disabled-button-toggle);
+            background-color: map.get($background, disabled-button-toggle);
         }
         .blui-mobile-stepper-dot-active {
-            background-color: map-get($primary, 500);
+            background-color: map.get($primary, 500);
         }
     }
 }
 
 @mixin blui-drawer($theme) {
-    $primary: map-get($theme, primary);
-    $foreground: map-get($theme, foreground);
-    $background: map-get($theme, background);
+    $primary: map.get($theme, primary);
+    $foreground: map.get($theme, foreground);
+    $background: map.get($theme, background);
     .blui-drawer {
         .blui-drawer-nav-group .mat-list-base {
-            color: map-get($foreground, text);
+            color: map.get($foreground, text);
         }
         .blui-drawer-nav-item-active-highlight {
-            background-color: map-get($primary, 500);
+            background-color: map.get($primary, 500);
         }
         .blui-drawer-nav-item-rail {
             &:hover,
@@ -130,10 +131,10 @@
 }
 
 @mixin blui-user-menu($theme) {
-    $primary: map-get($theme, primary);
+    $primary: map.get($theme, primary);
     .blui-user-menu-avatar {
-        background-color: map-get($primary, 50);
-        color: map-get($primary, 500);
+        background-color: map.get($primary, 50);
+        color: map.get($primary, 500);
     }
 
     .blui-user-menu-overlay .mat-toolbar {
